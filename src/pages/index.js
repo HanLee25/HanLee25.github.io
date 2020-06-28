@@ -19,8 +19,8 @@ function IndexPage() {
           src={catAndHumanIllustration}
         />
 
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
+        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-100">
+          Hey there! Welcome to my first Gatsby portfolio.
         </h2>
 
         <p className="leading-loose">

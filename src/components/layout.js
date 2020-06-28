@@ -13,7 +13,7 @@ function Layout({ children }) {
       </main>
 
       <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
+        <nav className="flex justify-between p-4 mx-auto text-sm md:p-8">
           <p className="text-white">
             Created by{` `}
             <a
@@ -22,7 +22,7 @@ function Layout({ children }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Taylor Bryant
+              Han Lee
             </a>
           </p>
 
