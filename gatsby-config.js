@@ -5,7 +5,7 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
+    title: `Han Lee's Gatsby Starter Tailwind`,
     description: `Gatsby starter styled with Tailwind`,
     author: `@taylorbryant`,
   },
