@@ -2,7 +2,6 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
 function IndexPage() {
   return (
@@ -12,29 +11,41 @@ function IndexPage() {
         title="Home"
       />
 
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-100">
-          Hey there! Welcome to my first Gatsby portfolio.
+      <section className="section">
+        <h2 className="hero h1">
+          Hey there!
+          <br />I am{" "}
+          <strong className="hero__strong">
+            a product designer
+          </strong>{" "}
+          who loves working on both UI & UX.
         </h2>
 
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold text-gray-900 no-underline"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwind CSS
-          </a>
-          , a utility-first CSS framework.
+        <p>
+          I'm also an illustrator, a front-end developer, and a
+          glue-gun master.
         </p>
+
+        <p className="hero__desc hero__desc--bad">
+          A 💡<span className="tracking-tighter underline">life</span>{" "}
+          <b className="inline-block transform translate-y-1">is</b> t
+          <span className="font-serif uppercase">o</span>o{" "}
+          <span className="uppercase">v</span>alu
+          <span className="inline-block italic transform scale-125">
+            able
+          </span>
+          🧻 to de
+          <span className="uppercase inline-block transform scale-125">
+            a
+          </span>
+          l with{" "}
+          <span className="font-sans inline-block transform -rotate-5 skew-x-12 font-bold line-through textShadow-xl">
+            bad <span className="uppercase">d</span>esigns
+          </span>
+          .
+        </p>
+
+        <p>Let me help you.</p>
       </section>
     </Layout>
   );
