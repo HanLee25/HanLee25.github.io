@@ -15,13 +15,13 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `gatsby-starter-tailwind`,
-				short_name: `starter`,
+				name: `gatsby-tailwind-by-HanLee`,
+				short_name: `HanLee`,
 				start_url: `/`,
 				background_color: fullConfig.theme.colors.white,
 				theme_color: fullConfig.theme.colors.teal["400"],
 				display: `minimal-ui`,
-				icon: `src/images/tailwind-icon.png`,
+				icon: `src/images/han-favicon.png`,
 			},
 		},
 		{
@@ -45,7 +45,7 @@ module.exports = {
 					options: {
 						props: {
 							className: `svg-img`, // Default class name
-              role: `img`,
+							role: `img`,
 						},
 					},
 				},

@@ -8,17 +8,23 @@ function AboutPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `product designer`,
+          `illustrator`,
+          `UI designer`,
+          `UX designer`,
+        ]}
         title="About"
       />
 
       <section className="flex flex-col items-center md:flex-row">
         <div className="md:w-2/3 md:mr-8">
           <blockquote className="pl-4 font-serif leading-loose text-justify border-l-4 border-gray-900">
-            The point is... to live one&apos;s life in the full complexity of
-            what one is, which is something much darker, more contradictory,
-            more of a maelstrom of impulses and passions, of cruelty, ecstacy,
-            and madness, than is apparent to the civilized being who glides on
+            The point is... to live one&apos;s life in the full
+            complexity of what one is, which is something much
+            darker, more contradictory, more of a maelstrom of
+            impulses and passions, of cruelty, ecstacy, and madness,
+            than is apparent to the civilized being who glides on
             the surface and fits smoothly into the world.
           </blockquote>
 

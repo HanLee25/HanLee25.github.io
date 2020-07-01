@@ -33,19 +33,21 @@ function Header() {
         </Link>
 
         <button
-          className="items-center md:hidden"
+          className="button button--svg md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <IconBurger
-            className="icon"
+            className={`${
+              isExpanded ? `icon--burger-close` : ` `
+            } icon icon--burger`}
             aria-labelledby="burgerIconTitleID burgerIconDescID"
           />
         </button>
 
         <nav
           className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:flex md:items-center w-full md:w-auto`}
+            isExpanded ? `header__nav--opened` : ` `
+          } header__nav main-nav`}
         >
           {[
             {
@@ -58,14 +60,24 @@ function Header() {
             },
           ].map((link) => (
             <Link
-              className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
+              className="main-nav__item"
               key={link.title}
               to={link.route}
+              activeClassName="main-nav__item--active"
             >
               {link.title}
             </Link>
           ))}
         </nav>
+      </div>
+
+      <div
+        className={`${
+          isExpanded ? `header__back-drop--opened` : ` `
+        } header__back-drop`}
+        onClick={() => toggleExpansion(!isExpanded)}
+      >
+        <span className="sr-only">Close navigation</span>
       </div>
     </header>
   );
