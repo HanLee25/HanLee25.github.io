@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/hanlee/Documents/GitHub/HanLee25.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-tailwind-by-HanLee","short_name":"HanLee","start_url":"/","background_color":"#fff","theme_color":"#4fd1c5","display":"minimal-ui","icon":"src/images/han-favicon.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"c48ba9085b0ff10e6a8bd60840737800"},
+      options: {"plugins":[],"name":"gatsby-tailwind-by-HanLee","short_name":"HanLee","start_url":"/","background_color":"#fff","theme_color":"#4fd1c5","display":"minimal-ui","icon":"src/images/han-favicon.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"b88e999e97f4ae0504570247cf2070bc"},
     },{
       plugin: require('/Users/hanlee/Documents/GitHub/HanLee25.github.io/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},

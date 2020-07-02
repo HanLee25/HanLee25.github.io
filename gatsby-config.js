@@ -38,7 +38,7 @@ module.exports = {
 		},
 		`gatsby-plugin-offline`,
 		{
-			resolve: "gatsby-plugin-react-svg",
+			resolve: `gatsby-plugin-react-svg`,
 			options: {
 				rule: {
 					include: /svg/, // See below to configure properly
@@ -51,5 +51,15 @@ module.exports = {
 				},
 			},
 		},
+		`gatsby-transformer-remark`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `works`,
+				path: `${__dirname}/src/works`,
+			},
+		},
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
 	],
 };
