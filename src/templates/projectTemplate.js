@@ -18,19 +18,17 @@ export default function Template({
           `UI designer`,
           `UX designer`,
         ]}
-        title="About"
+        title={frontmatter.title}
       />
 
-    <div className="project-container">
-      <div className="project">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+      <section className="content-section project">
+        <h2 className="hero h2">{frontmatter.title}</h2>
+
         <div
           className="project-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-    </div>
+      </section>
     </Layout>
   );
 }

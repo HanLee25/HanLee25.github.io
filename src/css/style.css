@@ -6,7 +6,19 @@
 @tailwind screen;
 
 
-/************** Structure **************/
+/*=================================================================
+
+ Page structure
+
+ [1] Elements
+ [2] Layout
+ [3] Header
+ [4] Main
+ [5] Footer
+
+ =================================================================*/
+
+/**************************** Elements ****************************/
 
 body {
   @apply font-sans;
@@ -14,10 +26,38 @@ body {
 }
 
 p {
-  @apply text-gray-800;
   @apply leading-relaxed;
   @apply mb-4;
 }
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  @apply leading-relaxed;
+  @apply mb-4;
+  @apply font-bold;
+  @apply tracking-wide;
+}
+
+.h1 {
+  @apply text-3xl;
+}
+
+.h2 {
+  @apply text-2xl;
+}
+
+.h3 {
+  @apply text-xl;
+}
+
+.h4 {
+  @apply text-lg;
+}
+
+
+/**************************** Layout ****************************/
 
 .page {
   @apply flex;
@@ -27,14 +67,29 @@ p {
   @apply pt-16;
 }
 
+.content-section {
+  @apply flex-1;
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+  @apply py-4;
+}
 
-/* Header */
+.content-column {
+  @apply grid;
+  @apply gap-4;
+
+  grid-template-rows: min-content 1fr;
+}
+
+
+/**************************** Header ****************************/
 
 .header {
   @apply border-b;
   @apply border-gray-300;
   @apply bg-white;
-  @apply bg-opacity-50;
+  @apply bg-opacity-75;
   @apply fixed;
   @apply text-gray-900;
   @apply top-0;
@@ -72,42 +127,26 @@ p {
 }
 
 .header__nav {
-  @apply block;
-  @apply duration-700;
+  @apply duration-500;
   @apply h-0;
   @apply overflow-hidden;
   @apply opacity-0;
   @apply transition-all;
-  @apply w-full;
+  @apply w-screen;
 }
 
 .header__nav--opened {
-  @apply h-full;
+  @apply h-auto;
   @apply opacity-100;
-  
-  min-height: 100px;
-}
-
-.main-nav {
-  @apply font-bold;
-  @apply text-2xl;
-}
-
-.main-nav__item {
-  @apply block;
-  @apply my-4;
-  @apply no-underline;
-}
-
-.main-nav__item--active {
-  @apply text-red-700;
 }
 
 .header__back-drop {
+  @apply bg-gray-200;
+  @apply bg-opacity-50;
   @apply fixed;
-  @apply h-full;
+  @apply h-screen;
   @apply hidden;
-  @apply w-full;
+  @apply w-screen;
 }
 
 .header__back-drop--opened {
@@ -115,7 +154,7 @@ p {
 }
 
 
-/* Main */
+/**************************** Main ****************************/
 
 .main {
   @apply flex;
@@ -127,58 +166,8 @@ p {
   @apply mx-auto;
 }
 
-.section {
-  @apply flex-1;
-  @apply w-full;
-  @apply py-4;
-}
 
-.section-hero {
-  @apply flex;
-  @apply flex-col;
-  @apply justify-between;
-}
-
-.hero {
-  @apply inline-block;
-}
-
-.hero__strong {
-  @apply bg-red-600;
-  @apply px-2;
-  @apply py-1;
-  @apply text-white;
-}
-
-.value-prop {
-  @apply mb-12;
-}
-
-.value-prop__bad {
-  @apply bg-red-700;
-  @apply duration-300;
-  @apply font-mono;
-  @apply inline-block;
-  @apply mt-4;
-  @apply max-w-xs;
-  @apply text-red-700;
-  @apply transition-all;
-  @apply w-9/12;
-
-  line-height: calc(theme('lineHeight.normal') / 3);
-}
-
-.value-prop__bad:hover {
-  @apply bg-white;
-  @apply cursor-not-allowed;
-}
-
-.value-prop__cta {
-  @apply mt-4;
-}
-
-
-/* Footer */
+/**************************** Footer ****************************/
 
 .footer {
   @apply bg-white;
@@ -201,7 +190,21 @@ p {
 }
 
 
-/************** Buttons **************/
+/*=================================================================
+
+ Components & modules
+
+ [1] Buttons
+ [2] Face
+ [3] Icon
+ [4] Main navigation
+ [5] Anchor navigation
+ [6] Hero
+
+ =================================================================*/
+
+
+/**************************** Buttons ****************************/
 
 .button {
   @apply bg-gray-900;
@@ -263,35 +266,7 @@ p {
 }
 
 
-/************** Headings **************/
-
-.h1,
-.h2,
-.h3,
-.h4 {
-  @apply leading-relaxed;
-  @apply font-bold;
-  @apply tracking-wide;
-}
-
-.h1 {
-  @apply text-3xl;
-}
-
-.h2 {
-  @apply text-2xl;
-}
-
-.h3 {
-  @apply text-xl;
-}
-
-.h4 {
-  @apply text-lg;
-}
-
-
-/************** Face **************/
+/**************************** Face ****************************/
 
 .face__element {
   @apply duration-300;
@@ -337,7 +312,7 @@ p {
 }
 
 
-/************** Icons **************/
+/**************************** Icons ****************************/
 
 .icon {
   @apply h-6;
@@ -382,13 +357,102 @@ p {
 }
 
 
-/************** Media query **************/
+/**************************** Main nav ****************************/
+
+.main-nav {
+  @apply font-bold;
+  @apply mt-4;
+  @apply text-2xl;
+}
+
+.main-nav__item {
+  @apply block;
+  @apply my-2;
+}
+
+.main-nav > li:last-child .main-nav__item {
+  @apply mb-0;
+}
+
+.main-nav__item--active {
+  @apply text-red-700;
+}
+
+
+/**************************** Anchor nav ****************************/
+
+.anchor-nav {
+  @apply flex;
+  @apply text-gray-500;
+  @apply text-sm;
+}
+
+.anchor-nav__item {
+  @apply mr-4;
+}
+
+/**************************** hero ****************************/
+
+.hero {
+  @apply inline-block;
+}
+
+.hero__strong {
+  @apply bg-red-600;
+  @apply px-2;
+  @apply py-1;
+  @apply text-white;
+}
+
+.hero__value {
+  @apply mb-12;
+  @apply text-gray-700;
+}
+
+.hero__why {
+  @apply bg-red-700;
+  @apply duration-300;
+  @apply font-mono;
+  @apply inline-block;
+  @apply mt-4;
+  @apply text-red-700;
+  @apply transition-all;
+  @apply w-auto;
+
+  line-height: calc(theme('lineHeight.normal') / 3);
+}
+
+.hero__why:hover {
+  @apply bg-white;
+  @apply cursor-not-allowed;
+}
+
+.hero__cta {
+  @apply mt-4;
+}
+
+
+/*=================================================================
+
+ Media query
+
+ [1] Medium screen
+ [2] Large screen
+
+ =================================================================*/
+
+/**************************** Medium screen ****************************/
 
 @screen md {
   .page {
     @apply flex-row;
     @apply pt-0;
     @apply m-auto;
+  }
+
+  .content-section {
+    @apply py-6;
+    @apply px-8;
   }
 
   .header {
@@ -431,16 +495,16 @@ p {
     @apply w-auto;
   }
 
+  .header__back-drop {
+    @apply bg-opacity-0;
+  }
+
   .main {
     @apply pb-16;
     @apply pr-0;
     @apply w-auto;
 
     padding-left: theme('width.48');
-  }
-
-  .section {
-    @apply px-8;
   }
 
   .footer {
@@ -450,31 +514,14 @@ p {
   }
 }
 
+
+/**************************** Large screen ****************************/
+
 @screen lg {
-  .header {
-    @apply w-64;
-  }
-
-  .header__wrapper {
-    @apply px-12;
-  }
-
-  .header__face {
-    @apply h-32;
-    @apply w-32;
-  }
-
-  .main {
-    padding-left: theme('width.64');
-  }
-
-  .section {
-    @apply pl-16;
-  }
-
-  .value-prop {
-    @apply mb-24;
-  }
+.content-section {
+  @apply py-8;
+  @apply pl-16;
+}
 
   .h1,
   .h2,
@@ -497,5 +544,31 @@ p {
 
   .h4 {
     @apply text-3xl;
+  }
+
+  .header {
+    @apply w-64;
+  }
+
+  .header__wrapper {
+    @apply px-12;
+  }
+
+  .header__face {
+    @apply h-32;
+    @apply w-32;
+  }
+
+  .main {
+    padding-left: theme('width.64');
+  }
+
+  .main-nav {
+    @apply mt-8;
+    @apply text-3xl;
+  }
+
+  .hero__value {
+    @apply mb-24;
   }
 }

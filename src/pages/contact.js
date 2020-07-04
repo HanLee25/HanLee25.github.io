@@ -7,25 +7,27 @@ function ContactPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `product design`,
+          `illustrattion`,
+          `UI design`,
+          `UX design`,
+          `visual storytelling`,
+          `visual narrative`,
+        ]}
         title="Contact"
       />
-      <section>
-        <form className="mx-auto md:w-1/2">
-          <p className="mb-8 leading-loose">
-            Here is an example of a form built using the official Tailwind CSS
-            Custom Forms plugin.{` `}
-            <a
-              className="font-bold text-gray-700 no-underline"
-              href="https://github.com/tailwindcss/custom-forms"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the docs
-            </a>
-            .
-          </p>
 
+      <section className="content-section">
+        <h2 className="h2">
+          Say{" "}
+          <span role="img" aria-label="emoji">
+            👋
+          </span>{" "}
+          to Han
+        </h2>
+
+        <form className="md:w-1/2">
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="first-name"
@@ -56,6 +58,20 @@ function ContactPage() {
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
+            htmlFor="email"
+          >
+            Email
+          </label>
+
+          <input
+            className="w-full mb-6 form-input"
+            id="email"
+            placeholder="bill@email.com"
+            type="email"
+          />
+
+          <label
+            className="block mb-2 text-xs font-bold uppercase"
             htmlFor="message"
           >
             Message
@@ -68,9 +84,7 @@ function ContactPage() {
             rows="8"
           />
 
-          <button className="button">
-            Submit
-          </button>
+          <button className="button">Submit</button>
         </form>
       </section>
     </Layout>

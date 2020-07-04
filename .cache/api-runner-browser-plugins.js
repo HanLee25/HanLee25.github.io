@@ -5,6 +5,12 @@ module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-offline/gatsby-browser.js'),
       options: {"plugins":[]},
     },{
+      plugin: require('../node_modules/gatsby-remark-images/gatsby-browser.js'),
+      options: {"plugins":[],"maxWidth":1200},
+    },{
+      plugin: require('../node_modules/gatsby-plugin-anchor-links/gatsby-browser.js'),
+      options: {"plugins":[],"offset":-100},
+    },{
       plugin: require('../gatsby-browser.js'),
       options: {"plugins":[]},
     }]
