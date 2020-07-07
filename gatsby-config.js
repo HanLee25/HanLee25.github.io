@@ -88,5 +88,12 @@ module.exports = {
         offset: -100,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-171803500-1",
+        head: false,
+      },
+    },
   ],
 };

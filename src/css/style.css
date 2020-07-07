@@ -67,19 +67,19 @@ p {
   @apply pt-16;
 }
 
+.content-column {
+  @apply grid;
+  @apply gap-4;
+
+  grid-template-rows: min-content 1fr;
+}
+
 .content-section {
   @apply flex-1;
   @apply flex;
   @apply flex-col;
   @apply w-full;
   @apply py-4;
-}
-
-.content-column {
-  @apply grid;
-  @apply gap-4;
-
-  grid-template-rows: min-content 1fr;
 }
 
 
@@ -185,8 +185,20 @@ p {
 
 .footer__credit {
   @apply flex;
+  @apply justify-between;
+  @apply p-4;
+  @apply mx-auto;
+  @apply text-sm;
+}
+
+.footer__links {
+  @apply flex;
   @apply mb-0;
   @apply text-gray-500;
+}
+
+.footer__links--build {
+  @apply hidden;
 }
 
 
@@ -200,6 +212,7 @@ p {
  [4] Main navigation
  [5] Anchor navigation
  [6] Hero
+ [7] Typing
 
  =================================================================*/
 
@@ -432,6 +445,64 @@ p {
 }
 
 
+/**************************** Typing ****************************/
+
+.typing {
+  @apply inline-block;
+  @apply overflow-hidden;
+  @apply align-bottom;
+
+  height: 1.625rem;
+}
+
+.typing__item {
+  @apply block;
+  @apply relative;
+
+  animation: typing-line 24s steps(4) infinite;
+}
+
+.typing__string {
+  @apply inline-block;
+  @apply relative;
+  line-height: 1;
+}
+
+.typing__string:after {
+  @apply absolute;
+  @apply bg-white;
+  @apply border-l-2;
+  @apply border-gray-600;
+  @apply left-0;
+  @apply right-0;
+  
+  content: "";
+  top:-1px;
+  bottom:-2px;
+  animation: typing-cursor 3s steps(20) infinite alternate;
+}
+
+@keyframes typing-cursor {
+  0% {
+    left: 0;
+    margin-right: auto;
+  }
+  100% {
+    left: 100%;
+    margin-left: .6em;
+    margin-right: -.6em;
+  }
+}
+
+@keyframes typing-line {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -6.5rem;
+  }
+}
+
 /*=================================================================
 
  Media query
@@ -512,16 +583,42 @@ p {
     @apply inset-x-0;
     @apply fixed;
   }
+
+  .footer__credit {
+    @apply px-8;
+  }
+
+  .footer__links--build {
+    @apply block;
+  }
 }
 
 
 /**************************** Large screen ****************************/
 
 @screen lg {
-.content-section {
-  @apply py-8;
-  @apply pl-16;
-}
+
+  .content-column {
+    @apply grid-rows-none;
+
+    grid-template-columns: 1fr min-content;
+  }
+
+  .content-column__side-bar {
+    @apply col-start-2;
+    @apply pt-8;
+    @apply row-start-1;
+  }
+
+  .content-column__main {
+    @apply col-start-1;
+    @apply row-start-1;
+  }
+
+  .content-section {
+    @apply py-8;
+    @apply pl-16;
+  }
 
   .h1,
   .h2,
@@ -568,7 +665,15 @@ p {
     @apply text-3xl;
   }
 
+  .anchor-nav {
+    @apply flex-col;
+  }
+
   .hero__value {
     @apply mb-24;
+  }
+
+  .footer__credit {
+    @apply px-0;
   }
 }

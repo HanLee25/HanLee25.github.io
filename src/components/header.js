@@ -49,7 +49,7 @@ function Header() {
 						isExpanded ? ` header__nav--opened` : ``
 					}`}
 				>
-					<ul className="main-nav divide-y divide-gray-300 md:divide-y">
+					<ul className="main-nav divide-y divide-gray-300 md:divide-y-0">
 						{[
 							{
 								route: `/about`,
@@ -64,10 +64,9 @@ function Header() {
 								title: `Contact`,
 							},
 						].map((link) => (
-							<li>
+							<li key={link.title}>
 								<Link
 									className="main-nav__item"
-									key={link.title}
 									to={link.route}
 									activeClassName="main-nav__item--active"
 									partiallyActive={true}

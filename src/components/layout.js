@@ -22,8 +22,8 @@ function Layout({ children }) {
 
 			<footer className="footer">
 				<div className="footer__wrapper">
-					<nav className="flex justify-between p-4 mx-auto text-sm md:px-8 lg:px-0">
-						<p className="footer__credit space-x-3">
+					<nav className="footer__credit">
+						<p className="footer__links space-x-3">
 							<span>Find me at{` `}</span>
 
 							<a
@@ -63,7 +63,7 @@ function Layout({ children }) {
 							</a>
 						</p>
 
-						<p className="footer__credit space-x-3">
+						<p className="footer__links footer__links--build space-x-3">
 							<span>Built with{` `}</span>
 
 							<a
