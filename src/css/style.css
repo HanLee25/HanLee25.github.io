@@ -37,6 +37,7 @@ a {
 
 a:hover {
   @apply no-underline;
+  @apply text-red-700;
 }
 
 .h1,
@@ -63,6 +64,14 @@ a:hover {
 
 .h4 {
   @apply text-lg;
+}
+
+ul,
+ol,
+dl {
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-3;
 }
 
 
@@ -239,6 +248,7 @@ a:hover {
   @apply duration-300;
   @apply font-bold;
   @apply inline-block;
+  @apply no-underline;
   @apply py-2;
   @apply px-4;
   @apply text-white;
@@ -248,6 +258,7 @@ a:hover {
 .button:hover {
   @apply bg-red-600;
   @apply border-gray-900;
+  @apply text-white;
 }
 
 .button--ghost {
@@ -265,18 +276,36 @@ a:hover {
 
 .button--link {
   @apply bg-transparent;
-  @apply border-black;
+  @apply border-0;
+  @apply border-transparent;
   @apply inline;
   @apply py-1;
   @apply px-0;
+  @apply relative;
   @apply text-current;
+}
+
+.button--link::before {
+  @apply absolute;
+  @apply bg-gray-900;
+  @apply bottom-0;
+  @apply block;
+  @apply duration-300;
+  @apply h-1;
+  @apply left-0;
+  @apply transition-all;
+  @apply w-full;
+
+  content: '';
 }
 
 .button--link:hover {
   @apply bg-transparent;
-  @apply border-b-8;
-  @apply border-red-700;
   @apply text-red-700;
+}
+
+.button--link:hover::before {
+  @apply w-0;
 }
 
 .button--svg {

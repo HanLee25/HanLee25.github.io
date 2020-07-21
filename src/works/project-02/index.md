@@ -4,6 +4,7 @@ date: "2019-10-04"
 title: "My second project"
 excerpt: "Portfolio for second project"
 tags: ['ui', 'ux']
+cover: "./tailwind-icon.png"
 ---
 
 # Heading

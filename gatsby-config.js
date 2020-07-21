@@ -83,6 +83,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100,

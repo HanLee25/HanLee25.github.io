@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -23,6 +24,9 @@ export default function Template({
 
       <section className="content-section project">
         <h2 className="hero h2">{frontmatter.title}</h2>
+        <p>{frontmatter.excerpt}</p>
+
+        <Img fixed={frontmatter.cover.childImageSharp.fixed} />
 
         <div
           className="project-content"
@@ -41,6 +45,14 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        excerpt
+        cover {
+          childImageSharp {
+            fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
   }
