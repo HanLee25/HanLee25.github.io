@@ -2,8 +2,8 @@
 slug: "/works/my-second-project"
 date: "2019-10-04"
 title: "My second project"
-tags: ['ui', 'ux']
 excerpt: "Portfolio for second project"
+tags: ['ui', 'ux']
 ---
 
 # Heading

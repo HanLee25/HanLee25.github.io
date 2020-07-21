@@ -7,6 +7,9 @@ var plugins = [{
     },{
       plugin: require('/Users/hanlee/Documents/GitHub/HanLee25.github.io/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('/Users/hanlee/Documents/GitHub/HanLee25.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"UA-171803500-1","head":false},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

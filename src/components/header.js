@@ -17,77 +17,77 @@ function Header() {
   `);
 
   return (
-		<header className="header">
-			<div className="header__wrapper">
-				<Link to="/" title="{site.siteMetadata.title} : Home">
-					<h1 className="header__brand">
-						<BrandFace
-							className="header__face"
-							aria-labelledby="hanFaceTitleID hanFaceDescID"
-						/>
+    <header className="header">
+      <div className="header__wrapper">
+        <Link
+          to="/"
+          title="{site.siteMetadata.title} : Home"
+          className="header__home"
+        >
+          <h1 className="header__brand">
+            <BrandFace
+              className="header__face"
+              aria-labelledby="hanFaceTitleID hanFaceDescID"
+            />
 
-						<span className="header__title">
-							{site.siteMetadata.title}
-						</span>
-					</h1>
-				</Link>
+            <span className="header__title">{site.siteMetadata.title}</span>
+          </h1>
+        </Link>
 
-				<button
-					className="button button--svg md:hidden"
-					onClick={() => toggleExpansion(!isExpanded)}
-				>
-					<IconBurger
-						className={`icon icon--burger${
-							isExpanded ? ` icon--burger-close` : ``
-						}`}
-						aria-labelledby="burgerIconTitleID burgerIconDescID"
-					/>
-				</button>
+        <button
+          className="button button--svg md:hidden"
+          onClick={() => toggleExpansion(!isExpanded)}
+        >
+          <IconBurger
+            className={`icon icon--burger${
+              isExpanded ? ` icon--burger-close` : ``
+            }`}
+            aria-labelledby="burgerIconTitleID burgerIconDescID"
+          />
+        </button>
 
-				<nav
-					className={`header__nav${
-						isExpanded ? ` header__nav--opened` : ``
-					}`}
-				>
-					<ul className="main-nav divide-y divide-gray-300 md:divide-y-0">
-						{[
-							{
-								route: `/about`,
-								title: `About`,
-							},
-							{
-								route: `/works`,
-								title: `Works`,
-							},
-							{
-								route: `/contact`,
-								title: `Contact`,
-							},
-						].map((link) => (
-							<li key={link.title}>
-								<Link
-									className="main-nav__item"
-									to={link.route}
-									activeClassName="main-nav__item--active"
-									partiallyActive={true}
-								>
-									{link.title}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</nav>
-			</div>
+        <nav
+          className={`header__nav${isExpanded ? ` header__nav--opened` : ``}`}
+        >
+          <ul className="main-nav divide-y divide-gray-300 md:divide-y-0">
+            {[
+              {
+                route: `/about`,
+                title: `About`,
+              },
+              {
+                route: `/works`,
+                title: `Works`,
+              },
+              {
+                route: `/contact`,
+                title: `Contact`,
+              },
+            ].map((link) => (
+              <li key={link.title}>
+                <Link
+                  className="main-nav__item"
+                  to={link.route}
+                  activeClassName="main-nav__item--active"
+                  partiallyActive={true}
+                >
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
 
-			<div
-				className={`${
-					isExpanded ? `header__back-drop--opened` : ` `
-				} header__back-drop`}
-				onClick={() => toggleExpansion(!isExpanded)}
-			>
-				<span className="sr-only">Close navigation</span>
-			</div>
-		</header>
+      <div
+        className={`${
+          isExpanded ? `header__back-drop--opened` : ` `
+        } header__back-drop`}
+        onClick={() => toggleExpansion(!isExpanded)}
+      >
+        <span className="sr-only">Close navigation</span>
+      </div>
+    </header>
   );
 }
 

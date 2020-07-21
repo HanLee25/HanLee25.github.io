@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><title id="burgerIconTitleID">Hamburger Menu</title><desc id="burgerIconDescID">Menu icon by Han Lee</desc><path d="M94.82,60.42H5.18A5.17,5.17,0,0,1,0,55.25H0a5.18,5.18,0,0,1,5.18-5.18H94.82A5.18,5.18,0,0,1,100,55.25h0A5.17,5.17,0,0,1,94.82,60.42Z" class="icon__part icon__part--patty" fill="#873700"/><path d="M94.82,76.34H5.18A5.18,5.18,0,0,1,0,71.16H0A5.18,5.18,0,0,1,5.18,66H94.82A5.18,5.18,0,0,1,100,71.16h0A5.18,5.18,0,0,1,94.82,76.34Z" class="icon__part icon__part--green" fill="#346315"/><path d="M94.82,44.51H5.18A5.18,5.18,0,0,1,0,39.33H0a5.18,5.18,0,0,1,5.18-5.17H94.82A5.18,5.18,0,0,1,100,39.33h0A5.18,5.18,0,0,1,94.82,44.51Z" class="icon__part icon__part--red" fill="#d64c16"/><path d="M92.22,29.08H7.78a4.37,4.37,0,0,1-4.37-4.37h0c0-13.34,10.81-23.16,24.16-23.16H72.43c13.35,0,24.16,9.82,24.16,23.16h0A4.37,4.37,0,0,1,92.22,29.08Z" class="icon__part" fill="#f4a845"/><path d="M92.22,98.45H7.78a4.37,4.37,0,0,1-4.37-4.37V86.65a4.36,4.36,0,0,1,4.37-4.37H92.22a4.36,4.36,0,0,1,4.37,4.37v7.43A4.37,4.37,0,0,1,92.22,98.45Z" class="icon__part" fill="#f4a845"/><circle cx="29.73" cy="10.24" r="3.19" class="icon__part" fill="#f7d0b0"/><circle cx="19.59" cy="19.6" r="3.19" class="icon__part" fill="#f7d0b0"/><circle cx="39.87" cy="19.6" r="3.19" class="icon__part" fill="#f7d0b0"/><path d="M96.59,24.71c0-13.34-10.81-23.16-24.16-23.16H50V29.08H92.22A4.37,4.37,0,0,0,96.59,24.71Z" class="icon__part" fill="#e0942f"/><path d="M92.22,98.45a4.37,4.37,0,0,0,4.37-4.37V86.65a4.36,4.36,0,0,0-4.37-4.37H50V98.45Z" class="icon__part" fill="#e0942f"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title id="burgerIconTitleID">Hamburger Menu</title>
+  <desc id="burgerIconDescID">Menu icon by Han Lee</desc>
+  <path d="M94.82,60.42H5.18A5.17,5.17,0,0,1,0,55.25H0a5.18,5.18,0,0,1,5.18-5.18H94.82A5.18,5.18,0,0,1,100,55.25h0A5.17,5.17,0,0,1,94.82,60.42Z" class="icon__part icon__part--patty" fill="#873700"/>
+  <path d="M94.82,76.34H5.18A5.18,5.18,0,0,1,0,71.16H0A5.18,5.18,0,0,1,5.18,66H94.82A5.18,5.18,0,0,1,100,71.16h0A5.18,5.18,0,0,1,94.82,76.34Z" class="icon__part icon__part--green" fill="#346315"/>
+  <path d="M94.82,44.51H5.18A5.18,5.18,0,0,1,0,39.33H0a5.18,5.18,0,0,1,5.18-5.17H94.82A5.18,5.18,0,0,1,100,39.33h0A5.18,5.18,0,0,1,94.82,44.51Z" class="icon__part icon__part--red" fill="#d64c16"/>
+  <g class="icon__part icon__part--top">
+    <path d="M92.22,29.08H7.78a4.37,4.37,0,0,1-4.37-4.37h0c0-13.34,10.81-23.16,24.16-23.16H72.43c13.35,0,24.16,9.82,24.16,23.16h0A4.37,4.37,0,0,1,92.22,29.08Z" class="icon__part" fill="#f4a845"/>
+    <circle cx="29.73" cy="10.24" r="3.19" class="icon__part" fill="#f7d0b0"/>
+    <circle cx="19.59" cy="19.6" r="3.19" class="icon__part" fill="#f7d0b0"/>
+    <circle cx="39.87" cy="19.6" r="3.19" class="icon__part" fill="#f7d0b0"/>
+    <path d="M96.59,24.71c0-13.34-10.81-23.16-24.16-23.16H50V29.08H92.22A4.37,4.37,0,0,0,96.59,24.71Z" class="icon__part" fill="#e0942f"/>
+  </g>
+  <g class="icon__part icon__part--bottom">
+    <path d="M92.22,98.45H7.78a4.37,4.37,0,0,1-4.37-4.37V86.65a4.36,4.36,0,0,1,4.37-4.37H92.22a4.36,4.36,0,0,1,4.37,4.37v7.43A4.37,4.37,0,0,1,92.22,98.45Z" class="icon__part" fill="#f4a845"/>
+    <path d="M92.22,98.45a4.37,4.37,0,0,0,4.37-4.37V86.65a4.36,4.36,0,0,0-4.37-4.37H50V98.45Z" class="icon__part" fill="#e0942f"/>
+  </g>
+</svg>

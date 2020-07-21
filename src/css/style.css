@@ -3,7 +3,7 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
-@tailwind screen;
+/* @tailwind screen; */
 
 
 /*=================================================================
@@ -21,6 +21,7 @@
 /**************************** Elements ****************************/
 
 body {
+  @apply bg-gray-100;
   @apply font-sans;
   @apply text-base;
 }
@@ -28,6 +29,14 @@ body {
 p {
   @apply leading-relaxed;
   @apply mb-4;
+}
+
+a {
+  @apply underline;
+}
+
+a:hover {
+  @apply no-underline;
 }
 
 .h1,
@@ -88,12 +97,13 @@ p {
 .header {
   @apply border-b;
   @apply border-gray-300;
-  @apply bg-white;
+  @apply bg-gray-100;
   @apply bg-opacity-75;
   @apply fixed;
   @apply text-gray-900;
   @apply top-0;
   @apply w-full;
+  @apply z-30;
 
   backdrop-filter: blur(10px);
 }
@@ -108,10 +118,13 @@ p {
   @apply mx-auto;
 }
 
+.header__home {
+  @apply no-underline;
+}
+
 .header__brand {
   @apply flex;
   @apply items-center;
-  @apply no-underline;
 }
 
 .header__face {
@@ -170,7 +183,7 @@ p {
 /**************************** Footer ****************************/
 
 .footer {
-  @apply bg-white;
+  @apply bg-gray-100;
   @apply bg-opacity-50;
 
   backdrop-filter: blur(10px);
@@ -278,6 +291,10 @@ p {
   @apply text-red-600;
 }
 
+.button--svg:focus {
+  @apply outline-none;
+}
+
 
 /**************************** Face ****************************/
 
@@ -348,6 +365,8 @@ p {
 
 .icon--burger .icon__part {
   @apply duration-300;
+  @apply origin-center;
+  @apply transform;
   @apply transition-all;
 }
 
@@ -356,17 +375,21 @@ p {
 }
 
 .icon--burger-close .icon__part--green {
-  @apply origin-center;
-  @apply transform;
   @apply -translate-y-4;
   @apply rotate-15;
 }
 
 .icon--burger-close .icon__part--red {
-  @apply origin-center;
-  @apply transform;
   @apply translate-y-4;
   @apply -rotate-15;
+}
+
+.icon--burger-close .icon__part--top {
+  @apply -translate-y-1;
+}
+
+.icon--burger-close .icon__part--bottom {
+  @apply translate-y-1;
 }
 
 
@@ -381,6 +404,7 @@ p {
 .main-nav__item {
   @apply block;
   @apply my-2;
+  @apply no-underline;
 }
 
 .main-nav > li:last-child .main-nav__item {
@@ -470,7 +494,7 @@ p {
 
 .typing__string:after {
   @apply absolute;
-  @apply bg-white;
+  @apply bg-gray-100;
   @apply border-l-2;
   @apply border-gray-600;
   @apply left-0;
@@ -582,6 +606,7 @@ p {
     @apply bottom-0;
     @apply inset-x-0;
     @apply fixed;
+    @apply z-40;
   }
 
   .footer__credit {

@@ -11,6 +11,9 @@ module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-anchor-links/gatsby-browser.js'),
       options: {"plugins":[],"offset":-100},
     },{
+      plugin: require('../node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
+      options: {"plugins":[],"trackingId":"UA-171803500-1","head":false},
+    },{
       plugin: require('../gatsby-browser.js'),
       options: {"plugins":[]},
     }]
