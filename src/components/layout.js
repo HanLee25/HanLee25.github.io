@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 
 import Header from "./header";
 
@@ -14,134 +15,132 @@ import IconGraphql from "../images/svg-plugin/icon-graphql.svg";
 import IconNpm from "../images/svg-plugin/icon-npm.svg";
 
 function Layout({ children }) {
+  let app = useRef(null);
+  let main = useRef(null);
+
+    useEffect(() => {
+      gsap.to(app, { duration: 0, css: { visibility: "visible" }})
+      
+      gsap.to(main, { duration: 0.5, css: { opacity: 1 } })
+    })
   return (
-		<div className="page">
-			<Header />
+    <div className="page" ref={(el) => (app = el)}>
+      <Header />
 
-			<main className="main">{children}</main>
+      <main className="main" ref={(el) => (main = el)}>
+        {children}
+      </main>
 
-			<footer className="footer">
-				<div className="footer__wrapper">
-					<nav className="footer__credit">
-						<p className="footer__links space-x-3">
-							<span>Find me at{` `}</span>
+      <footer className="footer">
+        <div className="footer__wrapper">
+          <nav className="footer__credit">
+            <p className="footer__links space-x-3">
+              <span>Find me at{` `}</span>
 
-							<a
-								className="button button--svg"
-								href="https://www.linkedin.com/in/han-lee-07bb3688/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconLinkedin
-									className="icon icon--sm"
-									aria-label="Linkedin Profile"
-								/>
-							</a>
+              <a
+                className="button button--svg"
+                href="https://www.linkedin.com/in/han-lee-07bb3688/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconLinkedin
+                  className="icon icon--sm"
+                  aria-label="Linkedin Profile"
+                />
+              </a>
 
-							<a
-								className="button button--svg"
-								href="https://dribbble.com/eyian25"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconDribbble
-									className="icon icon--sm"
-									aria-label="Dribbble Profile"
-								/>
-							</a>
+              <a
+                className="button button--svg"
+                href="https://dribbble.com/eyian25"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconDribbble
+                  className="icon icon--sm"
+                  aria-label="Dribbble Profile"
+                />
+              </a>
 
-							<a
-								className="button button--svg"
-								href="https://github.com/HanLee25/practicalJavaScript"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconGithub
-									className="icon icon--sm"
-									aria-label="GitHub Profile"
-								/>
-							</a>
-						</p>
+              <a
+                className="button button--svg"
+                href="https://github.com/HanLee25/practicalJavaScript"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconGithub
+                  className="icon icon--sm"
+                  aria-label="GitHub Profile"
+                />
+              </a>
+            </p>
 
-						<p className="footer__links footer__links--build space-x-3">
-							<span>Built with{` `}</span>
+            <p className="footer__links footer__links--build space-x-3">
+              <span>Built with{` `}</span>
 
-							<a
-								className="button button--svg"
-								href="https://pages.github.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconGithub2
-									className="icon icon--sm"
-									aria-label="GitHub Pages"
-								/>
-							</a>
+              <a
+                className="button button--svg"
+                href="https://pages.github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconGithub2
+                  className="icon icon--sm"
+                  aria-label="GitHub Pages"
+                />
+              </a>
 
-							<a
-								className="button button--svg"
-								href="https://www.gatsbyjs.org/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconGatsby
-									className="icon icon--sm"
-									aria-label="Gatsby"
-								/>
-							</a>
+              <a
+                className="button button--svg"
+                href="https://www.gatsbyjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconGatsby className="icon icon--sm" aria-label="Gatsby" />
+              </a>
 
-							<a
-								className="button button--svg"
-								href="https://reactjs.org/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconReact
-									className="icon icon--sm"
-									aria-label="React"
-								/>
-							</a>
+              <a
+                className="button button--svg"
+                href="https://reactjs.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconReact className="icon icon--sm" aria-label="React" />
+              </a>
 
-							<a
-								className="button button--svg"
-								href="https://graphql.org/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconGraphql
-									className="icon icon--sm"
-									aria-label="GraphQL"
-								/>
-							</a>
+              <a
+                className="button button--svg"
+                href="https://graphql.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconGraphql className="icon icon--sm" aria-label="GraphQL" />
+              </a>
 
-							<a
-								className="button button--svg"
-								href="https://tailwindcss.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconTailwind
-									className="icon icon--sm"
-									aria-label="Tailwind CSS"
-								/>
-							</a>
+              <a
+                className="button button--svg"
+                href="https://tailwindcss.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconTailwind
+                  className="icon icon--sm"
+                  aria-label="Tailwind CSS"
+                />
+              </a>
 
-							<a
-								className="button button--svg"
-								href="https://www.npmjs.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IconNpm
-									className="icon icon--sm"
-									aria-label="npm"
-								/>
-							</a>
-						</p>
-					</nav>
-				</div>
-			</footer>
-		</div>
+              <a
+                className="button button--svg"
+                href="https://www.npmjs.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconNpm className="icon icon--sm" aria-label="npm" />
+              </a>
+            </p>
+          </nav>
+        </div>
+      </footer>
+    </div>
   );
 }
 

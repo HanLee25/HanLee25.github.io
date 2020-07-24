@@ -5,7 +5,7 @@ title: "Car listing redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Revisit information architecture of car search result page of CheapOair native iOS application to improve car rental journey"
-tags: ['ui', 'ux', 'front-end']
+tags: ['ui design', 'ux research', 'wireframe', 'prototype', 'interaction', 'ios HIG']
 cover: "./project-cover.png"
 ---
 

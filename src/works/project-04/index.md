@@ -5,7 +5,7 @@ title: "Interactive reinforce MVP"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "MVP project to implement flight listing reinforce interaction in CheapOair PWA mobile experience to improve listing page engagement"
-tags: ['ui', 'ux', 'front-end']
+tags: ['ui design', 'ux research', 'front-end', 'RWD', 'PWA', 'interaction']
 cover: "./project-cover.png"
 ---
 

@@ -5,7 +5,7 @@ title: "Checkout path redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Break down and redesign the checkout process of CheapOair iOS native application to reduce the 'abandon cart' scenario"
-tags: ['ui', 'ux']
+tags: ['ui design', 'ux research', 'wireframe', 'prototype', 'interaction', 'ios HIG']
 cover: "./project-cover.png"
 ---
 

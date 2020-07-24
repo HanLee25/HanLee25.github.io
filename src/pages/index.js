@@ -1,11 +1,47 @@
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import { Link } from "gatsby";
-import React from "react";
 import { Helmet } from "react-helmet";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 function IndexPage() {
+  let hero = useRef(null);
+  let designer = useRef(null);
+
+    useEffect(() => {
+      const headlineHi = hero.children[0].children[0];
+      const headlineHand = headlineHi.nextSibling;
+      const headlineIam = hero.lastElementChild.children[0];
+
+      const designerBox = designer.firstElementChild;
+
+      gsap.to(hero, { duration: 0, css: { visibility: "visible" } });
+
+      gsap.from([headlineHi, headlineHand], {
+          duration: 0.8,
+          y: 120,
+          ease: "power3.easeOut",
+          stagger: 0.7,
+          delay: 0.25,
+        }
+      );
+
+      gsap.from(headlineIam, {
+        duration: 1,
+        y: 240,
+        ease: "power3.easeOut",
+        delay: 0.5,
+      });
+
+      gsap.from(designerBox, {
+        duration: 1,
+        y: -120,
+        ease: "power3.easeOut",
+        delay: 1.5,
+      });
+    })
   return (
     <Layout>
       <SEO
@@ -21,55 +57,56 @@ function IndexPage() {
       />
 
       <section className="content-section justify-between">
-        <h2 className="hero h1">
-          Hey there!
-          <span role="img" aria-label="emoji: Hi">
-            👋
+        <h2 className="hero h1" ref={(el) => (hero = el)}>
+          <span className="hero__paragraph">
+            <span className="hero__block">Hey there!</span>
+            <span className="hero__block" role="img" aria-label="emoji: Hi">
+              {" "}
+              👋
+            </span>
           </span>
 
           <br />
-          <br />I am a{" "}
-          <strong className="hero__strong">
-            product designer
-          </strong>{" "}
-          who loves to tell a{" "}
-          <Link
-            to="https://en.wikipedia.org/wiki/Visual_narrative"
-            target="_blank"
-            rel="noreferrer"
-            className="button button--link"
-          >
-            story visually
-          </Link>
-          .
+
+          <span className="hero__paragraph">
+            <span className="hero__block">
+              I am a{" "}
+              <strong className="hero__strong" ref={(el) => (designer = el)}>
+                <span className="hero__box"></span>
+                <span className="hero__designer">product designer</span>
+              </strong>{" "}
+              who loves to tell a{" "}
+              <a
+                href="https://en.wikipedia.org/wiki/Visual_narrative"
+                target="_blank"
+                rel="noreferrer"
+                className="button button--link"
+              >
+                story visually
+              </a>
+              .
+            </span>
+          </span>
         </h2>
 
         <div className="hero__value">
           <p>
             I am also{" "}
             <span className="typing">
-              <span class="typing__item">
-                <span class="typing__string">
-                  an UI + UX designer.
-                </span>
+              <span className="typing__item">
+                <span className="typing__string">an UI + UX designer.</span>
               </span>
-              <span class="typing__item">
-                <span class="typing__string">
-                  an illustrator.
-                </span>
+              <span className="typing__item">
+                <span className="typing__string">an illustrator.</span>
               </span>
-              <span class="typing__item">
-                <span class="typing__string">
-                  a product stategist.
-                </span>
+              <span className="typing__item">
+                <span className="typing__string">a product stategist.</span>
               </span>
-              <span class="typing__item">
-                <span class="typing__string">
-                  a front-end developer.
-                </span>
+              <span className="typing__item">
+                <span className="typing__string">a front-end developer.</span>
               </span>
             </span>
-            <br/>
+            <br />
             We should work together.
             <br />
             <span className="hero__why">
@@ -77,13 +114,9 @@ function IndexPage() {
               <span role="img" aria-label="emoji: light bulb">
                 💡
               </span>
-              <span className="tracking-tighter underline">
-                life
-              </span>{" "}
-              <b className="inline-block transform translate-y-1">
-                is
-              </b>{" "}
-              t<span className="font-serif uppercase">o</span>o{" "}
+              <span className="tracking-tighter underline">life</span>{" "}
+              <b className="inline-block transform translate-y-1">is</b> t
+              <span className="font-serif uppercase">o</span>o{" "}
               <span className="uppercase">v</span>alu
               <span className="inline-block italic transform scale-125">
                 able
@@ -122,7 +155,7 @@ function IndexPage() {
         </div>
 
         <Helmet>
-          <script>console.log('Test')</script>
+          <script>console.log('Hey, this is a "Hi" from the Helmet!')</script>
         </Helmet>
       </section>
     </Layout>

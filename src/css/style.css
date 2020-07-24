@@ -194,6 +194,7 @@ dl {
   @apply flex-col;
   @apply flex-1;
   @apply w-full;
+  @apply opacity-0;
   @apply px-6;
   @apply py-4;
   @apply mx-auto;
@@ -476,13 +477,43 @@ dl {
 
 .hero {
   @apply inline-block;
+  @apply normal-case;
+}
+
+.hero__paragraph {
+  @apply block;
+  @apply overflow-hidden;
+}
+
+.hero__block {
+  @apply inline-block;
+  @apply overflow-hidden;
 }
 
 .hero__strong {
-  @apply bg-red-600;
+  @apply bg-gray-100;
+  @apply inline-block;
   @apply px-2;
   @apply py-1;
+  @apply relative;
+}
+
+.hero__designer {
+  @apply relative;
   @apply text-white;
+
+  mix-blend-mode: difference;
+}
+
+.hero__box {
+  @apply absolute;
+  @apply bg-black;
+  @apply h-full;
+  @apply inset-0;
+  @apply w-full;
+  @apply z-0;
+
+  content: '';
 }
 
 .hero__value {
@@ -637,13 +668,14 @@ dl {
 
 .tag-list {
   @apply flex;
+  @apply flex-wrap;
 }
 
 .tag {
   @apply bg-gray-300;
   @apply font-normal;
   @apply no-underline;
-  @apply px-3;
+  @apply px-2;
   @apply py-1;
   @apply text-xs;
   @apply text-gray-600;
@@ -651,7 +683,8 @@ dl {
   @apply rounded-full;
 }
 
-.tag:hover {
+.tag:hover,
+.tag--active {
   @apply bg-red-600;
   @apply text-white;
 }
@@ -930,7 +963,6 @@ dl {
 
   .main-nav {
     @apply mt-8;
-    @apply text-3xl;
   }
 
   .anchor-nav {
