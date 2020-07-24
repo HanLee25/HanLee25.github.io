@@ -23,10 +23,10 @@ export default function Template({
       />
 
       <section className="content-section project">
-        <h2 className="hero h2">{frontmatter.title}</h2>
+        <h2 className="h2">{frontmatter.title}</h2>
         <p>{frontmatter.excerpt}</p>
 
-        <Img fixed={frontmatter.cover.childImageSharp.fixed} />
+        <Img fluid={frontmatter.cover.childImageSharp.fluid} />
 
         <div
           className="project-content"
@@ -42,14 +42,14 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMM, YYYY")
         slug
         title
         excerpt
         cover {
           childImageSharp {
-            fixed(width: 200, height: 200) {
-              ...GatsbyImageSharpFixed
+            fluid {
+              ...GatsbyImageSharpFluid
             }
           }
         }

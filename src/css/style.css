@@ -18,12 +18,13 @@
 
  =================================================================*/
 
-/**************************** Elements ****************************/
+/* Elements *******************************************************/
 
 body {
   @apply bg-gray-100;
   @apply font-sans;
   @apply text-base;
+  @apply text-gray-800;
 }
 
 p {
@@ -43,26 +44,35 @@ a:hover {
 .h1,
 .h2,
 .h3,
-.h4 {
+.h4,
+.h5,
+.h6 {
+  @apply capitalize;
   @apply leading-relaxed;
   @apply mb-4;
   @apply font-bold;
+  @apply text-black;
   @apply tracking-wide;
 }
 
 .h1 {
-  @apply text-3xl;
+  @apply text-4xl;
 }
 
 .h2 {
-  @apply text-2xl;
+  @apply text-3xl;
 }
 
 .h3 {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 .h4 {
+  @apply text-xl;
+}
+
+.h5,
+.h6 {
   @apply text-lg;
 }
 
@@ -75,7 +85,7 @@ dl {
 }
 
 
-/**************************** Layout ****************************/
+/* Layout *******************************************************/
 
 .page {
   @apply flex;
@@ -87,9 +97,10 @@ dl {
 
 .content-column {
   @apply grid;
+  @apply grid-cols-1;
   @apply gap-4;
 
-  grid-template-rows: min-content 1fr;
+  /* grid-template-rows: min-content 1fr; */
 }
 
 .content-section {
@@ -101,7 +112,7 @@ dl {
 }
 
 
-/**************************** Header ****************************/
+/* Header *******************************************************/
 
 .header {
   @apply border-b;
@@ -176,7 +187,7 @@ dl {
 }
 
 
-/**************************** Main ****************************/
+/* Main *******************************************************/
 
 .main {
   @apply flex;
@@ -189,7 +200,7 @@ dl {
 }
 
 
-/**************************** Footer ****************************/
+/* Footer *******************************************************/
 
 .footer {
   @apply bg-gray-100;
@@ -216,7 +227,7 @@ dl {
 .footer__links {
   @apply flex;
   @apply mb-0;
-  @apply text-gray-500;
+  @apply text-gray-600;
 }
 
 .footer__links--build {
@@ -239,7 +250,7 @@ dl {
  =================================================================*/
 
 
-/**************************** Buttons ****************************/
+/* Buttons *******************************************************/
 
 .button {
   @apply bg-gray-900;
@@ -325,15 +336,11 @@ dl {
 }
 
 
-/**************************** Face ****************************/
+/* Face *******************************************************/
 
 .face__element {
   @apply duration-300;
   @apply transition-all;
-}
-
-.face:hover .face__element {
-  @apply fill-current;
 }
 
 .face__skin {
@@ -370,8 +377,16 @@ dl {
   fill: #ffffff;
 }
 
+.face:hover .face__element {
+  @apply fill-current;
+}
 
-/**************************** Icons ****************************/
+.face:hover .face__glass-frame {
+  fill: #ffffff;
+}
+
+
+/* Icons *******************************************************/
 
 .icon {
   @apply h-6;
@@ -422,7 +437,7 @@ dl {
 }
 
 
-/**************************** Main nav ****************************/
+/* Main nav *******************************************************/
 
 .main-nav {
   @apply font-bold;
@@ -445,11 +460,11 @@ dl {
 }
 
 
-/**************************** Anchor nav ****************************/
+/* Anchor nav *******************************************************/
 
 .anchor-nav {
   @apply flex;
-  @apply text-gray-500;
+  @apply text-gray-600;
   @apply text-sm;
 }
 
@@ -457,7 +472,7 @@ dl {
   @apply mr-4;
 }
 
-/**************************** hero ****************************/
+/* hero *******************************************************/
 
 .hero {
   @apply inline-block;
@@ -498,7 +513,7 @@ dl {
 }
 
 
-/**************************** Typing ****************************/
+/* Typing *******************************************************/
 
 .typing {
   @apply inline-block;
@@ -556,6 +571,177 @@ dl {
   }
 }
 
+
+/*=================================================================
+
+ Contents
+
+ [1] Project list
+ [2] Tag list
+ [3] Timeline
+ [4] Quote
+
+ =================================================================*/
+
+/* Project list *******************************************************/
+
+.project-list {
+  @apply gap-8;
+  @apply grid;
+  @apply grid-cols-1;
+}
+
+.project-list__item,
+.project-list__detail {
+  @apply gap-3;
+  @apply grid;
+  @apply grid-cols-1;
+}
+
+.project-list__item + .project-list__item {
+  @apply border-t;
+  @apply border-gray-300;
+  @apply pt-10;
+}
+
+.project-list__header {
+  @apply flex;
+  @apply flex-col;
+  @apply justify-start;
+  @apply leading-none;
+}
+
+.project-list__title {
+  @apply capitalize;
+  @apply inline-block;
+  @apply mb-0;
+  @apply truncate;
+  @apply w-full;
+}
+
+.project-list__meta {
+  @apply text-gray-600;
+}
+
+.project-list__thumbnail {
+  @apply object-cover;
+}
+
+.project-list__description {
+  @apply max-w-full;
+  @apply mb-0;
+}
+
+
+/* Tag list *******************************************************/
+
+.tag-list {
+  @apply flex;
+}
+
+.tag {
+  @apply bg-gray-300;
+  @apply font-normal;
+  @apply no-underline;
+  @apply px-3;
+  @apply py-1;
+  @apply text-xs;
+  @apply text-gray-600;
+  @apply uppercase;
+  @apply rounded-full;
+}
+
+.tag:hover {
+  @apply bg-red-600;
+  @apply text-white;
+}
+
+
+/* Tineline *******************************************************/
+
+.timeline {
+  @apply my-4;
+  @apply ml-1;
+  @apply relative;
+}
+
+.timeline::before {
+  @apply absolute;
+  @apply block;
+  @apply border-l-4;
+  @apply border-red-700;
+  @apply h-full;
+  @apply left-0;
+  @apply top-0;
+  
+  content: '';
+  margin-left: calc( theme('borderWidth.4') / -2);
+}
+
+.timeline__event {
+  @apply mt-8;
+  @apply pl-8;
+  @apply relative;
+}
+
+.timeline__event::before,
+.timeline__event::after {
+  @apply absolute;
+  @apply block;
+}
+
+.timeline__event::before {
+  @apply bg-gray-100;
+  @apply border-4;
+  @apply border-red-700;
+  @apply h-4;
+  @apply -ml-2;
+  @apply left-0;
+  @apply rounded-full;
+  @apply w-4;
+
+  content: '';
+  top: 0.4rem;
+}
+
+.timeline__event::after {
+  @apply text-xs;
+  @apply text-gray-600;
+
+  content: attr(data-date);
+  left: theme('spacing.8');
+  top: theme('spacing.8');
+  width: calc(100% - theme('spacing.8'));
+}
+
+.timeline__meta {
+  @apply text-gray-600;
+}
+
+.timeline__detail {
+  @apply my-3;
+}
+
+
+/* Quote *******************************************************/
+
+.quote {
+  @apply border-l-4;
+  @apply border-red-700;
+  @apply font-serif;
+  @apply leading-loose;
+  @apply pl-4;
+  @apply text-justify;
+}
+
+.quote-by {
+  @apply block;
+  @apply font-bold;
+  @apply my-4;
+  @apply uppercase;
+  @apply text-xs;
+}
+
 /*=================================================================
 
  Media query
@@ -565,7 +751,7 @@ dl {
 
  =================================================================*/
 
-/**************************** Medium screen ****************************/
+/* Medium screen *******************************************************/
 
 @screen md {
   .page {
@@ -643,41 +829,38 @@ dl {
   }
 
   .footer__links--build {
-    @apply block;
+    @apply inline-flex;
+  }
+
+  .project-list {
+    @apply gap-12;
+  }
+
+  .project-list__item {
+    @apply gap-12;
+
+    grid-template-columns: 40% 60%;
+  }
+
+  .project-list__item + .project-list__item {
+    @apply pt-12;
+  }
+
+  .project-list__header {
+    @apply flex-col-reverse;
   }
 }
 
 
-/**************************** Large screen ****************************/
+/* Large screen *******************************************************/
 
 @screen lg {
-
-  .content-column {
-    @apply grid-rows-none;
-
-    grid-template-columns: 1fr min-content;
-  }
-
-  .content-column__side-bar {
-    @apply col-start-2;
-    @apply pt-8;
-    @apply row-start-1;
-  }
-
-  .content-column__main {
-    @apply col-start-1;
-    @apply row-start-1;
-  }
-
-  .content-section {
-    @apply py-8;
-    @apply pl-16;
-  }
-
   .h1,
   .h2,
   .h3,
-  .h4 {
+  .h4,
+  .h5,
+  .h6 {
     @apply leading-normal;
   }
 
@@ -695,6 +878,37 @@ dl {
 
   .h4 {
     @apply text-3xl;
+  }
+
+  .h5 {
+    @apply text-2xl;
+  }
+
+  .h6 {
+    @apply text-xl;
+  }
+
+  .content-column {
+    @apply gap-8;
+    @apply grid-rows-none;
+
+    grid-template-columns: 1fr minmax(max-content, 15%);
+  }
+
+  .content-column__side-bar {
+    @apply col-start-2;
+    @apply pt-8;
+    @apply row-start-1;
+  }
+
+  .content-column__main {
+    @apply col-start-1;
+    @apply row-start-1;
+  }
+
+  .content-section {
+    @apply py-8;
+    @apply pl-16;
   }
 
   .header {
@@ -729,5 +943,26 @@ dl {
 
   .footer__credit {
     @apply px-0;
+  }
+
+  .timeline {
+    @apply ml-40;
+  }
+
+  .timeline__event::before {
+    top: 0.55rem;
+  }
+
+  .timeline__event::after {
+    @apply left-auto;
+    @apply text-right;
+    @apply w-40;
+
+    top: 0.48rem;
+    right: calc(100% + theme('spacing.6'));
+  }
+
+  .timeline__title {
+    @apply mb-0;
   }
 }

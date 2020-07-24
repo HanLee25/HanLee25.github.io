@@ -1,10 +1,10 @@
 ---
-slug: "/works/1st-project"
-date: "2018-05-04"
-title: "Flight search redesign"
+slug: "/works/3rd-project"
+date: "2019-05-04"
+title: "Car listing redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
-excerpt: "Redesign the flight search feature and other home page componets for CheapOair iOS native app to improve funnel"
+excerpt: "Revisit information architecture of car search result page of CheapOair native iOS application to improve car rental journey"
 tags: ['ui', 'ux', 'front-end']
 cover: "./project-cover.png"
 ---

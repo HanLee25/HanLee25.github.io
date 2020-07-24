@@ -33,14 +33,14 @@ function IndexPage() {
             product designer
           </strong>{" "}
           who loves to tell a{" "}
-          <a
-            href="https://en.wikipedia.org/wiki/Visual_narrative"
+          <Link
+            to="https://en.wikipedia.org/wiki/Visual_narrative"
             target="_blank"
             rel="noreferrer"
             className="button button--link"
           >
             story visually
-          </a>
+          </Link>
           .
         </h2>
 

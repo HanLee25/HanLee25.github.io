@@ -1,10 +1,12 @@
 ---
-slug: "/works/my-second-project"
+slug: "/works/2nd-project"
 date: "2019-10-04"
-title: "My second project"
-excerpt: "Portfolio for second project"
+title: "Checkout path redesign"
+team: "Fareportal"
+teamUrl: "http://www.fareportal.com/"
+excerpt: "Break down and redesign the checkout process of CheapOair iOS native application to reduce the 'abandon cart' scenario"
 tags: ['ui', 'ux']
-cover: "./tailwind-icon.png"
+cover: "./project-cover.png"
 ---
 
 # Heading

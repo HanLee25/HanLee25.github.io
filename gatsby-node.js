@@ -1,7 +1,11 @@
+const path = require("path");
+const _ = require("lodash");
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
   const projectTemplate = require.resolve(`./src/templates/projectTemplate.js`);
+  const tagTemplate = path.resolve("src/templates/tagsTemplate.js");
 
   const result = await graphql(`
     {
@@ -13,8 +17,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               slug
+              tags
             }
           }
+        }
+      }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -35,5 +45,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         slug: node.frontmatter.slug,
       },
     });
+  });
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    })
   });
 };

@@ -1,10 +1,10 @@
 ---
-slug: "/works/1st-project"
-date: "2018-05-04"
-title: "Flight search redesign"
+slug: "/works/4th-project"
+date: "2019-05-10"
+title: "Interactive reinforce MVP"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
-excerpt: "Redesign the flight search feature and other home page componets for CheapOair iOS native app to improve funnel"
+excerpt: "MVP project to implement flight listing reinforce interaction in CheapOair PWA mobile experience to improve listing page engagement"
 tags: ['ui', 'ux', 'front-end']
 cover: "./project-cover.png"
 ---
