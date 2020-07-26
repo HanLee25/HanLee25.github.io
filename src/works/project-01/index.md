@@ -5,7 +5,7 @@ title: "Flight search redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Redesign the flight search feature and other home page componets for CheapOair iOS native app to improve funnel"
-tags: ['ui design', 'ux research', 'wireframe', 'user flow', 'prototype', 'interaction', 'ios HIG', 'front-end', 'styled components', 'REACT']
+tags: ['ui design', 'ux research', 'wireframe', 'user flow', 'prototype', 'interaction', 'ios HIG', 'front-end', 'styled components', 'REACT JS']
 cover: "./project-cover.png"
 ---
 

@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
+import { TextPlugin } from "gsap/TextPlugin";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -9,37 +10,55 @@ import SEO from "../components/seo";
 function IndexPage() {
   let hero = useRef(null);
   let designer = useRef(null);
+  let value = useRef(null);
+  let bad = useRef(null);
+  let typing = useRef(null);
+
+  gsap.registerPlugin(TextPlugin);
 
     useEffect(() => {
-      const headlineHi = hero.children[0].children[0];
-      const headlineHand = headlineHi.nextSibling;
-      const headlineIam = hero.lastElementChild.children[0];
-
+      const headlineHi = hero.children[0].firstElementChild;
+      const headlineHand = hero.children[0].lastElementChild;
+      const headlineIam01 = hero.lastElementChild.previousSibling.children[0];
+      const headlineIam02 = hero.lastElementChild.children[0];
       const designerBox = designer.firstElementChild;
+      const whyHire = value.firstElementChild.children[0];
+      const askMe = value.lastElementChild.children[0];
+      const badDesign = bad;
+      const typingText = typing;
 
-      gsap.to(hero, { duration: 0, css: { visibility: "visible" } });
-
-      gsap.from([headlineHi, headlineHand], {
-          duration: 0.8,
-          y: 120,
-          ease: "power3.easeOut",
-          stagger: 0.7,
-          delay: 0.25,
-        }
-      );
-
-      gsap.from(headlineIam, {
-        duration: 1,
-        y: 240,
-        ease: "power3.easeOut",
-        delay: 0.5,
+      gsap.from([headlineHi, headlineHand, headlineIam01, headlineIam02], {
+        duration: 0.8,
+        y: 130,
+        ease: "ease.out",
+        stagger: 0.4,
+        delay: 1,
       });
 
       gsap.from(designerBox, {
         duration: 1,
-        y: -120,
-        ease: "power3.easeOut",
-        delay: 1.5,
+        y: -360,
+        ease: "bounce.out",
+        delay: 3,
+      });
+
+      gsap.from([whyHire, askMe], {
+        duration: 1,
+        y: 180,
+        ease: "ease.out",
+        stagger: 0.4,
+      });
+
+      gsap.to(typingText, {
+        duration: 6,
+        text: {
+          value:
+            "an illustrator, a product designer, and a front-end developer.",
+        },
+        ease: "none",
+        repeat: -1,
+        repeatDelay: 1,
+        delay: 4,
       });
     })
   return (
@@ -59,84 +78,77 @@ function IndexPage() {
       <section className="content-section justify-between">
         <h2 className="hero h1" ref={(el) => (hero = el)}>
           <span className="hero__paragraph">
-            <span className="hero__block">Hey there!</span>
-            <span className="hero__block" role="img" aria-label="emoji: Hi">
-              {" "}
+            <span className="hero__line">Hey there!</span>{" "}
+            <span className="hero__line" role="img" aria-label="emoji: Hi">
               👋
             </span>
           </span>
 
           <br />
+          <br />
 
           <span className="hero__paragraph">
-            <span className="hero__block">
-              I am a{" "}
+            <span className="hero__line">
+              I'm a{" "}
               <strong className="hero__strong" ref={(el) => (designer = el)}>
                 <span className="hero__box"></span>
-                <span className="hero__designer">product designer</span>
+                <span className="hero__designer">
+                  <span className="hero__product">product </span>designer
+                </span>
               </strong>{" "}
-              who loves to tell a{" "}
+              who
+            </span>{" "}
+          </span>
+
+          <span className="hero__paragraph">
+            <span className="hero__line">
+              loves to tell a story{" "}
               <a
                 href="https://en.wikipedia.org/wiki/Visual_narrative"
                 target="_blank"
                 rel="noreferrer"
                 className="button button--link"
               >
-                story visually
+                visually
               </a>
               .
             </span>
           </span>
         </h2>
 
-        <div className="hero__value">
-          <p>
-            I am also{" "}
-            <span className="typing">
-              <span className="typing__item">
-                <span className="typing__string">an UI + UX designer.</span>
+        <div className="hero__value" ref={(el) => (value = el)}>
+          <p className="hero__paragraph">
+            <span className="hero__line">
+              I am also{" "}
+              <span className="typing" ref={(el) => (typing = el)}>
+                an UI + UX designer.
+                <span className="typing__item">
+                  <span className="typing__string">an UI + UX designer.</span>
+                </span>
+                <span className="typing__item">
+                  <span className="typing__string">an illustrator.</span>
+                </span>
+                <span className="typing__item">
+                  <span className="typing__string">a product stategist.</span>
+                </span>
+                <span className="typing__item">
+                  <span className="typing__string">a front-end developer.</span>
+                </span>
               </span>
-              <span className="typing__item">
-                <span className="typing__string">an illustrator.</span>
+              <br />
+              We should work together.
+              <br />
+              <span className="hero__why">
+                Your time is too valuable to be wasted on the{" "}
+                <span className="hero__bad" ref={(el) => (bad = el)}>
+                  bad designs
+                </span>
+                .
               </span>
-              <span className="typing__item">
-                <span className="typing__string">a product stategist.</span>
-              </span>
-              <span className="typing__item">
-                <span className="typing__string">a front-end developer.</span>
-              </span>
-            </span>
-            <br />
-            We should work together.
-            <br />
-            <span className="hero__why">
-              Because A{" "}
-              <span role="img" aria-label="emoji: light bulb">
-                💡
-              </span>
-              <span className="tracking-tighter underline">life</span>{" "}
-              <b className="inline-block transform translate-y-1">is</b> t
-              <span className="font-serif uppercase">o</span>o{" "}
-              <span className="uppercase">v</span>alu
-              <span className="inline-block italic transform scale-125">
-                able
-              </span>
-              <span role="img" aria-label="emoji: toilet paper">
-                🧻
-              </span>{" "}
-              to de
-              <span className="uppercase inline-block transform scale-125">
-                a
-              </span>
-              l with the{" "}
-              <span className="font-sans inline-block transform -rotate-5 skew-x-12 font-bold line-through textShadow-xl">
-                bad <span className="uppercase">d</span>esigns
-              </span>
-              .
             </span>
           </p>
 
-          <div>
+          <div className="overflow-hidden">
             {[
               {
                 route: `/contact`,
