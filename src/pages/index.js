@@ -25,7 +25,7 @@ function IndexPage() {
       const whyHire = value.firstElementChild.children[0];
       const askMe = value.lastElementChild.children[0];
       const badDesign = bad;
-      const typingText = typing;
+      const typingText = typing.children[0].children[1];
 
       gsap.from([headlineHi, headlineHand, headlineIam01, headlineIam02], {
         duration: 0.8,
@@ -53,7 +53,8 @@ function IndexPage() {
         duration: 6,
         text: {
           value:
-            "an illustrator, a product designer, and a front-end developer.",
+            ", an illustrator, a product designer, and a front-end developer",
+          type: "diff",
         },
         ease: "none",
         repeat: -1,
@@ -121,18 +122,9 @@ function IndexPage() {
             <span className="hero__line">
               I am also{" "}
               <span className="typing" ref={(el) => (typing = el)}>
-                an UI + UX designer.
                 <span className="typing__item">
-                  <span className="typing__string">an UI + UX designer.</span>
-                </span>
-                <span className="typing__item">
-                  <span className="typing__string">an illustrator.</span>
-                </span>
-                <span className="typing__item">
-                  <span className="typing__string">a product stategist.</span>
-                </span>
-                <span className="typing__item">
-                  <span className="typing__string">a front-end developer.</span>
+                  <span>an UI + UX designer</span>
+                  <span className="typing__string"></span>.
                 </span>
               </span>
               <br />

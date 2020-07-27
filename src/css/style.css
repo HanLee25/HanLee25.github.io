@@ -563,48 +563,41 @@ dl {
 
 .typing {
   @apply inline-block;
-  @apply overflow-hidden;
-  @apply align-bottom;
-
-  height: 1.625rem;
 }
 
 .typing__item {
   @apply block;
   @apply relative;
 
-  animation: typing-line 24s steps(4) infinite;
+  /* animation: typing-line 24s steps(4) infinite; */
 }
 
 .typing__string {
   @apply inline-block;
+  @apply leading-none;
   @apply relative;
-  line-height: 1;
 }
 
 .typing__string:after {
   @apply absolute;
-  @apply bg-gray-100;
   @apply border-l-2;
-  @apply border-gray-600;
-  @apply left-0;
+  @apply border-gray-900;
+  @apply -mr-1;
   @apply right-0;
-  
-  content: "";
-  top:-1px;
-  bottom:-2px;
-  animation: typing-cursor 3s steps(20) infinite alternate;
+  @apply w-px;
+
+  content: " ";
+  top: -1px;
+  bottom: -2px;
+  animation: typing-cursor 0.3s linear infinite alternate;
 }
 
 @keyframes typing-cursor {
   0% {
-    left: 0;
-    margin-right: auto;
+    opacity: 1;
   }
   100% {
-    left: 100%;
-    margin-left: .6em;
-    margin-right: -.6em;
+    opacity: 0;
   }
 }
 
