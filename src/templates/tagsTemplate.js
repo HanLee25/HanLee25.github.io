@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
+import { kebabCase } from "lodash";
 
 // Components
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image";
-import { kebabCase } from "lodash";
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -51,19 +51,19 @@ const Tags = ({ pageContext, data }) => {
                     </h3>
 
                     <small className="project-list__meta">
-                      <time datetime="{frontmatter.date}">
+                      <time dateTime="{frontmatter.date}">
                         {frontmatter.date}
                       </time>
-                      {" "}
+                      {` `}
                       at
-                      {" "}
-                      <Link
-                        to={frontmatter.teamUrl}
+                      {` `}
+                      <a
+                        href={frontmatter.teamUrl}
                         target="_blank"
                         rel="noreferrer"
                       >
                         {frontmatter.team}
-                      </Link>
+                      </a>
                     </small>
                   </header>
 

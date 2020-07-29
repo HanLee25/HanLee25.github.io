@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import React, { useRef, useEffect } from "react";
+import PropTypes from "prop-types";
 import { gsap } from "gsap";
 
 import Header from "./header";
@@ -13,14 +13,42 @@ import IconNpm from "../images/svg-plugin/icon-npm.svg";
 import IconGsap from "../images/svg-plugin/icon-gsap.svg";
 
 function Layout({ children }) {
+  gsap.config({
+    nullTargetWarn: false,
+  });
+
   let app = useRef(null);
   let main = useRef(null);
 
-    useEffect(() => {
-      gsap.to(app, { duration: 0, css: { visibility: "visible" }})
-      
-      gsap.to(main, { duration: 0.5, css: { opacity: 1 }, delay: 0.25})
-    })
+  useEffect(() => {
+    gsap.to(app, { duration: 0, css: { visibility: "visible" } });
+
+    gsap.to(main, {
+      duration: 0.5,
+      opacity: 1,
+      ease: "power3.out",
+      delay: 0.25,
+    });
+
+    const contentSection = ".content-section";
+
+    gsap.from(contentSection, {
+      duration: 0.5,
+      y: 100,
+      ease: "power3.out",
+      delay: 0.25,
+    });
+
+    const contentHeader = ".content-section__header > *";
+
+    gsap.from(contentHeader, {
+      duration: 0.5,
+      y: 100,
+      ease: "power3.out",
+      stagger: 0.2,
+      delay: 0.5,
+    });
+  })
   return (
     <div className="page" ref={(el) => (app = el)}>
       <Header />
@@ -32,9 +60,7 @@ function Layout({ children }) {
       <footer className="footer">
         <div className="footer__wrapper">
           <nav className="footer__credit">
-            <span>
-              Han Lee
-            </span>
+            <span>Han Lee</span>
 
             <span className="footer__links space-x-3">
               <span>Built with{` `}</span>
@@ -45,7 +71,7 @@ function Layout({ children }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <IconGithub2 className="icon" aria-label="GitHub Pages"/>
+                <IconGithub2 className="icon" aria-label="GitHub Pages" />
               </a>
 
               <a
@@ -81,7 +107,7 @@ function Layout({ children }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <IconTailwind className="icon" aria-label="Tailwind CSS"/>
+                <IconTailwind className="icon" aria-label="Tailwind CSS" />
               </a>
 
               <a

@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 import BrandFace from "../images/svg-plugin/han-face.svg";
 import IconBurger from "../images/svg-plugin/icon-burger.svg";

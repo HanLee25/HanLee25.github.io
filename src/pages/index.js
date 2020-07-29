@@ -1,8 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
 import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
-import { TextPlugin } from "gsap/TextPlugin";
+import { gsap } from "gsap";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -11,10 +10,6 @@ function IndexPage() {
   let hero = useRef(null);
   let designer = useRef(null);
   let value = useRef(null);
-  let bad = useRef(null);
-  let typing = useRef(null);
-
-  gsap.registerPlugin(TextPlugin);
 
     useEffect(() => {
       const headlineHi = hero.children[0].firstElementChild;
@@ -24,15 +19,12 @@ function IndexPage() {
       const designerBox = designer.firstElementChild;
       const whyHire = value.firstElementChild.children[0];
       const askMe = value.lastElementChild.children[0];
-      const badDesign = bad;
-      const typingText = typing.children[0].children[1];
 
       gsap.from([headlineHi, headlineHand, headlineIam01, headlineIam02], {
         duration: 0.8,
         y: 130,
-        ease: "ease.out",
+        ease: "power3.out",
         stagger: 0.4,
-        delay: 1,
       });
 
       gsap.from(designerBox, {
@@ -42,24 +34,18 @@ function IndexPage() {
         delay: 3,
       });
 
-      gsap.from([whyHire, askMe], {
-        duration: 1,
+      gsap.from(whyHire, {
+        duration: 0.8,
         y: 180,
-        ease: "ease.out",
-        stagger: 0.4,
+        ease: "power3.out",
+        delay: 1.6,
       });
 
-      gsap.to(typingText, {
-        duration: 6,
-        text: {
-          value:
-            ", an illustrator, a product designer, and a front-end developer",
-          type: "diff",
-        },
-        ease: "none",
-        repeat: -1,
-        repeatDelay: 1,
-        delay: 4,
+      gsap.from(askMe, {
+        duration: 0.4,
+        y: 80,
+        ease: "power3.out",
+        delay: 2,
       });
     })
   return (
@@ -121,21 +107,28 @@ function IndexPage() {
           <p className="hero__paragraph">
             <span className="hero__line">
               I am also{" "}
-              <span className="typing" ref={(el) => (typing = el)}>
+              <span className="typing">
                 <span className="typing__item">
-                  <span>an UI + UX designer</span>
-                  <span className="typing__string"></span>.
+                  <span className="typing__string">an UI + UX designer. </span>
+                </span>
+                <span className="typing__item">
+                  <span className="typing__string">an illustrator. </span>
+                </span>
+                <span className="typing__item">
+                  <span className="typing__string">an art director. </span>
+                </span>
+                <span className="typing__item">
+                  <span className="typing__string">a product stategist. </span>
+                </span>
+                <span className="typing__item">
+                  <span className="typing__string">a front-end developer. </span>
                 </span>
               </span>
               <br />
               We should work together.
               <br />
               <span className="hero__why">
-                Your time is too valuable to be wasted on the{" "}
-                <span className="hero__bad" ref={(el) => (bad = el)}>
-                  bad designs
-                </span>
-                .
+                Your time is too valuable to be wasted on the bad designs.
               </span>
             </span>
           </p>

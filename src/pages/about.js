@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { Link } from "gatsby";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 function AboutPage() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  let careerTimeLine = useRef(null);
+
+  useEffect(() => {
+
+    const careerEvent = careerTimeLine.childNodes;
+
+    gsap.defaults({ ease: "power3.out" });
+    gsap.set(careerEvent, { y: 100 });
+
+    ScrollTrigger.batch(careerEvent, {
+      onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
+      start: "top bottom",
+    });
+  })
   return (
     <Layout>
       <SEO
@@ -47,7 +64,9 @@ function AboutPage() {
 
         <div className="content-column__main">
           <section id="bio" className="content-section">
-            <h2 className="h2">Bio</h2>
+            <header className="content-section__header">
+              <h2 className="h2">Bio</h2>
+            </header>
 
             <p>
               Han Lee, a product designer who helps to solve UI/UX problems of
@@ -73,7 +92,9 @@ function AboutPage() {
           </section>
 
           <section id="mission" className="content-section">
-            <h2 className="h2">Mission</h2>
+            <header className="content-section__header">
+              <h2 className="h2">Mission</h2>
+            </header>
 
             <div>
               <blockquote className="quote">
@@ -106,16 +127,22 @@ function AboutPage() {
             <p>
               <b>
                 - all to{" "}
-                <Link to="https://en.wikipedia.org/wiki/Visual_narrative">
+                <a
+                  href="https://en.wikipedia.org/wiki/Visual_narrative"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   tell a story visually
-                </Link>{" "}
+                </a>{" "}
                 about the product.
               </b>
             </p>
           </section>
 
           <section id="experience" className="content-section">
-            <h2 className="h2">Experience</h2>
+            <header className="content-section__header">
+              <h2 className="h2">Experience</h2>
+            </header>
 
             <p>
               One thing that I learned from my past experience is, more elements
@@ -131,7 +158,7 @@ function AboutPage() {
               designer.
             </p>
 
-            <ul className="timeline">
+            <ul className="timeline" ref={(el) => (careerTimeLine = el)}>
               <li className="timeline__event" data-date="Jul 2019 - Apr 2020">
                 <h3 className="timeline__title h5">Product designer</h3>
 

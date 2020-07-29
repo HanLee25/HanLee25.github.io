@@ -1,8 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { Link } from "gatsby";
-import Img from "gatsby-image";
+import { Link, graphql } from "gatsby";
 import { kebabCase } from "lodash";
+import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -24,9 +23,9 @@ function WorksPage({
       />
 
       <section className="content-section">
-        <h2 className="h2">
-          Works
-        </h2>
+        <header className="content-section__header">
+          <h2 className="h2">Works</h2>
+        </header>
 
         <div className="project-list">
           {edges.map((edge) => {
@@ -47,15 +46,19 @@ function WorksPage({
                     </h3>
 
                     <small className="project-list__meta">
-                      <time datetime="{frontmatter.date}">
-                        {frontmatter.date} 
+                      <time dateTime="{frontmatter.date}">
+                        {frontmatter.date}
                       </time>
-                      &nbsp;at&nbsp;
-                      <Link to={frontmatter.teamUrl}
+                      {` `}
+                      at
+                      {` `}
+                      <a
+                        href={frontmatter.teamUrl}
                         target="_blank"
-                        rel="noreferrer">
+                        rel="noreferrer"
+                      >
                         {frontmatter.team}
-                      </Link>
+                      </a>
                     </small>
                   </header>
 
@@ -76,7 +79,10 @@ function WorksPage({
                   ) : null}
 
                   <div>
-                    <Link to={frontmatter.slug} className="text-sm text-gray-600">
+                    <Link
+                      to={frontmatter.slug}
+                      className="text-sm text-gray-600"
+                    >
                       Read more
                     </Link>
                   </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
 // Utilities
 import kebabCase from "lodash/kebabCase";
@@ -7,7 +8,6 @@ import kebabCase from "lodash/kebabCase";
 // Components
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Link, graphql } from "gatsby";
 
 const TagsPage = ({
   data: {
