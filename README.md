@@ -4,7 +4,6 @@
 <div>
   This site is built on <strong>a <a href="https://www.gatsbyjs.org/">Gatsby</a> starter styled using <a href="https://tailwindcss.com/">Tailwind CSS</a>, a utility-first CSS framework.</strong><br />
   Uses <a href="https://www.purgecss.com/">PurgeCSS</a> to remove unused CSS.<br />
-  Illustrations by <a href="https://undraw.co/">unDraw</a>.
 
   This site is hosted directly from [GitHub Pages](https://pages.github.com/)
 </div>

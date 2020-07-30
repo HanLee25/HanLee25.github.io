@@ -27,7 +27,7 @@ const TagPage = ({ pageContext, data }) => {
       />
 
       <section className="content-section">
-        <header className="content-section__header">
+        <header className="content-section__header content-section__header--short">
           <h2 className="h2">{tagHeader}</h2>
         </header>
 
@@ -38,7 +38,10 @@ const TagPage = ({ pageContext, data }) => {
             const { frontmatter } = edge.node;
             return (
               <article key={frontmatter.slug} className="project-list__item">
-                <Link to={frontmatter.slug} className="button button--link">
+                <Link
+                  to={frontmatter.slug}
+                  className="project-list__link button button--link"
+                >
                   <Img
                     fluid={frontmatter.cover.childImageSharp.fluid}
                     className="project-list__thumbnail"

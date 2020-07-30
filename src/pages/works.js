@@ -53,7 +53,10 @@ function WorksPage({
             const { frontmatter } = edge.node;
             return (
               <article key={frontmatter.slug} className="project-list__item">
-                <Link to={frontmatter.slug} className="button button--link">
+                <Link
+                  to={frontmatter.slug}
+                  className="project-list__link button button--link"
+                >
                   <Img
                     fluid={frontmatter.cover.childImageSharp.fluid}
                     className="project-list__thumbnail"
