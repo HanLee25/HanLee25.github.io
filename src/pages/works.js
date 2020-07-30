@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { kebabCase } from "lodash";
 import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Tags from "../components/tags";
 
 function WorksPage({
   data, // this prop will be injected by the GraphQL query below.
@@ -26,6 +26,8 @@ function WorksPage({
         <header className="content-section__header">
           <h2 className="h2">Works</h2>
         </header>
+
+        <Tags />
 
         <div className="project-list">
           {edges.map((edge) => {
@@ -67,12 +69,10 @@ function WorksPage({
                   </p>
 
                   {frontmatter.tags ? (
-                    <ul className="tag-list">
+                    <ul className="inline-list">
                       {frontmatter.tags.map((tag) => (
-                        <li key={tag + `tag`} className="tag-list__item">
-                          <Link to={`/tags/${kebabCase(tag)}/`} className="tag">
-                            {tag}
-                          </Link>
+                        <li key={tag + `tag`} className="inline-list__item">
+                          <span className="tag">{tag}</span>
                         </li>
                       ))}
                     </ul>

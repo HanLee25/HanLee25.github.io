@@ -1,18 +1,18 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
-import { kebabCase } from "lodash";
 
 // Components
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Tags from "../components/tags";
 
-const Tags = ({ pageContext, data }) => {
+const TagPage = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const pageTag = tag
-  const tagHeader = `work${totalCount === 1 ? "" : "s"} by "${pageTag}(${totalCount})"`
+  const tagHeader = `Work${totalCount === 1 ? "" : "s"} in '${pageTag}'`
 
   return (
     <Layout>
@@ -26,12 +26,13 @@ const Tags = ({ pageContext, data }) => {
         title={tagHeader}
       />
 
-      <section  className="content-section">
-        <h2 className="h2">{tagHeader}</h2>
+      <section className="content-section">
+        <header className="content-section__header">
+          <h2 className="h2">{tagHeader}</h2>
+        </header>
 
-        <Link to="/tags">All tags</Link>
-        <Link to="/works">All works</Link>
-        
+        <Tags />
+
         <div className="project-list">
           {edges.map((edge) => {
             const { frontmatter } = edge.node;
@@ -72,17 +73,16 @@ const Tags = ({ pageContext, data }) => {
                   </p>
 
                   {frontmatter.tags ? (
-                    <ul className="tag-list">
+                    <ul className="inline-list">
                       {frontmatter.tags.map((tag) => (
-                        <li key={tag + `tag`} className="tag-list__item">
-                          <Link
-                            to={`/tags/${kebabCase(tag)}/`}
+                        <li key={tag + `tag`} className="inline-list__item">
+                          <span
                             className={`tag${
                               tag === pageTag ? ` tag--active` : ``
                             }`}
                           >
                             {tag}
-                          </Link>
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -106,7 +106,7 @@ const Tags = ({ pageContext, data }) => {
   );
 }
 
-Tags.propTypes = {
+TagPage.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
   }),
@@ -128,8 +128,6 @@ Tags.propTypes = {
     }),
   }),
 }
-
-export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -162,3 +160,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default TagPage;

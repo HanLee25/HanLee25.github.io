@@ -35,8 +35,10 @@ function ThanksPage() {
             I'm sure it's about something super interesting.{" "}
             <span role="img" aria-label="emoji">
               😁
-            </span> I'd reply as soon as I'd get the context.
-            <br />You can count on me!
+            </span>{" "}
+            I'd reply as soon as I'd get the context.
+            <br />
+            You can count on me!
           </p>
           <p>
             If you're in rush, you can contact me at{" "}

@@ -19,6 +19,7 @@ function IndexPage() {
       const designerBox = designer.firstElementChild;
       const whyHire = value.firstElementChild.children[0];
       const askMe = value.lastElementChild.children[0];
+      const checkOut = value.lastElementChild.children[1];
 
       gsap.from([headlineHi, headlineHand, headlineIam01, headlineIam02], {
         duration: 0.8,
@@ -41,10 +42,11 @@ function IndexPage() {
         delay: 1.6,
       });
 
-      gsap.from(askMe, {
+      gsap.from([askMe, checkOut], {
         duration: 0.4,
         y: 80,
         ease: "power3.out",
+        stagger: 0.2,
         delay: 2,
       });
     })
@@ -121,7 +123,9 @@ function IndexPage() {
                   <span className="typing__string">a product stategist. </span>
                 </span>
                 <span className="typing__item">
-                  <span className="typing__string">a front-end developer. </span>
+                  <span className="typing__string">
+                    a front-end developer.{" "}
+                  </span>
                 </span>
               </span>
               <br />
@@ -134,20 +138,17 @@ function IndexPage() {
           </p>
 
           <div className="overflow-hidden">
-            {[
-              {
-                route: `/contact`,
-                title: `Ask me how`,
-              },
-            ].map((link) => (
-              <Link
-                className="hero__cta button"
-                key={link.title}
-                to={link.route}
-              >
-                {link.title}
-              </Link>
-            ))}
+            <Link className="hero__cta button" title="Ask me how" to="/contact">
+              Ask me how
+            </Link>
+
+            <Link
+              className="hero__cta button button--ghost"
+              title="Check out"
+              to="/works"
+            >
+              CHeck out my works
+            </Link>
           </div>
         </div>
 

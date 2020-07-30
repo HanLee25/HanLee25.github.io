@@ -39,79 +39,96 @@ function ContactPage() {
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="first-name"
           >
-            First Name
+            First Name *
           </label>
 
           <input
             className="w-full mb-6 form-input"
             id="first-name"
             placeholder="Bill"
+            name="first-name"
             type="text"
+            required
           />
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="last-name"
           >
-            Last Name
+            Last Name *
           </label>
 
           <input
             className="w-full mb-6 form-input"
             id="last-name"
             placeholder="Murray"
+            name="last-name"
             type="text"
+            required
           />
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="email"
           >
-            Email
+            Email *
           </label>
 
           <input
             className="w-full mb-6 form-input"
             id="email"
-            placeholder="bill@email.com"
+            placeholder="you@email.com"
             type="email"
+            name="_replyto"
+            required
           />
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="message"
           >
-            Message
+            Message *
           </label>
 
           <textarea
             className="w-full mb-6 form-textarea"
             id="message"
             placeholder="Say something..."
+            name="message"
             rows="8"
+            required
           />
 
           <label
             className="block mb-2 text-xs font-bold uppercase"
             htmlFor="file"
           >
-            Attachments
+            Attachments (Optional)
           </label>
 
           <input
             className="w-full mb-6 form-input"
             id="file"
             placeholder="Attachments (optional)"
+            name="file"
             type="file"
           />
-          <input type="hidden" name="_subject" value="Contact form 'hanlee25.github.io'" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Contact form 'hanlee25.github.io'"
+          />
           <input
             type="hidden"
             name="_after"
             value="https://hanlee25.github.io/thanks"
           />
           <input type="hidden" name="_honeypot" value="" />
-          <input type="hidden" name="_confirmation" value="Sending the message." />
+          <input
+            type="hidden"
+            name="_confirmation"
+            value="Sending the message..."
+          />
 
           <button className="button">Submit</button>
         </form>

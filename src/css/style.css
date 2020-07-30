@@ -18,7 +18,7 @@
 
  =================================================================*/
 
-/* Elements *******************************************************/
+/* Elements *********************/
 
 body {
   @apply bg-gray-100;
@@ -84,8 +84,15 @@ dl {
   @apply gap-3;
 }
 
+.inline-list {
+  @apply flex;
+  @apply flex-wrap;
+  @apply gap-2;
+  @apply leading-none;
+}
 
-/* Layout *******************************************************/
+
+/* Layout *********************/
 
 .page {
   @apply flex;
@@ -116,7 +123,7 @@ dl {
 }
 
 
-/* Header *******************************************************/
+/* Header *********************/
 
 .header {
   @apply border-b;
@@ -204,7 +211,7 @@ dl {
 }
 
 
-/* Main *******************************************************/
+/* Main *********************/
 
 .main {
   @apply flex;
@@ -218,7 +225,7 @@ dl {
 }
 
 
-/* Footer *******************************************************/
+/* Footer *********************/
 
 .footer {
   @apply bg-gray-100;
@@ -268,16 +275,17 @@ dl {
  [5] Anchor navigation
  [6] Hero
  [7] Typing
+ [8] Badge
 
  =================================================================*/
 
 
-/* Buttons *******************************************************/
+/* [1] Buttons *********************/
 
 .button {
-  @apply bg-gray-900;
-  @apply border-b-4;
-  @apply border-red-600;
+  @apply bg-red-600;
+  @apply border-4;
+  @apply border-transparent;
   @apply duration-300;
   @apply font-bold;
   @apply inline-block;
@@ -286,25 +294,24 @@ dl {
   @apply px-4;
   @apply text-white;
   @apply transition-all;
+  @apply uppercase;
 }
 
 .button:hover {
-  @apply bg-red-600;
-  @apply border-gray-900;
+  @apply bg-gray-900;
   @apply text-white;
 }
 
 .button--ghost {
   @apply bg-transparent;
-  @apply border-4;
   @apply border-current;
   @apply text-current;
 }
 
 .button--ghost:hover {
   @apply bg-transparent;
-  @apply border-dashed;
-  @apply text-red-600;
+  @apply border-red-700;
+  @apply text-red-700;
 }
 
 .button--link {
@@ -312,6 +319,7 @@ dl {
   @apply border-0;
   @apply border-transparent;
   @apply inline-block;
+  @apply normal-case;
   @apply py-1;
   @apply px-0;
   @apply relative;
@@ -357,8 +365,28 @@ dl {
   @apply outline-none;
 }
 
+.button--active {
+  @apply bg-red-600;
+  @apply border-red-600;
+  @apply text-white;
+}
 
-/* Face *******************************************************/
+.button--sm {
+  @apply border-b-2;
+  @apply text-xs;
+}
+
+.button--sm.button--ghost {
+  @apply border-2;
+}
+
+.button--sm.button--link,
+.button--sm.button--svg {
+  @apply border-0;
+}
+
+
+/* [2] Face *********************/
 
 .face__element {
   @apply duration-300;
@@ -410,7 +438,7 @@ dl {
 }
 
 
-/* Icons *******************************************************/
+/* [3] Icons *********************/
 
 .icon {
   @apply h-6;
@@ -457,7 +485,7 @@ dl {
 }
 
 
-/* Main nav *******************************************************/
+/* [4] Main nav *********************/
 
 .main-nav {
   @apply font-bold;
@@ -479,7 +507,7 @@ dl {
 }
 
 
-/* Anchor nav *******************************************************/
+/* [5] Anchor nav *********************/
 
 .anchor-nav {
   @apply flex;
@@ -491,7 +519,7 @@ dl {
   @apply mr-4;
 }
 
-/* hero *******************************************************/
+/* [6] hero *********************/
 
 .hero {
   @apply inline-block;
@@ -562,8 +590,12 @@ dl {
   @apply mt-4;
 }
 
+.hero__cta + .hero__cta {
+  @apply ml-4;
+}
 
-/* Typing *******************************************************/
+
+/* [7] Typing *********************/
 
 .typing {
   @apply inline-block;
@@ -643,19 +675,39 @@ dl {
   }
 }
 
+/* [8] Badge *********************/
+
+.badge {
+  @apply bg-current;
+  @apply font-thin;
+  @apply inline-block;
+  @apply rounded-full;
+  @apply text-center;
+  @apply w-4;
+
+  padding: calc( theme('spacing.1') * 0.5) 0;
+}
+
+.badge__value {
+  @apply text-white;
+
+  mix-blend-mode: difference;
+}
+
 
 /*=================================================================
 
  Contents
 
  [1] Project list
- [2] Tag list
+ [2] Tags
  [3] Timeline
  [4] Quote
+ [5] Filter
 
  =================================================================*/
 
-/* Project list *******************************************************/
+/* [1] Project list *********************/
 
 .project-list {
   @apply gap-8;
@@ -705,14 +757,7 @@ dl {
 }
 
 
-/* Tag list *******************************************************/
-
-.tag-list {
-  @apply flex;
-  @apply flex-wrap;
-  @apply gap-2;
-  @apply leading-none;
-}
+/* [2] Tag *********************/
 
 .tag {
   @apply bg-gray-300;
@@ -727,14 +772,13 @@ dl {
   @apply rounded-full;
 }
 
-.tag:hover,
 .tag--active {
-  @apply bg-red-600;
+  @apply bg-gray-600;
   @apply text-white;
 }
 
 
-/* Tineline *******************************************************/
+/* [3] Tineline *********************/
 
 .timeline {
   @apply my-4;
@@ -801,7 +845,7 @@ dl {
 }
 
 
-/* Quote *******************************************************/
+/* [5] Quote *********************/
 
 .quote {
   @apply border-l-4;
@@ -820,6 +864,13 @@ dl {
   @apply text-xs;
 }
 
+/* [6] Filter *********************/
+
+.filter {
+  @apply mb-12;
+}
+
+
 /*=================================================================
 
  Media query
@@ -829,7 +880,7 @@ dl {
 
  =================================================================*/
 
-/* Medium screen *******************************************************/
+/* Medium screen *********************/
 
 @screen md {
   .page {
@@ -945,7 +996,7 @@ dl {
 }
 
 
-/* Large screen *******************************************************/
+/* Large screen *********************/
 
 @screen lg {
 .h1 {
@@ -1051,7 +1102,7 @@ dl {
 }
 
 
-/* Extra large screen *******************************************************/
+/* Extra large screen *********************/
 
 @screen xl {
   .h1,
