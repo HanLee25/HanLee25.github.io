@@ -20,7 +20,7 @@ function AboutPage() {
 
     ScrollTrigger.batch(careerEvent, {
       onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
-      start: "top bottom",
+      start: "top 95%",
     });
   })
   return (

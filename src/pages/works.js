@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link, graphql } from "gatsby";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Img from "gatsby-image";
+
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -10,6 +13,22 @@ function WorksPage({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { edges } = data.allMarkdownRemark;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let projectList = useRef(null);
+
+  useEffect(() => {
+    const project = projectList.childNodes;
+
+    gsap.defaults({ ease: "power3.out" });
+    gsap.set(project, { y: 100 });
+
+    ScrollTrigger.batch(project, {
+      onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
+      start: "top 95%",
+    });
+  });
   return (
     <Layout>
       <SEO
@@ -29,7 +48,7 @@ function WorksPage({
 
         <Tags />
 
-        <div className="project-list">
+        <div className="project-list" ref={(el) => (projectList = el)}>
           {edges.map((edge) => {
             const { frontmatter } = edge.node;
             return (

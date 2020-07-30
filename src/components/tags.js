@@ -16,7 +16,7 @@ const Tags = () => {
         >
           All{" "}
           <span className="badge">
-            <span className="badge__value">8</span>
+            <span className="badge__value">11</span>
           </span>
         </Link>
       </li>

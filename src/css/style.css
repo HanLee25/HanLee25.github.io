@@ -320,8 +320,7 @@ dl {
   @apply border-transparent;
   @apply inline-block;
   @apply normal-case;
-  @apply py-1;
-  @apply px-0;
+  @apply p-0;
   @apply relative;
   @apply text-current;
 }
@@ -373,6 +372,8 @@ dl {
 
 .button--sm {
   @apply border-b-2;
+  @apply py-1;
+  @apply px-2;
   @apply text-xs;
 }
 
@@ -383,6 +384,7 @@ dl {
 .button--sm.button--link,
 .button--sm.button--svg {
   @apply border-0;
+  @apply p-0;
 }
 
 

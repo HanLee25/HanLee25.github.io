@@ -60,7 +60,7 @@ function Layout({ children }) {
       <footer className="footer">
         <div className="footer__wrapper">
           <nav className="footer__credit">
-            <span>Han Lee</span>
+            <span className="text-gray-600">&copy; Copyright 2020, Han Lee</span>
 
             <span className="footer__links space-x-3">
               <span>Built with{` `}</span>
