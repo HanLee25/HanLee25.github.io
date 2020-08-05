@@ -35,7 +35,7 @@ function AboutPage() {
         title="About"
       />
 
-      <div className="content-column">
+      <div className="content-column content-column--reversed">
         <aside className="content-column__side-bar">
           <ul className="anchor-nav">
             <li>

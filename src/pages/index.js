@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "gatsby";
-import { Helmet } from "react-helmet";
 import { gsap } from "gsap";
 
 import Layout from "../components/layout";
@@ -151,10 +150,6 @@ function IndexPage() {
             </Link>
           </div>
         </div>
-
-        <Helmet>
-          <script>console.log('Hey, this is a "Hi" from the Helmet!')</script>
-        </Helmet>
       </section>
     </Layout>
   );

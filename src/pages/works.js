@@ -22,11 +22,11 @@ function WorksPage({
     const project = projectList.childNodes;
 
     gsap.defaults({ ease: "power3.out" });
-    gsap.set(project, { y: 100 });
+    gsap.set(project, { y: 100, opacity: 0.5 });
 
     ScrollTrigger.batch(project, {
       onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
-      start: "top 95%",
+      start: "top bottom",
     });
   });
   return (
@@ -56,6 +56,9 @@ function WorksPage({
                 <Link
                   to={frontmatter.slug}
                   className="project-list__link button button--link"
+                  state={{
+                    modal: true,
+                  }}
                 >
                   <Img
                     fluid={frontmatter.cover.childImageSharp.fluid}
@@ -86,7 +89,7 @@ function WorksPage({
                     </small>
                   </header>
 
-                  <p className="project-list__description">
+                  <p className="project-list__description paragrahp-truncate">
                     {frontmatter.excerpt}
                   </p>
 
@@ -104,8 +107,11 @@ function WorksPage({
                     <Link
                       to={frontmatter.slug}
                       className="text-sm text-gray-600"
+                      state={{
+                        modal: true,
+                      }}
                     >
-                      Read more
+                      Read more &gt;
                     </Link>
                   </div>
                 </div>
@@ -121,7 +127,7 @@ function WorksPage({
 export const workQuery = graphql`
   query WorksPageQuery {
     allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___number] }
     ) {
       edges {
         node {
@@ -140,6 +146,7 @@ export const workQuery = graphql`
                 }
               }
             }
+            number
           }
         }
       }

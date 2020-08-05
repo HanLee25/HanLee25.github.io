@@ -14,6 +14,9 @@ module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
       options: {"plugins":[],"trackingId":"UA-171803500-1","head":false},
     },{
+      plugin: require('../node_modules/gatsby-plugin-modal-routing/gatsby-browser.js'),
+      options: {"plugins":[],"appElement":"#___gatsby","modalProps":{"portalClassName":"modal","overlayClassName":"modal__overlay","className":"modal__content","bodyOpenClassName":"modal-body--opened","htmlOpenClassName":"modal-html--opened"}},
+    },{
       plugin: require('../gatsby-browser.js'),
       options: {"plugins":[]},
     }]

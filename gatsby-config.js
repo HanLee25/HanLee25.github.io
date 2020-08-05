@@ -102,5 +102,18 @@ module.exports = {
         head: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-modal-routing`,
+      options: {
+        appElement: "#___gatsby",
+        modalProps: {
+          portalClassName: `modal`,
+          overlayClassName: `modal__overlay`,
+          className: `modal__content`,
+          bodyOpenClassName: `modal-body--opened`,
+          htmlOpenClassName: `modal-html--opened`,
+        },
+      },
+    },
   ],
 };

@@ -1,23 +1,31 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import abductionIllustration from "../images/abduction-illustration.svg";
 
 function NotFoundPage() {
   return (
     <Layout>
       <SEO title="404: Not found" />
-      <div>
-        <img
-          alt="Ghost getting abducted by aliens"
-          className="block mx-auto w-1/2"
-          src={abductionIllustration}
-        />
-        <h2 className="bg-yellow-400 text-2xl font-bold inline-block my-8 p-3">
-          Looks like this page is a ghost that got abducted by aliens...
-        </h2>
-      </div>
+
+      <section className="content-section">
+        <header className="content-section__header">
+          <h2 className="h2">You seems lost</h2>
+        </header>
+
+        <p>
+          I can't fine the page you're looking for.
+          <br />
+          Maybe try{" "}
+          <Link to="/" title="Home">
+            <span role="img" aria-label="emoji: house building">
+              🏠
+            </span>
+          </Link>{" "}
+          again?
+        </p>
+      </section>
     </Layout>
   );
 }

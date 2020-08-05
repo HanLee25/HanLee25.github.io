@@ -96,7 +96,7 @@ const TagPage = ({ pageContext, data }) => {
                       to={frontmatter.slug}
                       className="text-sm text-gray-600"
                     >
-                      Read more
+                      Read more &gt;
                     </Link>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export const pageQuery = graphql`
   query($tag: String) {
     allMarkdownRemark(
       limit: 2000
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___number] }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
@@ -157,6 +157,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            number
           }
         }
       }

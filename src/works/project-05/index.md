@@ -7,6 +7,9 @@ teamUrl: "http://www.fareportal.com/"
 excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"
 tags: ['UX research', 'Data visualization', 'Visual design', 'Print design']
 cover: "./project-cover.png"
+role: " "
+industry: " "
+number: "05"
 ---
 
 # Heading

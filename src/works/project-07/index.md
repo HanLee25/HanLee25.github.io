@@ -7,6 +7,9 @@ teamUrl: "https://thoughtbot.com/"
 excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"
 tags: ['Product strategy', 'Front-end', 'RoR', 'UI design', 'Branding', 'Illustration', 'User test']
 cover: "./project-cover.png"
+role: " "
+industry: " "
+number: "07"
 ---
 
 # Heading
