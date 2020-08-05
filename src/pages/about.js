@@ -10,6 +10,7 @@ function AboutPage() {
   gsap.registerPlugin(ScrollTrigger);
 
   let careerTimeLine = useRef(null);
+  let stickyContainer = useRef(null);
 
   useEffect(() => {
 
@@ -21,6 +22,32 @@ function AboutPage() {
     ScrollTrigger.batch(careerEvent, {
       onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
       start: "top 95%",
+    });
+
+    const stickyTarget = stickyContainer.firstElementChild;
+
+    ScrollTrigger.create({
+      trigger: stickyContainer,
+      start: 'top top',
+      end: 'bottom top',
+      endTrigger: '.main',
+      toggleClass: { targets: stickyTarget, className: 'is--stuck' },
+    });
+
+    ScrollTrigger.create({
+      trigger: stickyContainer,
+      start: 'top -100px',
+      end: 'bottom top',
+      endTrigger: '.main',
+      toggleClass: { targets: stickyTarget, className: 'is--shown' },
+    });
+
+    ScrollTrigger.create({
+      trigger: stickyContainer,
+      start: 'top -101px',
+      end: 'bottom top',
+      endTrigger: '.main',
+      toggleClass: { targets: stickyTarget, className: 'is--pushed' },
     });
   })
   return (
@@ -37,29 +64,33 @@ function AboutPage() {
 
       <div className="content-column content-column--reversed">
         <aside className="content-column__side-bar">
-          <ul className="anchor-nav">
-            <li>
-              <AnchorLink
-                to="/about#bio"
-                title="Bio"
-                className="anchor-nav__item"
-              />
-            </li>
-            <li>
-              <AnchorLink
-                to="/about#mission"
-                title="Mission"
-                className="anchor-nav__item"
-              />
-            </li>
-            <li>
-              <AnchorLink
-                to="/about#experience"
-                title="Experience"
-                className="anchor-nav__item"
-              />
-            </li>
-          </ul>
+          <div className="sticky-element" ref={(el) => (stickyContainer = el)}>
+            <div className="sticky-element__target sticky-element__target--bar">
+              <ul className="anchor-nav">
+                <li>
+                  <AnchorLink
+                    to="/about#bio"
+                    title="Bio"
+                    className="anchor-nav__item"
+                  />
+                </li>
+                <li>
+                  <AnchorLink
+                    to="/about#mission"
+                    title="Mission"
+                    className="anchor-nav__item"
+                  />
+                </li>
+                <li>
+                  <AnchorLink
+                    to="/about#experience"
+                    title="Experience"
+                    className="anchor-nav__item"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
         </aside>
 
         <div className="content-column__main">

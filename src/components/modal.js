@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "gatsby";
@@ -9,12 +9,14 @@ import IconArrow from "../images/svg-plugin/icon-arrow.svg";
 function Modal({ children }) {
   gsap.registerPlugin(ScrollTrigger);
 
+  let modalContainer = useRef(null);
+
   useEffect(() => {
-    const modalScroll = ".modal__wrapper";
+    const modalScroll = modalContainer;
     const projectSection = ".project > * > *";
 
     gsap.defaults({ ease: "power3.out" });
-    gsap.set(projectSection, { duration: 1, y: 150, opacity: 0.5, scroller: modalScroll });
+    gsap.set(projectSection, { duration: 1, y: 150, opacity: 0.5 });
 
     ScrollTrigger.batch(projectSection, {
       scroller: modalScroll,
@@ -23,7 +25,7 @@ function Modal({ children }) {
     });
   });
   return (
-    <div className="modal__wrapper">
+    <div className="modal__wrapper" ref={(el) => (modalContainer = el)}>
       <Link
         to="/works"
         className="modal__close button button--svg"
