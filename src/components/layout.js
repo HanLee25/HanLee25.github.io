@@ -64,7 +64,7 @@ function Layout({ children }) {
               &copy; Copyright 2020, Han Lee
             </span>
 
-            <span className="footer__links space-x-3">
+            <span className="footer__links">
               <span>Built with{` `}</span>
 
               <a

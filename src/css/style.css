@@ -116,6 +116,12 @@ dd {
   @apply leading-none;
 }
 
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .inline-list > :not(template) + :not(template) {
+    @apply ml-3;
+  }
+}}
+
 .bulleted-list,
 .ordered-list {
   @apply pl-6;
@@ -221,6 +227,12 @@ figcaption {
   @apply ml-12;
   @apply text-gray-600;
 }
+
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .header__links > :not(template) + :not(template) {
+    @apply ml-5;
+  }
+}}
 
 .header__links .icon__part {
   @apply fill-current;
@@ -1243,6 +1255,12 @@ figcaption {
     @apply ml-0;
   }
 
+  @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+      .header__links > :not(template) + :not(template) {
+      @apply ml-8;
+    }
+  }}
+
   .header__nav {
     @apply h-full;
     @apply mt-16;
@@ -1280,12 +1298,19 @@ figcaption {
   }
 
   .footer__links {
-    @apply items-center;
     @apply flex;
+    @apply gap-3;
+    @apply items-center;
     @apply justify-around;
     @apply mb-0;
     @apply text-gray-600;
   }
+
+  @media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+      .footer__links > :not(template) + :not(template) {
+      @apply ml-3;
+    }
+  }}
 
   .footer__link {
     @apply opacity-50;
