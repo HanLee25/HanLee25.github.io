@@ -7,9 +7,11 @@ teamUrl: "http://www.fareportal.com/"
 excerpt: "MVP project to implement flight listing reinforce interaction in CheapOair PWA mobile experience to improve listing page engagement"
 tags: ['UI design', 'UX research', 'Persona', 'Front-end', 'HTML / SCSS', 'JS', 'RWD', 'PWA', 'Interaction']
 cover: "./project-cover.png"
+preview: "./project-preview.png"
 role: " "
 industry: " "
 number: "04"
+headerFlip: false
 ---
 
 # Heading
