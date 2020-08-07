@@ -38,7 +38,7 @@ const TagPage = ({ pageContext, data }) => {
       start: 'top -40px',
       end: 'bottom top',
       endTrigger: '.main',
-      toggleClass: { targets: stickyHeader, className: 'shadow-lg' },
+      toggleClass: { targets: stickyHeader, className: 'header__wrapper--floating' },
     });
   });
   return (

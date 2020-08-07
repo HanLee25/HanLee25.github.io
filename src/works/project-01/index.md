@@ -147,3 +147,75 @@ headerFlip: false
     </figure>
   </div>
 </div>
+<div class="content-section project-content project-content--5/5">
+  <div class="project-content__column">
+    <header class="content-section__header">
+      <h3 class="h3">Hand-off</h3>
+    </header>
+    <dl>
+      <dt>Interaction flow</dt>
+      <dd>
+        <ul class="bulleted-list">
+          <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
+          <li>This helps developers and QAs to overview end-to-end product process.</li>
+          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--block">
+    <figure class="project-content__figure lg:-mr-24">
+      <img src="./project09.jpg" alt="Project"/>
+      <figcaption>Fig.8: Interaction map</figcaption>
+    </figure>
+  </div>
+  <div class="project-content__column">
+    <dl>
+      <dt>User flow</dt>
+      <dd>
+        <ul class="bulleted-list">
+          <li>To visualize the early concept of UX logic to include primary and secondary use-cases.</li>
+          <li>This helps product manager to define user stories to prepare the developments.</li>
+          <li><a href="https://drive.google.com/file/d/1vEFyY1PBGcZHtjw21RjEmgGtw10nQdhw/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--block">
+    <figure class="project-content__figure lg:-mr-24">
+      <img src="./project08.jpg" alt="Project"/>
+      <figcaption>Fig.9: Flow chart</figcaption>
+    </figure>
+  </div>
+</div>
+<div class="content-section project-content">
+  <div class="project-content__column">
+    <header class="content-section__header">
+      <h3 class="h3">Contribution</h3>
+    </header>
+    <dl class="-mx-8 md:mx-0 lg:-mr-16 p-8 bg-white rounded-md shadow">
+      <dt>Product strategy</dt>
+      <dd>
+        <ul class="bulleted-list">
+          <li>Collaborating with product owner for setting the problem statement</li>
+          <li>Setting product design strategy</li>
+        </ul>
+      </dd>
+      <dt>UI design</dt>
+      <dd>
+        <ul class="bulleted-list">
+          <li>Creating a high-fidelity UI mock-up</li>
+          <li>Creating an interactive prototype using Sketch and UXPin</li>
+        </ul>
+      </dd>
+      <dt>UX design</dt>
+      <dd>
+        <ul class="bulleted-list">
+          <li>Collaborating with UX researcher on a benchmarking report and analyzing user behavior, traffic analysis</li>
+          <li>Collaborating in interaction design to create a wireframe</li>
+          <li>Generating an interaction flow and micro-interaction guide</li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+</div>

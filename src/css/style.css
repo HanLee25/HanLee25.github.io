@@ -200,6 +200,10 @@ figcaption {
   @apply mx-auto;
 }
 
+.header__wrapper--floating {
+  @apply shadow-lg;
+}
+
 .header__home {
   @apply no-underline;
 }
@@ -847,7 +851,7 @@ figcaption {
 
 .sticky-element__target.is--pushed {
   @apply z-20;
-  
+
   top: theme('spacing.16');
 }
 
@@ -1233,6 +1237,11 @@ figcaption {
   @apply px-16;
 }
 
+.project-content__image--block {
+  @apply -mx-8;
+  @apply p-0;
+}
+
 .project-content__image--grid {
   @apply gap-8;
   @apply grid;
@@ -1253,6 +1262,10 @@ figcaption {
 .project-content__figure + .project-content__figure {
   @apply delay-100;
   @apply transition-all;
+}
+
+.project-content__image--block figcaption {
+  @apply ml-8;
 }
 
 
@@ -1306,6 +1319,10 @@ figcaption {
   .header__wrapper {
     @apply flex-col;
     @apply py-12;
+  }
+
+  .header__wrapper--floating {
+    @apply shadow-none;
   }
 
   .header__brand {
@@ -1486,9 +1503,18 @@ figcaption {
     @apply px-40;
   }
 
+  .project-content__image--block {
+    @apply m-0;
+    @apply p-0;
+  }
+
   .project-content__image--grid {
     @apply gap-20;
     @apply px-16;
+  }
+
+  .project-content__image--block figcaption {
+    @apply ml-0;
   }
 }
 
