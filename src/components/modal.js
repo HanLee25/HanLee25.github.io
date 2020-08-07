@@ -16,7 +16,7 @@ function Modal({ children }) {
     const projectSection = ".project > * > *";
 
     gsap.defaults({ ease: "power3.out" });
-    gsap.set(projectSection, { duration: 1, y: 150, opacity: 0.5 });
+    gsap.set(projectSection, { duration: 1, y: 50, opacity: 0.5 });
 
     ScrollTrigger.batch(projectSection, {
       scroller: modalScroll,

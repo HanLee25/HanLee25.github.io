@@ -15,40 +15,49 @@ export default function Template({
     nullTargetWarn: false,
   });
 
-  let projectWrapper = useRef(null);
+  let projectInfo = useRef(null);
+  let projectContent = useRef(null);
 
   useEffect(() => {
-    const projectIntro = projectWrapper.firstElementChild.children[0];
-    const projectMeta = projectIntro.nextSibling.childNodes;
+    const projectIntro = projectInfo.firstElementChild.childNodes;
+    const projectMeta = projectInfo.firstElementChild.nextSibling.childNodes;
 
-    gsap.from([projectIntro, projectMeta], {
-      duration: 1,
+    gsap.from(projectIntro, {
+      duration: 0.5,
       y: 100,
       opacity: 0,
       ease: "power4.out",
       stagger: 0.25,
-      delay: 0.5,
+    });
+
+    gsap.from(projectMeta, {
+      duration: 0.25,
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      stagger: 0.1,
+      delay: 0.35,
     });
 
     const projectTitle =
-      projectWrapper.lastElementChild.children[0].children[0].childNodes;
+      projectContent.firstElementChild.children[0].childNodes;
 
     gsap.from(projectTitle, {
       duration: 0.5,
       y: 100,
+      opacity: 0,
       ease: "power3.out",
       stagger: 0.25,
     });
   })
   return (
     <Modal>
-      <div className="content-column" ref={(el) => (projectWrapper = el)}>
-        <aside className="content-column__side-bar">
+      <div className="content-column">
+        <aside className="content-column__side-bar" ref={(el) => (projectInfo = el)}>
           <div className="project-intro">
-            <Img
-              fixed={frontmatter.cover.childImageSharp.fixed}
-              className="project-intro__thumbnail"
-            />
+            <div className="project-intro__thumbnail">
+              <Img fluid={frontmatter.cover.childImageSharp.fluid} />
+            </div>
 
             <span className="project-intro__title">{frontmatter.title}</span>
           </div>
@@ -86,12 +95,16 @@ export default function Template({
           </dl>
         </aside>
 
-        <div className="content-column__main">
+        <div className="content-column__main" ref={(el) => (projectContent = el)}>
           <section className="content-section">
             <header className="content-section__header project-header">
               <h2 className="project-header__title h1">{frontmatter.title}</h2>
 
               <p className="project-header__overview">{frontmatter.excerpt}</p>
+
+              <div className="project-header__preview">
+                <Img fluid={frontmatter.preview.childImageSharp.fluid} />
+              </div>
             </header>
           </section>
 
@@ -121,8 +134,15 @@ export const pageQuery = graphql`
         industry
         cover {
           childImageSharp {
-            fixed(width: 400) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        preview {
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

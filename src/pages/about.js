@@ -17,7 +17,7 @@ function AboutPage() {
     const careerEvent = careerTimeLine.childNodes;
 
     gsap.defaults({ ease: "power3.out" });
-    gsap.set(careerEvent, { y: 100 });
+    gsap.set(careerEvent, { y: 50, opacity: 0.5 });
 
     ScrollTrigger.batch(careerEvent, {
       onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
@@ -65,7 +65,7 @@ function AboutPage() {
       <div className="content-column content-column--reversed">
         <aside className="content-column__side-bar">
           <div className="sticky-element" ref={(el) => (stickyContainer = el)}>
-            <div className="sticky-element__target sticky-element__target--bar">
+            <div className="sticky-element__target">
               <ul className="anchor-nav">
                 <li>
                   <AnchorLink

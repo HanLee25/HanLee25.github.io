@@ -22,7 +22,7 @@ function WorksPage({
     const project = projectList.childNodes;
 
     gsap.defaults({ ease: "power3.out" });
-    gsap.set(project, { y: 100, opacity: 0.5 });
+    gsap.set(project, { y: 50, opacity: 0.5 });
 
     ScrollTrigger.batch(project, {
       onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
@@ -141,7 +141,7 @@ export const workQuery = graphql`
             tags
             cover {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 600, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -44,6 +44,7 @@ function Layout({ children }) {
     gsap.from(contentHeader, {
       duration: 0.5,
       y: 100,
+      opacity: 0,
       ease: "power3.out",
       stagger: 0.2,
       delay: 0.5,

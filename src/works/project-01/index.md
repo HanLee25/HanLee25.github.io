@@ -7,12 +7,13 @@ teamUrl: "http://www.fareportal.com/"
 excerpt: "Redesign the flight search feature and other home page componets for CheapOair iOS native app to improve funnel."
 tags: ['UI design', 'UX research', 'Wireframe', 'User flow', 'Prototype', 'Interaction', 'iOS HIG', 'Front-end', 'Styled components', 'REACT JS']
 cover: "./project-cover.png"
+preview: "./project-preview.png"
 role: "Mobile design manager"
 industry: "Travel / Online travel agency"
 number: "01"
 ---
 
-<div class="content-section project-content project-content--6/4 xl:w-5/6 xl:mx-auto">
+<div class="content-section project-content project-content--6/4">
   <div class="project-content__column">
     <header class="content-section__header">
       <h3 class="h3">Project background</h3>
@@ -50,7 +51,7 @@ number: "01"
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--6/4 project-content--flipped">
+<div class="content-section project-content project-content--4/6 project-content--flipped">
   <div class="project-content__column">
     <header class="content-section__header">
       <h3 class="h3">Diverge solutions</h3>
@@ -74,7 +75,7 @@ number: "01"
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image-grid project-content__image-grid-offset-left">
+  <div class="project-content__column project-content__image-grid project-content__image-grid-overlay">
     <figure class="project-content__figure">
       <img src="./project03.png" alt="Project" />
       <figcaption>Fig.3: Option A</figcaption>
