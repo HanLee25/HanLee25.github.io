@@ -790,6 +790,7 @@ figcaption {
   @apply p-8;
   @apply overflow-y-auto;
   @apply overflow-x-hidden;
+  @apply scrolling-touch;
 }
 
 .modal__close {
@@ -883,8 +884,13 @@ figcaption {
   @apply pt-10;
 }
 
-.work-list__thumbnail {
-  height: calc(100% - theme('spacing.2'));
+.work-list__link {
+  height: calc(theme('spacing.20') + theme('spacing.24'));
+}
+
+.work-list__thumbnail,
+.work-list__thumbnail .gatsby-image-wrapper {
+  @apply h-full;
 }
 
 .work-list__header {
@@ -1066,6 +1072,10 @@ figcaption {
 
 /* [6] Projects *********************/
 
+.project {
+  @apply pb-8;
+}
+
 .project-intro {
   @apply mb-8;
   @apply relative;
@@ -1202,10 +1212,15 @@ figcaption {
   @apply relative;
 }
 
-.project-content__image-grid {
+.project-content__image {
+  @apply px-16;
+}
+
+.project-content__image--grid {
   @apply gap-8;
   @apply grid;
   @apply grid-cols-2;
+  @apply px-0;
 }
 
 .project-content__figure .gatsby-resp-image-wrapper {
@@ -1313,10 +1328,9 @@ figcaption {
 
   .main {
     @apply pb-16;
-    @apply pr-0;
+    @apply pl-56;
+    @apply pr-8;
     @apply w-auto;
-
-    padding-left: theme('width.48');
   }
 
   .footer {
@@ -1359,6 +1373,7 @@ figcaption {
   }
 
   .hero {
+    @apply -mr-4;
     @apply tracking-normal;
   }
 
@@ -1395,6 +1410,10 @@ figcaption {
 
   .work-list__item + .work-list__item {
     @apply pt-12;
+  }
+
+  .work-list__link {
+    @apply h-64;
   }
 
   .work-list__header {
@@ -1441,6 +1460,21 @@ figcaption {
   .project-header--flipped {
     grid-template-columns: minmax(12rem, max-content) auto;
   }
+
+  .project-content {
+    @apply mx-auto;
+    @apply w-5/6;
+  }
+
+  .project-content__image {
+    @apply py-8;
+    @apply px-40;
+  }
+
+  .project-content__image--grid {
+    @apply gap-20;
+    @apply px-16;
+  }
 }
 
 
@@ -1472,14 +1506,14 @@ figcaption {
   }
 
   .content-column {
-    @apply gap-0;
+    @apply gap-8;
     @apply grid-rows-none;
 
-    grid-template-columns: minmax(max-content, 15%) 1fr;
+    grid-template-columns: minmax(max-content, 14%) 1fr;
   }
 
   .content-column--reversed {
-    grid-template-columns: 1fr minmax(max-content, 15%);
+    grid-template-columns: 1fr minmax(max-content, 14%);
   }
 
   .content-column__side-bar {
@@ -1516,7 +1550,8 @@ figcaption {
   }
 
   .main {
-    padding-left: theme('width.64');
+    @apply pl-64;
+    @apply pr-0;
   }
 
   .footer__credit {
@@ -1591,7 +1626,7 @@ figcaption {
   }
 
   .work-list__link {
-    max-height: 70%;
+    @apply h-48;
   }
 
   .timeline {
@@ -1703,6 +1738,7 @@ figcaption {
     @apply gap-8;
     @apply items-center;
     @apply pr-0;
+    @apply w-auto;
   }
 
   .project-content--3\/7 {
@@ -1734,19 +1770,23 @@ figcaption {
     @apply row-start-1;
   }
 
-  .project-content__image-grid-overlay .project-content__figure {
+  .project-content__image {
+    @apply p-0;
+  }
+
+  .project-content__image--grid-overlay .project-content__figure {
     @apply -mr-24;
   }
 
-  .project-content__image-grid-overlay .project-content__figure:first-child {
+  .project-content__image--grid-overlay .project-content__figure:first-child {
     @apply mt-4;
   }
 
-  .project-content__image-grid-overlay .project-content__figure:last-child {
+  .project-content__image--grid-overlay .project-content__figure:last-child {
     @apply mt-16;
   }
 
-  .project-content--flipped .project-content__image-grid-overlay .project-content__figure {
+  .project-content--flipped .project-content__image--grid-overlay .project-content__figure {
     @apply -ml-24;
     @apply mr-0;
   }
@@ -1794,7 +1834,7 @@ figcaption {
   }
 
   .work-list__link {
-    @apply max-h-full;
+    @apply h-56;
   }
 
   .filter__list {
@@ -1838,11 +1878,11 @@ figcaption {
     @apply gap-16;
   }
 
-  .project-content__image-grid-overlay .project-content__figure {
+  .project-content__image--grid-overlay .project-content__figure {
     @apply -ml-4;
   }
 
-  .project-content--flipped .project-content__image-grid-overlay .project-content__figure {
+  .project-content--flipped .project-content__image--grid-overlay .project-content__figure {
     @apply -ml-24;
     @apply -mr-4;
   }

@@ -55,15 +55,14 @@ function WorksPage({
               <article key={frontmatter.slug} className="work-list__item">
                 <Link
                   to={frontmatter.slug}
-                  className="work-list__link button button--link"
+                  className="work-list__link"
                   state={{
                     modal: true,
                   }}
                 >
-                  <Img
-                    fluid={frontmatter.cover.childImageSharp.fluid}
-                    className="work-list__thumbnail"
-                  />
+                  <div className="work-list__thumbnail">
+                    <Img fluid={frontmatter.cover.childImageSharp.fluid} />
+                  </div>
                 </Link>
 
                 <div className="work-list__detail">
