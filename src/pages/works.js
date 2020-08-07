@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Img from "gatsby-image";
 
-
+// Components
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Tags from "../components/tags";
@@ -27,6 +27,16 @@ function WorksPage({
     ScrollTrigger.batch(project, {
       onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
       start: "top bottom",
+    });
+
+    const stickyHeader = '.header__wrapper';
+
+    ScrollTrigger.create({
+      trigger: projectList,
+      start: 'top -40px',
+      end: 'bottom top',
+      endTrigger: '.main',
+      toggleClass: { targets: stickyHeader, className: 'shadow-lg' },
     });
   });
   return (

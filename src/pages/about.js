@@ -44,7 +44,7 @@ function AboutPage() {
 
     ScrollTrigger.create({
       trigger: stickyContainer,
-      start: 'top -101px',
+      start: 'top -110px',
       end: 'bottom top',
       endTrigger: '.main',
       toggleClass: { targets: stickyTarget, className: 'is--pushed' },

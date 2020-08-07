@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Img from "gatsby-image";
 
 // Components
@@ -14,6 +16,31 @@ const TagPage = ({ pageContext, data }) => {
   const pageTag = tag
   const tagHeader = `Work${totalCount === 1 ? "" : "s"} in '${pageTag}'`
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  let projectList = useRef(null);
+
+  useEffect(() => {
+    const project = projectList.childNodes;
+
+    gsap.defaults({ ease: "power3.out" });
+    gsap.set(project, { y: 50, opacity: 0.5 });
+
+    ScrollTrigger.batch(project, {
+      onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
+      start: "top bottom",
+    });
+
+    const stickyHeader = '.header__wrapper';
+
+    ScrollTrigger.create({
+      trigger: projectList,
+      start: 'top -40px',
+      end: 'bottom top',
+      endTrigger: '.main',
+      toggleClass: { targets: stickyHeader, className: 'shadow-lg' },
+    });
+  });
   return (
     <Layout>
       <SEO
@@ -33,7 +60,7 @@ const TagPage = ({ pageContext, data }) => {
 
         <Tags />
 
-        <div className="work-list">
+        <div className="work-list work-list--filtered" ref={(el) => (projectList = el)}>
           {edges.map((edge) => {
             const { frontmatter } = edge.node;
             return (

@@ -27,12 +27,12 @@ function Tags() {
         <li className="inline-list__item">
           <Link
             to="/works"
-            className="button button--ghost button--sm"
-            activeClassName="button--active"
+            className="tag"
+            activeClassName="tag--active"
             partiallyActive={true}
           >
-            All{" "}
-            <span className="badge">
+            All skills{" "}
+            <span className="tag__addon-right badge">
               <span className="badge__value">11</span>
             </span>
           </Link>
@@ -41,12 +41,12 @@ function Tags() {
           <li key={tag.fieldValue} className="inline-list__item">
             <Link
               to={`/tags/${kebabCase(tag.fieldValue)}`}
-              className="button button--ghost button--sm"
-              activeClassName="button--active"
+              className="tag"
+              activeClassName="tag--active"
               partiallyActive={true}
             >
               {tag.fieldValue}{" "}
-              <span className="badge">
+              <span className="tag__addon-right badge">
                 <span className="badge__value">{tag.totalCount}</span>
               </span>
             </Link>

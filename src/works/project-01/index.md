@@ -63,7 +63,7 @@ headerFlip: false
         <ul class="bulleted-list">
           <li>Full search + Extra component</li>
           <li>Users would miss additional context below the fold</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" class="text-sm text-gray-600">Open wireframe</a></li>
+          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
         </ul>
       </dd>
       <dt>Option B</dt>
@@ -71,7 +71,7 @@ headerFlip: false
         <ul class="bulleted-list">
           <li>Minimal search bar to save more space</li>
           <li>User wouldn't associate the minimal search bar UI with the concept of travel search</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/317587837" class="text-sm text-gray-600">Open wireframe</a></li>
+          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/317587837" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
         </ul>
       </dd>
     </dl>
@@ -115,7 +115,7 @@ headerFlip: false
 <div class="content-section project-content project-content--5/5 project-content--flipped">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Prototye</h3>
+      <h3 class="h3">Prototype</h3>
     </header>
     <dl>
       <dt>Visual design</dt>
@@ -134,6 +134,7 @@ headerFlip: false
         </ol>
       </dd>
     </dl>
+    <a href="https://preview.uxpin.com/6178e38c68fdc4e35512c57e84b9a96790b8c9b2#/pages//simulate/sitemap?mode=ch" target="_blank" rel="noreferrer" class="button button--ghost button--sm mt-4">Open interactive prototype</a>
   </div>
   <div class="project-content__column project-content__image project-content__image--grid project-content__image--grid-overlay">
     <figure class="project-content__figure">

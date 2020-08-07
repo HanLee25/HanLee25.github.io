@@ -172,6 +172,10 @@ figcaption {
   @apply py-4;
 }
 
+.content-section__header--short {
+  width: calc(100% - theme('spacing.24'));
+}
+
 
 /* Header *********************/
 
@@ -733,6 +737,7 @@ figcaption {
   @apply bg-current;
   @apply font-thin;
   @apply inline-block;
+  @apply opacity-50;
   @apply rounded-full;
   @apply text-center;
   @apply w-4;
@@ -741,8 +746,6 @@ figcaption {
 }
 
 .badge__value {
-  @apply text-white;
-
   mix-blend-mode: difference;
 }
 
@@ -836,11 +839,15 @@ figcaption {
 
 .sticky-element__target.is--shown {
   @apply bg-gray-100;
+  @apply border-b;
+  @apply border-t;
   @apply opacity-100;
   @apply shadow-lg;
 }
 
 .sticky-element__target.is--pushed {
+  @apply z-20;
+  
   top: theme('spacing.16');
 }
 
@@ -936,6 +943,14 @@ figcaption {
 .tag--active {
   @apply bg-gray-600;
   @apply text-white;
+}
+
+.tag__addon-left {
+  @apply -ml-1;
+}
+
+.tag__addon-right {
+  @apply -mr-1;
 }
 
 
@@ -1034,8 +1049,9 @@ figcaption {
 
 .filter__toggle {
   @apply absolute;
-  @apply -mt-12;
   @apply right-0;
+
+  margin-top: -3.5rem;
 }
 
 .filter__arrow {
@@ -1128,10 +1144,9 @@ figcaption {
 
 .project-header {
   @apply grid;
-  @apply gap-6;
   @apply items-center;
 
-  grid-template-columns: auto minmax(8rem, max-content);
+  grid-template-columns: auto minmax(10rem, max-content);
 }
 
 .project-header__title {
@@ -1181,11 +1196,13 @@ figcaption {
 }
 
 .project-header__preview .gatsby-image-wrapper {
-  @apply -mr-20;
+  @apply -ml-4;
+  @apply -mr-32;
+  @apply -my-12;
 }
 
 .project-header--flipped {
-  grid-template-columns: minmax(8rem, max-content) auto;
+  grid-template-columns: minmax(10rem, max-content) auto;
 }
 
 .project-header--flipped .project-header__overview {
@@ -1198,8 +1215,8 @@ figcaption {
 }
 
 .project-header--flipped .project-header__preview .gatsby-image-wrapper {
-  @apply -ml-20;
-  @apply mr-0;
+  @apply -ml-32;
+  @apply -mr-4;
 }
 
 .project-content {
@@ -1442,15 +1459,13 @@ figcaption {
   }
 
   .project-header {
-    @apply gap-16;
+    @apply items-start;
 
-    grid-template-columns: auto minmax(12rem, max-content);
+    grid-template-columns: auto minmax(16rem, max-content);
   }
 
   .project-header__preview .gatsby-image-wrapper {
-    @apply -mr-16;
-
-    margin-top: -21rem;
+    margin-top: -25rem;
   }
 
   .project-header__overview {
@@ -1458,7 +1473,7 @@ figcaption {
   }
 
   .project-header--flipped {
-    grid-template-columns: minmax(12rem, max-content) auto;
+    grid-template-columns: minmax(16rem, max-content) auto;
   }
 
   .project-content {
@@ -1677,9 +1692,7 @@ figcaption {
   }
 
   .project-header {
-    @apply col-gap-10;
-    @apply items-start;
-    @apply row-gap-0;
+    @apply col-gap-4;
 
     grid-template-columns: minmax(14rem, max-content) auto;
   }
@@ -1687,7 +1700,7 @@ figcaption {
   .project-header__title {
     @apply block;
     @apply col-start-2;
-    @apply -mr-20;
+    @apply -mr-24;
     @apply row-start-1;
   }
 
@@ -1698,13 +1711,14 @@ figcaption {
   }
 
   .project-header__preview .gatsby-image-wrapper {
-    @apply mt-0;
-    @apply mr-0;
+    @apply -ml-24;
+    @apply -mr-8;
+    @apply -mt-20;
   }
 
   .project-header__overview {
     @apply col-start-2;
-    @apply -mr-20;
+    @apply -mr-24;
     @apply row-start-2;
   }
 
@@ -1730,8 +1744,8 @@ figcaption {
   }
 
   .project-header--flipped .project-header__preview .gatsby-image-wrapper {
-    @apply ml-0;
-    @apply -mr-20;
+    @apply -ml-8;
+    @apply -mr-56;
   }
 
   .project-content {
@@ -1858,20 +1872,33 @@ figcaption {
   .project-header {
     @apply col-gap-16;
 
-    grid-template-columns: minmax(14rem, max-content) auto;
+    grid-template-columns: minmax(15rem, max-content) auto;
+  }
+
+  .project-header__title {
+    @apply -mr-16;
+  }
+
+  .project-header__preview .gatsby-image-wrapper {
+    @apply -ml-12;
+    @apply -mr-16;
   }
 
   .project-header__overview {
+    @apply -mr-16;
     @apply text-3xl;
   }
 
   .project-header--flipped {
-    grid-template-columns: auto minmax(10rem, max-content);
+    @apply -mr-8;
+
+    grid-template-columns: auto minmax(12rem, max-content);
   }
 
   .project-header--flipped .project-header__preview .gatsby-image-wrapper {
-    @apply -mr-24;
-    @apply -mt-6;
+    @apply -ml-12;
+    @apply -mr-48;
+    @apply -my-24;
   }
 
   .project-content--flipped {
