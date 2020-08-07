@@ -33,29 +33,29 @@ const TagPage = ({ pageContext, data }) => {
 
         <Tags />
 
-        <div className="project-list">
+        <div className="work-list">
           {edges.map((edge) => {
             const { frontmatter } = edge.node;
             return (
-              <article key={frontmatter.slug} className="project-list__item">
+              <article key={frontmatter.slug} className="work-list__item">
                 <Link
                   to={frontmatter.slug}
-                  className="project-list__link button button--link"
+                  className="work-list__link button button--link"
                 >
                   <Img
                     fluid={frontmatter.cover.childImageSharp.fluid}
-                    className="project-list__thumbnail"
+                    className="work-list__thumbnail"
                   />
                 </Link>
 
-                <div className="project-list__detail">
-                  <header className="project-list__header">
-                    <h3 className="project-list__title h4">
+                <div className="work-list__detail">
+                  <header className="work-list__header">
+                    <h3 className="work-list__title h4">
                       {frontmatter.title}
                     </h3>
 
-                    <small className="project-list__meta">
-                      <time dateTime="{frontmatter.date}">
+                    <small className="work-list__meta">
+                      <time dateTime={frontmatter.date}>
                         {frontmatter.date}
                       </time>
                       {` `}
@@ -71,7 +71,7 @@ const TagPage = ({ pageContext, data }) => {
                     </small>
                   </header>
 
-                  <p className="project-list__description">
+                  <p className="work-list__description">
                     {frontmatter.excerpt}
                   </p>
 

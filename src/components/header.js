@@ -24,7 +24,7 @@ function Header() {
       <div className="header__wrapper">
         <Link
           to="/"
-          title="{site.siteMetadata.title} : Home"
+          title={site.siteMetadata.title + ` : Home`}
           className="header__home"
         >
           <h1 className="header__brand">

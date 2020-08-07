@@ -7,9 +7,11 @@ teamUrl: "http://www.fareportal.com/"
 excerpt: "Break down and redesign the checkout process of CheapOair iOS native application to reduce the 'abandon cart' scenario"
 tags: ['UI design', 'Style guide', 'UX research', 'User flow', 'Persona', 'Wireframe', 'Prototype', 'Interaction', 'iOS HIG']
 cover: "./project-cover.png"
+preview: "./project-preview.png"
 role: " "
 industry: " "
 number: "02"
+headerFlip: false
 ---
 
 # Heading

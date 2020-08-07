@@ -62,13 +62,14 @@ export default function Template({
             <span className="project-intro__title">{frontmatter.title}</span>
           </div>
 
-          <dl className="project-meta">
+          <dl className={`project-meta${frontmatter.headerFlip === true ? ` project-meta--pushed` : ``}`}>
             <dt className="project-meta__title">Team</dt>
             <dd>
               <a
-                href="{frontmatter.teamUrl}"
+                href={frontmatter.teamUrl}
                 target="_blank"
-                title="{frontmatter.team}"
+                without rel="noreferrer"
+                title={frontmatter.team}
               >
                 {frontmatter.team}
               </a>
@@ -97,7 +98,7 @@ export default function Template({
 
         <div className="content-column__main" ref={(el) => (projectContent = el)}>
           <section className="content-section">
-            <header className="content-section__header project-header">
+            <header className={`content-section__header project-header${frontmatter.headerFlip === true ? ` project-header--flipped` : ``}`}>
               <h2 className="project-header__title h1">{frontmatter.title}</h2>
 
               <p className="project-header__overview">{frontmatter.excerpt}</p>
@@ -132,6 +133,7 @@ export const pageQuery = graphql`
         teamUrl
         role
         industry
+        headerFlip
         cover {
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {

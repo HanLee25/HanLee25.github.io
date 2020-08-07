@@ -11,6 +11,7 @@ preview: "./project-preview.png"
 role: "Mobile design manager"
 industry: "Travel / Online travel agency"
 number: "01"
+headerFlip: false
 ---
 
 <div class="content-section project-content project-content--6/4">

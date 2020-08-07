@@ -852,7 +852,7 @@ figcaption {
 
  Contents
 
- [1] Project list
+ [1] Work list
  [2] Tags
  [3] Timeline
  [4] Quote
@@ -861,40 +861,40 @@ figcaption {
 
  =================================================================*/
 
-/* [1] Project list *********************/
+/* [1] Work list *********************/
 
-.project-list {
+.work-list {
   @apply gap-8;
   @apply grid;
   @apply grid-cols-1;
   @apply pb-8;
 }
 
-.project-list__item,
-.project-list__detail {
+.work-list__item,
+.work-list__detail {
   @apply gap-3;
   @apply grid;
   @apply grid-cols-1;
 }
 
-.project-list__item + .project-list__item {
+.work-list__item + .work-list__item {
   @apply border-t;
   @apply border-gray-300;
   @apply pt-10;
 }
 
-.project-list__thumbnail {
+.work-list__thumbnail {
   height: calc(100% - theme('spacing.2'));
 }
 
-.project-list__header {
+.work-list__header {
   @apply flex;
   @apply flex-col;
   @apply justify-start;
   @apply leading-none;
 }
 
-.project-list__title {
+.work-list__title {
   @apply capitalize;
   @apply inline-block;
   @apply mb-0;
@@ -902,11 +902,11 @@ figcaption {
   @apply w-full;
 }
 
-.project-list__meta {
+.work-list__meta {
   @apply text-gray-600;
 }
 
-.project-list__description {
+.work-list__description {
   @apply max-w-full;
   @apply mb-0;
 }
@@ -1149,6 +1149,8 @@ figcaption {
   @apply text-gray-400;
   @apply text-6xl;
   @apply top-0;
+
+  mix-blend-mode: darken;
 }
 
 .project-header__overview::before {
@@ -1170,6 +1172,24 @@ figcaption {
 
 .project-header__preview .gatsby-image-wrapper {
   @apply -mr-20;
+}
+
+.project-header--flipped {
+  grid-template-columns: minmax(8rem, max-content) auto;
+}
+
+.project-header--flipped .project-header__overview {
+  @apply col-start-2;
+  @apply row-start-1;
+}
+
+.project-header--flipped .project-header__preview {
+  @apply col-start-1;
+}
+
+.project-header--flipped .project-header__preview .gatsby-image-wrapper {
+  @apply -ml-20;
+  @apply mr-0;
 }
 
 .project-content {
@@ -1365,19 +1385,19 @@ figcaption {
     @apply top-0;
   }
 
-  .project-list {
+  .work-list {
     @apply gap-12;
   }
 
-  .project-list__item {
+  .work-list__item {
     @apply gap-6;
   }
 
-  .project-list__item + .project-list__item {
+  .work-list__item + .work-list__item {
     @apply pt-12;
   }
 
-  .project-list__header {
+  .work-list__header {
     @apply flex-col-reverse;
   }
 
@@ -1398,6 +1418,10 @@ figcaption {
     @apply w-1/2;
   }
 
+  .project-meta--pushed {
+    @apply ml-64;
+  }
+
   .project-header {
     @apply gap-16;
 
@@ -1412,6 +1436,10 @@ figcaption {
 
   .project-header__overview {
     @apply text-2xl;
+  }
+
+  .project-header--flipped {
+    grid-template-columns: minmax(12rem, max-content) auto;
   }
 }
 
@@ -1556,13 +1584,13 @@ figcaption {
     top: theme('spacing.8');
   }
 
-  .project-list__item {
+  .work-list__item {
     @apply gap-12;
 
     grid-template-columns: 40% calc(60% - theme('spacing.12'));
   }
 
-  .project-list__link {
+  .work-list__link {
     max-height: 70%;
   }
 
@@ -1609,20 +1637,22 @@ figcaption {
 
   .project-meta {
     @apply grid-cols-1;
+    @apply ml-0;
     @apply w-48;
   }
 
   .project-header {
     @apply col-gap-10;
+    @apply items-start;
     @apply row-gap-0;
 
-    grid-template-columns: minmax(12rem, max-content) auto;
+    grid-template-columns: minmax(14rem, max-content) auto;
   }
 
   .project-header__title {
     @apply block;
     @apply col-start-2;
-    @apply -mr-16;
+    @apply -mr-20;
     @apply row-start-1;
   }
 
@@ -1639,8 +1669,34 @@ figcaption {
 
   .project-header__overview {
     @apply col-start-2;
-    @apply -mr-16;
+    @apply -mr-20;
     @apply row-start-2;
+  }
+
+  .project-header--flipped {
+    grid-template-columns: auto minmax(8rem, max-content);
+  }
+
+  .project-header--flipped .project-header__title {
+    @apply col-start-1;
+    @apply mr-0;
+    @apply row-start-1;
+  }
+
+  .project-header--flipped .project-header__overview {
+    @apply col-start-1;
+    @apply mr-0;
+    @apply row-start-2;
+  }
+
+  .project-header--flipped .project-header__preview {
+    @apply col-start-2;
+    @apply row-start-1;
+  }
+
+  .project-header--flipped .project-header__preview .gatsby-image-wrapper {
+    @apply ml-0;
+    @apply -mr-20;
   }
 
   .project-content {
@@ -1737,7 +1793,7 @@ figcaption {
     @apply max-w-screen-xl;
   }
 
-  .project-list__link {
+  .work-list__link {
     @apply max-h-full;
   }
 
@@ -1767,6 +1823,15 @@ figcaption {
 
   .project-header__overview {
     @apply text-3xl;
+  }
+
+  .project-header--flipped {
+    grid-template-columns: auto minmax(10rem, max-content);
+  }
+
+  .project-header--flipped .project-header__preview .gatsby-image-wrapper {
+    @apply -mr-24;
+    @apply -mt-6;
   }
 
   .project-content--flipped {
