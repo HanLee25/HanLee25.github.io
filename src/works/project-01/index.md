@@ -11,7 +11,7 @@ preview: "./project-preview.png"
 role: "Mobile design manager"
 industry: "Travel / Online travel agency"
 number: "01"
-headerFlip: false
+headerFlip: true
 ---
 
 <div class="content-section project-content project-content--6/4">
@@ -41,7 +41,7 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--grid project-content__image--grid-overlay">
+  <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project01.png" alt="Project" />
       <figcaption>Fig.1: Landing screen</figcaption>
@@ -76,7 +76,7 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--grid project-content__image--grid-overlay">
+  <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project03.png" alt="Project" />
       <figcaption>Fig.3: Option A</figcaption>
@@ -87,7 +87,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--7/3">
+<div class="content-section project-content project-content--6/4">
   <div class="project-content__column">
     <header class="content-section__header">
       <h3 class="h3">Converge solutions</h3>
@@ -106,7 +106,7 @@ headerFlip: false
     </dl>
   </div>
   <div class="project-content__column project-content__image">
-    <figure class="project-content__figure lg:-mr-20">
+    <figure class="project-content__figure">
       <img src="./project05.png" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>
@@ -136,7 +136,7 @@ headerFlip: false
     </dl>
     <a href="https://preview.uxpin.com/6178e38c68fdc4e35512c57e84b9a96790b8c9b2#/pages//simulate/sitemap?mode=ch" target="_blank" rel="noreferrer" class="button button--ghost button--sm mt-4">Open interactive prototype</a>
   </div>
-  <div class="project-content__column project-content__image project-content__image--grid project-content__image--grid-overlay">
+  <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project07.png" alt="Project"/>
       <figcaption>Fig.7: Option C search view</figcaption>
@@ -147,7 +147,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--5/5">
+<div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
       <h3 class="h3">Hand-off</h3>
@@ -163,8 +163,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--block">
-    <figure class="project-content__figure lg:-mr-24">
+  <div class="project-content__column project-content__image project-content__image--filled">
+    <figure class="project-content__figure">
       <img src="./project09.jpg" alt="Project"/>
       <figcaption>Fig.8: Interaction map</figcaption>
     </figure>
@@ -181,8 +181,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--block">
-    <figure class="project-content__figure lg:-mr-24">
+  <div class="project-content__column project-content__image project-content__image--filled">
+    <figure class="project-content__figure">
       <img src="./project08.jpg" alt="Project"/>
       <figcaption>Fig.9: Flow chart</figcaption>
     </figure>

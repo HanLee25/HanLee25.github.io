@@ -49,6 +49,41 @@ export default function Template({
       ease: "power3.out",
       stagger: 0.25,
     });
+
+    const imgBlocks = document.querySelectorAll('.project-content__image--block');
+
+    function isOverflown(element) {
+      return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+    }
+
+    imgBlocks.forEach(imgBlock => imgBlock.classList.add(isOverflown(imgBlock) ? 'is--overflows' : 'is--fits'));
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    imgBlocks.forEach(imgBlock => imgBlock.addEventListener('mousedown', (e) => {
+      isDown = true;
+      imgBlock.classList.add('is--grabbed');
+      startX = e.pageX - imgBlock.offsetLeft;
+      scrollLeft = imgBlock.scrollLeft;
+      console.log(isDown);
+    }));
+    imgBlocks.forEach(imgBlock => imgBlock.addEventListener('mouseleave', () => {
+      isDown = false;
+      imgBlock.classList.remove('is--grabbed');
+    }));
+    imgBlocks.forEach(imgBlock => imgBlock.addEventListener('mouseup', () => {
+      isDown = false;
+      imgBlock.classList.remove('is--grabbed');
+    }));
+    imgBlocks.forEach(imgBlock => imgBlock.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - imgBlock.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      imgBlock.scrollLeft = scrollLeft - walk;
+    }));
   })
   return (
     <Modal>
