@@ -5,9 +5,10 @@ title: "Checkout path redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Re-architect and redesign the checkout process flow of CheapOair iOS native application to reduce the 'abandon cart' scenario"
-tags: ['UI design', 'Style guide', 'UX research', 'User flow', 'Persona', 'Wireframe', 'Prototype', 'Interaction', 'iOS HIG', 'Front-end', 'Styled components', 'REACT JS']
+tags: ['UI design', 'Information architecture', 'Style guide', 'UX research', 'User flow', 'Wireframe', 'Prototype', 'Interaction', 'iOS HIG', 'Front-end', 'Styled components', 'REACT JS', 'Conversion optimization']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
+previewLandscape: false
 role: "Mobile design manager"
 industry: "Travel / Online travel agency"
 number: "02"
@@ -55,7 +56,7 @@ headerFlip: false
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Daft solutions</h3>
+      <h3 class="h3">Draft solutions</h3>
     </header>
     <dl>
       <dt>Option A</dt>
@@ -166,7 +167,7 @@ headerFlip: false
     <header class="content-section__header">
       <h3 class="h3">Contribution</h3>
     </header>
-    <dl class="-mx-8 md:mx-0 lg:-mr-16 p-8 bg-white rounded-md shadow">
+    <dl class="project-content__card">
       <dt>Product strategy</dt>
       <dd>
         <ul class="bulleted-list">

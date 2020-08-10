@@ -5,7 +5,7 @@ title: "Campaign landing page design"
 team: "Beteran"
 teamUrl: "/"
 excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"
-tags: ['UI design', 'Front-end', 'Shopify', 'Liquid', 'HTML / SCSS', 'JS']
+tags: ['UI design', 'Front-end', 'Shopify', 'Liquid', 'HTML / SCSS', 'Javascript']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 role: " "

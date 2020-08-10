@@ -190,6 +190,10 @@ figcaption {
   @apply z-20;
 }
 
+.header--expanded {
+  @apply z-50;
+}
+
 .header__wrapper {
   @apply flex;
   @apply flex-wrap;
@@ -1206,6 +1210,11 @@ figcaption {
   @apply -my-12;
 }
 
+.project-header__preview--landscape .gatsby-image-wrapper {
+  @apply ml-0;
+  @apply -mr-40;
+}
+
 .project-header--flipped {
   grid-template-columns: minmax(8rem, max-content) auto;
 }
@@ -1234,6 +1243,18 @@ figcaption {
 
 .project-content__column {
   @apply relative;
+}
+
+.project-content__card {
+ @apply -mx-8;
+ @apply p-8;
+ @apply bg-white;
+ @apply rounded-lg;
+
+ box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.3),
+              0 -20px 40px -20px rgba(0, 0, 0, 0.1),
+              20px 0 40px -20px rgba(0, 0, 0, 0.1),
+              -20px 0 40px -20px rgba(0, 0, 0, 0.1);
 }
 
 .project-content__image {
@@ -1299,10 +1320,11 @@ figcaption {
   @apply mr-4;
   @apply pointer-events-none;
 
-  min-width: 45%;
+  min-width: 40%;
 }
 
-.project-content__figure .gatsby-resp-image-wrapper {
+.project-content__figure .gatsby-resp-image-wrapper,
+.project-content__figure > img {
   @apply overflow-hidden;
   @apply rounded-lg;
 
@@ -1469,12 +1491,15 @@ figcaption {
 
   .sticky-element__target.is--stuck {
     @apply px-8;
+    @apply opacity-100;
 
     left: theme('spacing.48');
     top: calc(theme('spacing.32') * -1);
   }
 
   .sticky-element__target.is--shown {
+    @apply border-none;
+    @apply shadow-none;
     @apply top-0;
   }
 
@@ -1524,6 +1549,10 @@ figcaption {
 
     grid-template-columns: auto minmax(16rem, max-content);
   }
+  
+  .project-header__overview {
+    @apply text-2xl;
+  }
 
   .project-header__preview .gatsby-image-wrapper {
     @apply -mr-32;
@@ -1531,8 +1560,11 @@ figcaption {
     margin-top: -26rem;
   }
 
-  .project-header__overview {
-    @apply text-2xl;
+  .project-header__preview--landscape .gatsby-image-wrapper {
+    @apply ml-8;
+    @apply -mr-64;
+
+    margin-top: -22rem;
   }
 
   .project-header--flipped {
@@ -1543,9 +1575,18 @@ figcaption {
     @apply -ml-32;
   }
 
+  .project-header--flipped .project-header__preview--landscape .gatsby-image-wrapper {
+    @apply -ml-64;
+    @apply mr-8;
+  }
+
   .project-content {
     @apply mx-auto;
     @apply w-5/6;
+  }
+
+  .project-content__card {
+    @apply mx-0;
   }
 
   .project-content__image {
@@ -1577,11 +1618,13 @@ figcaption {
     @apply -mx-24;
     @apply pl-24;
     @apply pr-12;
-    @apply py-8;
+    @apply py-12;
   }
 
   .project-content__image--block .project-content__figure {
-    min-width: 25%;
+    @apply mr-8;
+
+    min-width: 28%;
   }
 }
 
@@ -1815,6 +1858,13 @@ figcaption {
     @apply -mt-48;
   }
 
+  .project-header__preview--landscape .gatsby-image-wrapper {
+    @apply ml-4;
+    @apply -mt-16;
+
+    margin-right: -24rem;
+  }
+
   .project-header--flipped {
     grid-template-columns: minmax(14rem, max-content) auto;
   }
@@ -1840,6 +1890,11 @@ figcaption {
   .project-header--flipped .project-header__preview .gatsby-image-wrapper {
     @apply -ml-32;
     @apply -mr-12;
+  }
+
+  .project-header--flipped .project-header__preview--landscape .gatsby-image-wrapper {
+    @apply -ml-24;
+    @apply mr-4;
   }
 
   .project-content {
@@ -1876,6 +1931,10 @@ figcaption {
   .project-content--flipped > .project-content__column:last-child {
     @apply col-start-1;
     @apply row-start-1;
+  }
+
+  .project-content__card {
+    @apply -mr-16;
   }
 
   .project-content__image {
@@ -1926,9 +1985,9 @@ figcaption {
   }
 
   .project-content__image--block .project-content__figure {
-    @apply mr-8;
+    @apply mr-10;
 
-    min-width: 35%;
+    min-width: 38%;
   }
 }
 
@@ -2011,7 +2070,15 @@ figcaption {
     @apply -my-24;
   }
 
+  .project-header__preview--landscape .gatsby-image-wrapper {
+    @apply ml-0;
+    @apply -mt-32;
+
+    margin-right: -26rem;
+  }
+
   .project-header--flipped {
+    @apply gap-16;
     @apply -mr-8;
 
     grid-template-columns: minmax(16rem, max-content) auto;
@@ -2027,8 +2094,10 @@ figcaption {
     @apply -mr-24;
   }
 
-  .project-content--flipped {
-    @apply gap-16;
+  .project-header--flipped .project-header__preview--landscape .gatsby-image-wrapper {
+    @apply -ml-16;
+    @apply -mr-8;
+    @apply -mt-16;
   }
 
   .project-content__image .project-content__figure {
@@ -2040,8 +2109,8 @@ figcaption {
   }
 
   .project-content__image--block .project-content__figure {
-    @apply mr-8;
+    @apply mr-12;
 
-    min-width: 25%;
+    min-width: 26%;
   }
 }

@@ -5,9 +5,10 @@ title: "Flight search redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Redesign the flight search feature and other home page componets for CheapOair iOS native app to improve funnel."
-tags: ['UI design', 'UX research', 'Wireframe', 'User flow', 'Prototype', 'Interaction', 'iOS HIG', 'Front-end', 'Styled components', 'REACT JS']
+tags: ['UI design', 'Information architecture', 'UX research', 'Wireframe', 'User flow', 'Prototype', 'Interaction', 'iOS HIG', 'Front-end', 'Styled components', 'REACT JS']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
+previewLandscape: false
 role: "Mobile design manager"
 industry: "Travel / Online travel agency"
 number: "01"
@@ -55,7 +56,7 @@ headerFlip: true
 <div class="content-section project-content project-content--4/6 project-content--flipped">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Diverge solutions</h3>
+      <h3 class="h3">Diverge ideas</h3>
     </header>
     <dl>
       <dt>Option A</dt>
@@ -193,7 +194,7 @@ headerFlip: true
     <header class="content-section__header">
       <h3 class="h3">Contribution</h3>
     </header>
-    <dl class="-mx-8 md:mx-0 lg:-mr-16 p-8 bg-white rounded-md shadow">
+    <dl class="project-content__card">
       <dt>Product strategy</dt>
       <dd>
         <ul class="bulleted-list">

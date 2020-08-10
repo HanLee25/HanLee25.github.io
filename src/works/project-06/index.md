@@ -1,17 +1,18 @@
 ---
 slug: "/works/6th-project"
 date: "2017-08-20"
-title: "Brand identity"
+title: "Brand identity & logo"
 team: "Various clients"
 teamUrl: "/"
-excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"
+excerpt: "Explore and build up the visual communication of the brand identity"
 tags: ['Branding', 'Illustration', 'Brand sprint', 'Visual design', 'Print design']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
-role: " "
-industry: " "
+previewLandscape: true
+role: "Designer"
+industry: "Vary"
 number: "06"
-headerFlip: false
+headerFlip: true
 ---
 
 # Heading

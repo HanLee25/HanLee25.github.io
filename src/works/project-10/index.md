@@ -5,7 +5,7 @@ title: "Shopify theme customization"
 team: "HYPD"
 teamUrl: "/"
 excerpt: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"
-tags: ['Branding', 'Brand sprint', 'Illustration', 'UI design', 'Front-end', 'Shopify', 'Liquid', 'HTML / SCSS', 'JS']
+tags: ['Branding', 'Brand sprint', 'Illustration', 'UI design', 'Front-end', 'Shopify', 'Liquid', 'HTML / SCSS', 'Javascript']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 role: " "

@@ -20,7 +20,7 @@ function Header() {
   `);
 
   return (
-    <header className="header">
+    <header className={`header${isExpanded ? ` header--expanded` : ``}`}>
       <div className="header__wrapper">
         <Link
           to="/"

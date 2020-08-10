@@ -67,7 +67,6 @@ export default function Template({
       imgBlock.classList.add('is--grabbed');
       startX = e.pageX - imgBlock.offsetLeft;
       scrollLeft = imgBlock.scrollLeft;
-      console.log(isDown);
     }));
     imgBlocks.forEach(imgBlock => imgBlock.addEventListener('mouseleave', () => {
       isDown = false;
@@ -88,7 +87,10 @@ export default function Template({
   return (
     <Modal>
       <div className="content-column">
-        <aside className="content-column__side-bar" ref={(el) => (projectInfo = el)}>
+        <aside
+          className="content-column__side-bar"
+          ref={(el) => (projectInfo = el)}
+        >
           <div className="project-intro">
             <div className="project-intro__thumbnail">
               <Img fluid={frontmatter.cover.childImageSharp.fluid} />
@@ -97,13 +99,17 @@ export default function Template({
             <span className="project-intro__title">{frontmatter.title}</span>
           </div>
 
-          <dl className={`project-meta${frontmatter.headerFlip === true ? ` project-meta--pushed` : ``}`}>
+          <dl
+            className={`project-meta${
+              frontmatter.headerFlip === true ? ` project-meta--pushed` : ``
+            }`}
+          >
             <dt className="project-meta__title">Team</dt>
             <dd>
               <a
                 href={frontmatter.teamUrl}
                 target="_blank"
-                without rel="noreferrer"
+                rel="noreferrer"
                 title={frontmatter.team}
               >
                 {frontmatter.team}
@@ -131,14 +137,25 @@ export default function Template({
           </dl>
         </aside>
 
-        <div className="content-column__main" ref={(el) => (projectContent = el)}>
+        <div
+          className="content-column__main"
+          ref={(el) => (projectContent = el)}
+        >
           <section className="content-section">
-            <header className={`content-section__header project-header${frontmatter.headerFlip === true ? ` project-header--flipped` : ``}`}>
+            <header
+              className={`content-section__header project-header${
+                frontmatter.headerFlip === true
+                  ? ` project-header--flipped`
+                  : ``
+              }`}
+            >
               <h2 className="project-header__title h1">{frontmatter.title}</h2>
 
               <p className="project-header__overview">{frontmatter.excerpt}</p>
 
-              <div className="project-header__preview">
+              <div className={`project-header__preview${
+              frontmatter.previewLandscape === true ? ` project-header__preview--landscape` : ``
+            }`}>
                 <Img fluid={frontmatter.preview.childImageSharp.fluid} />
               </div>
             </header>
@@ -169,6 +186,7 @@ export const pageQuery = graphql`
         role
         industry
         headerFlip
+        previewLandscape
         cover {
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {
