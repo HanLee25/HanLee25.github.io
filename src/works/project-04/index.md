@@ -69,7 +69,7 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--filled">
+  <div class="project-content__column project-content__image project-content__image--1">
     <figure class="project-content__figure">
       <img src="./project03.jpg" alt="Project"/>
       <figcaption>Fig.3: Option C search view</figcaption>

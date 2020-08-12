@@ -155,7 +155,7 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--filled">
+  <div class="project-content__column project-content__image project-content__image--1">
     <figure class="project-content__figure">
       <img src="./project06.jpg" alt="Project"/>
       <figcaption>Fig.7: Option C search view</figcaption>

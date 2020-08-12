@@ -5,7 +5,7 @@ title: "Flight search redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Redesign the flight search feature and other home page componets for CheapOair iOS native app to improve funnel."
-tags: ['UI design', 'Information architecture', 'UX research', 'Wireframe', 'User flow', 'Prototype', 'Interaction', 'iOS HIG', 'Front-end', 'Styled components', 'REACT JS']
+tags: ['UI design', 'Information architecture', 'UX research', 'Wireframe', 'User flow', 'Prototype', 'Interaction', 'Visual narrative', 'iOS HIG', 'Front-end', 'Styled components', 'REACT JS']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: false
@@ -113,7 +113,38 @@ headerFlip: true
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--5/5 project-content--flipped">
+<div class="content-section project-content">
+  <div class="project-content__column">
+    <header class="content-section__header">
+      <h3 class="h3">Micro interaction</h3>
+    </header>
+    <dl>
+      <dt>Interaction sequence</dt>
+      <dd>
+        <ol class="ordered-list">
+          <li>Initial view</li>
+          <li>Searching: user enters location > search section enpanded</li>
+          <li>Exploring: user interact other components > moves toward to each path</li>
+        </ol>
+      </dd>
+    </dl>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--block">
+    <figure class="project-content__figure">
+      <img src="./project10.gif" alt="Project"/>
+      <figcaption>Fig.7: Option C search view</figcaption>
+    </figure>
+    <figure class="project-content__figure">
+      <img src="./project11.gif" alt="Project"/>
+      <figcaption>Fig.6: Option C initial view</figcaption>
+    </figure>
+    <figure class="project-content__figure">
+      <img src="./project12.gif" alt="Project"/>
+      <figcaption>Fig.6: Option C initial view</figcaption>
+    </figure>
+  </div>
+</div>
+<div class="content-section project-content project-content--5/5">
   <div class="project-content__column">
     <header class="content-section__header">
       <h3 class="h3">Prototype</h3>
@@ -164,7 +195,7 @@ headerFlip: true
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--filled">
+  <div class="project-content__column project-content__image project-content__image--1">
     <figure class="project-content__figure">
       <img src="./project09.jpg" alt="Project"/>
       <figcaption>Fig.8: Interaction map</figcaption>
@@ -182,7 +213,7 @@ headerFlip: true
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--filled">
+  <div class="project-content__column project-content__image project-content__image--1">
     <figure class="project-content__figure">
       <img src="./project08.jpg" alt="Project"/>
       <figcaption>Fig.9: Flow chart</figcaption>
