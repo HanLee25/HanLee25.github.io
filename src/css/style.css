@@ -1133,6 +1133,7 @@ figcaption {
   @apply block;
   @apply capitalize;
   @apply font-bold;
+  @apply leading-none;
   @apply text-white;
   @apply text-2xl;
   @apply z-10;
@@ -1235,6 +1236,11 @@ figcaption {
   @apply -mr-4;
 }
 
+.project-header--flipped .project-header__preview--landscape .gatsby-image-wrapper {
+  @apply -ml-32;
+  @apply mr-0;
+}
+
 .project-content {
   @apply gap-4;
   @apply grid;
@@ -1266,6 +1272,11 @@ figcaption {
 .project-content__image .project-content__figure {
   @apply col-start-4;
   @apply col-end-10;
+}
+
+.project-content__image.project-content__image--landscape .project-content__figure {
+  @apply col-start-1;
+  @apply col-end-13;
 }
 
 .project-content__image--1 .project-content__figure {
@@ -1336,6 +1347,25 @@ figcaption {
               0 -20px 40px -20px rgba(0, 0, 0, 0.1),
               20px 0 40px -20px rgba(0, 0, 0, 0.1),
               -20px 0 40px -20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.project-content__figure--gif {
+  @apply relative;
+}
+
+.project-content__figure--gif::before {
+  @apply absolute;
+  @apply bg-gray-500;
+  @apply bg-opacity-75;
+  @apply block;
+  @apply px-1;
+  @apply rounded;
+  @apply text-gray-800;
+  
+  content: 'GIF';
+  font-size: 0.65rem;
+  left: theme('spacing.1');
+  top: theme('spacing.1');
 }
 
 
@@ -1601,6 +1631,11 @@ figcaption {
   .project-content__image .project-content__figure {
     @apply col-start-5;
     @apply col-end-9;
+  }
+
+  .project-content__image.project-content__image--landscape .project-content__figure {
+    @apply col-start-3;
+    @apply col-end-11;
   }
 
   .project-content__image--1 .project-content__figure {
@@ -1946,7 +1981,8 @@ figcaption {
     @apply p-0;
   }
 
-  .project-content__image .project-content__figure {
+  .project-content__image .project-content__figure,
+  .project-content__image.project-content__image--landscape .project-content__figure {
     @apply col-start-1;
     @apply col-end-13;
   }

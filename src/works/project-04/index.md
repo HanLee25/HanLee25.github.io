@@ -92,8 +92,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure">
+  <div class="project-content__column project-content__image project-content__image--landscape">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project11.gif" alt="Project"/>
       <figcaption>Fig.3: Option C search view</figcaption>
     </figure>
@@ -112,8 +112,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure">
+  <div class="project-content__column project-content__image project-content__image--landscape">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project12.gif" alt="Project"/>
       <figcaption>Fig.3: Option C search view</figcaption>
     </figure>

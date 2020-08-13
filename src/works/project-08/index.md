@@ -95,7 +95,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--6/4">
+<div class="content-section project-content project-content--5/5">
   <div class="project-content__column">
     <dl>
       <dt>Critical path</dt>
@@ -107,8 +107,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure -mr-8 -ml-8 md:-mr-12 md:-ml-12 lg:mr-0 lg:ml-0">
+  <div class="project-content__column project-content__image project-content__image--landscape">
+    <figure class="project-content__figure">
       <img src="./project08.png" alt="Project"/>
       <figcaption>Fig.3: Option C search view</figcaption>
     </figure>
@@ -169,7 +169,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--4/6 project-content--flipped">
+<div class="content-section project-content project-content--5/5 project-content--flipped">
   <div class="project-content__column">
     <dl>
       <dt>Assumptions Board</dt>
@@ -181,8 +181,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure -mr-8 -ml-8 md:-mr-12 md:-ml-12 lg:mr-0 lg:ml-0">
+  <div class="project-content__column project-content__image project-content__image--landscape">
+    <figure class="project-content__figure">
       <img src="./project07.png" alt="Project"/>
       <figcaption>Fig.3: Option C search view</figcaption>
     </figure>
@@ -205,7 +205,7 @@ headerFlip: false
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project16.gif" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>
@@ -241,7 +241,7 @@ headerFlip: false
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project21.gif" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>
@@ -306,7 +306,7 @@ headerFlip: false
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project29.gif" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>
@@ -314,7 +314,7 @@ headerFlip: false
       <img src="./project27.png" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project28.gif" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>
@@ -337,7 +337,7 @@ headerFlip: false
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--block project-content__image--landscape">
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project30.gif" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>

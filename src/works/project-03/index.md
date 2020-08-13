@@ -1,7 +1,7 @@
 ---
 slug: "/works/3rd-project"
 date: "2019-05-04"
-title: "Car listing & detail redesign"
+title: "Car listing redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Revisit IA / NA of car listing page and detail page of CheapOair native iOS application to improve car rental process."

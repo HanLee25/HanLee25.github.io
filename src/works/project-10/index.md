@@ -10,13 +10,13 @@ cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true
 role: "Illustrator"
-industry: "Proffesional networking"
+industry: "Street fashion ecommerce"
 number: "10"
 headerFlip: false
 ---
 
-<div class="content-section project-content project-content--6/4 project-content--flipped">
-  <div class="project-content__column">
+<div class="content-section project-content project-content--5/5 project-content--flipped md:grid-cols-2">
+  <div class="project-content__column lg:ml-12 lg:-mr-12 xl:-ml-4">
     <header class="content-section__header">
       <h3 class="h3">Brand sprint</h3>
     </header>
@@ -44,8 +44,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure">
+  <div class="project-content__column project-content__image project-content__image--1">
+    <figure class="project-content__figure pr-8 md:pr-4 lg:pr-8 xl:pr-0">
       <img src="./project01.jpg" alt="Project" />
       <figcaption>Fig.1: Listing screen</figcaption>
     </figure>
@@ -92,7 +92,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
-<div class="content-section project-content">
+<div class="content-section project-content lg:-mt-12">
   <div class="project-content__column">
     <dl>
       <dt>Visualization</dt>
@@ -105,14 +105,44 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image project-content__image--block project-content__image--landscape">
+  <div class="project-content__column project-content__image project-content__image--landscape">
     <figure class="project-content__figure">
       <img src="./project06.png" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--block">
+    <figure class="project-content__figure">
+      <img src="./project06a.png" alt="Project" />
+      <figcaption>Fig.3: Option A</figcaption>
+    </figure>
+    <figure class="project-content__figure">
+      <img src="./project06b.png" alt="Project" />
+      <figcaption>Fig.4: Option B</figcaption>
+    </figure>
+    <figure class="project-content__figure">
+      <img src="./project06c.png" alt="Project" />
+      <figcaption>Fig.4: Option B</figcaption>
+    </figure>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--landscape">
     <figure class="project-content__figure">
       <img src="./project07.png" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
+    </figure>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--block">
+    <figure class="project-content__figure">
+      <img src="./project07a.png" alt="Project" />
+      <figcaption>Fig.3: Option A</figcaption>
+    </figure>
+    <figure class="project-content__figure">
+      <img src="./project07b.png" alt="Project" />
+      <figcaption>Fig.4: Option B</figcaption>
+    </figure>
+    <figure class="project-content__figure">
+      <img src="./project07c.png" alt="Project" />
+      <figcaption>Fig.4: Option B</figcaption>
     </figure>
   </div>
 </div>
@@ -164,7 +194,7 @@ headerFlip: false
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--block project-content__image--landscape">
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project11.gif" alt="Project"/>
       <figcaption>Fig.5: Option C</figcaption>
     </figure>

@@ -130,15 +130,15 @@ headerFlip: true
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project10.gif" alt="Project"/>
       <figcaption>Fig.7: Option C search view</figcaption>
     </figure>
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project11.gif" alt="Project"/>
       <figcaption>Fig.6: Option C initial view</figcaption>
     </figure>
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project12.gif" alt="Project"/>
       <figcaption>Fig.6: Option C initial view</figcaption>
     </figure>

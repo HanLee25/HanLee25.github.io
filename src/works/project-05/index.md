@@ -15,8 +15,8 @@ number: "05"
 headerFlip: false
 ---
 
-<div class="content-section project-content project-content--4/6 project-content--flipped md:grid-cols-2">
-  <div class="project-content__column">
+<div class="content-section project-content project-content--5/5 project-content--flipped md:grid-cols-2">
+  <div class="project-content__column lg:ml-8 lg:-mr-8 xl:-ml-16">
     <header class="content-section__header">
       <h3 class="h3">Project process</h3>
     </header>
@@ -44,8 +44,8 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure -ml-8 -mr-8 md:-ml-32 md:-mr-12 lg:ml-0 lg:mr-0">
+  <div class="project-content__column project-content__image project-content__image--1">
+    <figure class="project-content__figure pr-8 md:pr-56 lg:pr-16">
       <img src="./project01.png" alt="Project" />
       <figcaption>Fig.1: Listing screen</figcaption>
     </figure>
@@ -74,7 +74,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--6/4 md:-mt-16">
+<div class="content-section project-content project-content--6/4 md:-mt-16 lg:-mt-8">
   <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project05.png" alt="Project"/>
@@ -106,7 +106,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--6/4 md:-mt-16">
+<div class="content-section project-content project-content--6/4 md:-mt-16 lg:-mt-8">
   <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project07.png" alt="Project"/>

@@ -41,14 +41,14 @@ headerFlip: false
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
+  <div class="project-content__column project-content__image project-content__image--landscape">
     <figure class="project-content__figure">
       <img src="./project01.png" alt="Project" />
       <figcaption>Fig.1: Listing screen</figcaption>
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--3/7">
+<div class="content-section project-content project-content--4/6">
   <div class="project-content__column">
     <header class="content-section__header">
       <h3 class="h3">Branding</h3>
@@ -191,7 +191,7 @@ headerFlip: false
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
-    <figure class="project-content__figure">
+    <figure class="project-content__figure project-content__figure--gif">
       <img src="./project21.gif" alt="Project" />
       <figcaption>Fig.4: Option B</figcaption>
     </figure>

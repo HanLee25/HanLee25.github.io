@@ -1,11 +1,11 @@
 ---
 slug: "/works/9th-project"
 date: "2020-02-20"
-title: "Landing page hero illustration"
+title: "Hero image illustration"
 team: "Thoughtbot"
 teamUrl: "https://thoughtbot.com/"
-excerpt: "Illustrate the core product value of the besiness to visually communicate via hero image."
-tags: ['Illustration', 'Visual narrative', UI design]
+excerpt: "Illustrate the core product value of the besiness to communicate visually."
+tags: ['Illustration', 'Visual narrative', UI design, 'Visual design', 'UX research', 'User test']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true
@@ -15,8 +15,8 @@ number: "09"
 headerFlip: true
 ---
 
-<div class="content-section project-content project-content--4/6">
-  <div class="project-content__column">
+<div class="content-section project-content project-content--5/5 md:grid-cols-2">
+  <div class="project-content__column lg:-mr-12 xl:-ml-4">
     <header class="content-section__header">
       <h3 class="h3">Design background</h3>
     </header>
@@ -44,8 +44,8 @@ headerFlip: true
       </dd>
     </dl>
   </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure">
+  <div class="project-content__column project-content__image project-content__image--1">
+    <figure class="project-content__figure pr-8 md:pr-4 lg:pr-8 xl:pr-0">
       <img src="./project01.png" alt="Project" />
       <figcaption>Fig.1: Listing screen</figcaption>
     </figure>
