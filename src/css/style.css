@@ -1323,6 +1323,10 @@ figcaption {
   min-width: 40%;
 }
 
+.project-content__image--block.project-content__image--landscape .project-content__figure {
+  min-width: 80%;
+}
+
 .project-content__figure .gatsby-resp-image-wrapper,
 .project-content__figure > img {
   @apply overflow-hidden;

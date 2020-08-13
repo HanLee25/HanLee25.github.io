@@ -4,13 +4,13 @@ date: "2017-08-20"
 title: "Comedy portal MVP"
 team: "Thoughtbot"
 teamUrl: "https://thoughtbot.com/"
-excerpt: "Refine the product strategy to build an effective MVP version of web app and native app along with the landing pages"
-tags: ['Product strategy', 'Front-end', 'RoR', 'HTML / SCSS','UI design', 'Branding', 'Illustration', 'Visual narrative', 'User test', 'iOS HIG', 'No code', 'Adalo']
+excerpt: "Refine the product strategy to build an effective MVP version of web app and native app along with the landing pages."
+tags: ['Product strategy', 'Front-end', 'RoR', 'HTML / SCSS', 'Jamstack', 'UI design', 'Branding', 'Illustration', 'Visual narrative', 'User test', 'iOS HIG', 'No code', 'Adalo']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true
-role: "Designer"
-industry: "Vary"
+role: "Product designer"
+industry: "Entertainment / performing art"
 number: "07"
 headerFlip: false
 ---
@@ -21,24 +21,23 @@ headerFlip: false
       <h3 class="h3">Project background</h3>
     </header>
     <dl>
-      <dt>Product issue</dt>
+      <dt>Problem statement</dt>
       <dd>
         Users abandon the booking path after selecting the flight fron the listing
       </dd>
-      <dt>User Test Finding</dt>
-      <dd>
-        "I already selected what I want. I expected some sign of the next step..."
-      </dd>
-      <dt>Product goal</dt>
+      <dt>Sprint questions</dt>
       <dd>
         <ol class="ordered-list">
           <li>Increase flight search rate</li>
           <li>Reduce bounce rate</li>
         </ol>
       </dd>
-      <dt>Design challenge</dt>
+      <dt>MVP goal</dt>
       <dd>
-        Spare the space for post-booking and marketing components
+        <ol class="ordered-list">
+          <li>Increase flight search rate</li>
+          <li>Reduce bounce rate</li>
+        </ol>
       </dd>
     </dl>
   </div>

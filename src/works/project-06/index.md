@@ -4,8 +4,8 @@ date: "2017-08-20"
 title: "Brand identity & logo design"
 team: "Various clients"
 teamUrl: "/"
-excerpt: "Explore and build up the visual communication of the brand identity"
-tags: ['Branding', 'Illustration', 'Brand sprint', 'Visual design', 'Visual narrative', 'Print design']
+excerpt: "Explore and build up the visual communication of the brand identity."
+tags: ['Branding', 'Art directing', 'Illustration', 'Brand sprint', 'Visual design', 'Visual narrative', 'Print design']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true
