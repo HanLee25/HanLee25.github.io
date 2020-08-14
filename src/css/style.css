@@ -142,6 +142,11 @@ dd {
   list-style-type: lower-roman;
 }
 
+.bulleted-list > .inline-list__item,
+.ordered-list > .inline-list__item {
+  @apply mr-6;
+}
+
 figcaption {
   @apply block;
   @apply mt-2;

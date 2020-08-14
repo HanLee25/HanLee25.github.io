@@ -4,7 +4,7 @@ date: "2018-08-20"
 title: "User persona poster"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
-excerpt: "Analyze and visualize consumer data to build a group of user persona profile."
+excerpt: "Analyze and visualize consumer data to build a group of user persona profiles"
 tags: ['UX research', 'Data visualization', 'Visual design', 'User flow', 'Branding', 'Persona', 'Print design']
 cover: "./project-cover.png"
 preview: "./project-preview.png"

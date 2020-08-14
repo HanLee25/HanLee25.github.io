@@ -4,7 +4,7 @@ date: "2017-08-20"
 title: "Comedy portal MVP"
 team: "Thoughtbot"
 teamUrl: "https://thoughtbot.com/"
-excerpt: "Refine the product strategy to build an effective MVP version of web app and native app along with the landing pages."
+excerpt: "Refine the product strategy to build a valid MVP version of the web app and native app along with the marketing landing pages."
 tags: ['Product strategy', 'Front-end', 'RoR', 'HTML / SCSS', 'Jamstack', 'UI design', 'Branding', 'Illustration', 'Visual narrative', 'User test', 'iOS HIG', 'No code', 'Adalo']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
@@ -15,7 +15,7 @@ number: "07"
 headerFlip: false
 ---
 
-<div class="content-section project-content project-content--4/6 project-content--flipped">
+<div class="content-section project-content project-content--3/7 project-content--flipped">
   <div class="project-content__column">
     <header class="content-section__header">
       <h3 class="h3">Product design sprint</h3>
@@ -25,12 +25,23 @@ headerFlip: false
       <dd>
         Comedy goers don't have the cohesive solution to search and follow stand up comedians.
       </dd>
-      <dt>Sprint questions</dt>
+    </dl>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--landscape">
+    <figure class="project-content__figure">
+      <img src="./project01.png" alt="Project" />
+      <figcaption>Fig.1: Business overview</figcaption>
+    </figure>
+  </div>
+</div>
+<div class="content-section project-content -mt-12">
+  <div class="project-content__column">
+    <dl>
+    <dt>Sprint questions</dt>
       <dd>
         <ol class="ordered-list">
           <li>Is online stand-up comedian directory useful to comedy goers?</li>
           <li>Is an online venue directory useful to comedy goers?</li>
-          <li>How can online exposure help stand up comedians?</li>
         </ol>
       </dd>
       <dt>MVP goal</dt>
@@ -41,12 +52,6 @@ headerFlip: false
         </ol>
       </dd>
     </dl>
-  </div>
-  <div class="project-content__column project-content__image project-content__image--landscape">
-    <figure class="project-content__figure">
-      <img src="./project01.png" alt="Project" />
-      <figcaption>Fig.1: Business overview</figcaption>
-    </figure>
   </div>
 </div>
 <div class="content-section project-content project-content--4/6">
@@ -87,7 +92,7 @@ headerFlip: false
       <dd>
         <ul class="bulleted-list">
           <li>Scope out expanded terms and narrow down to the core concept.</li>
-          <li>Research pronoun that widely communicated.</li>
+          <li>Research pronoun with consensus in common communication.</li>
         </ul>
       </dd>
       <dt>Visualize</dt>
@@ -168,7 +173,7 @@ headerFlip: false
       <h3 class="h3">Define JTBD + draft solution</h3>
     </header>
     <ol class="ordered-list">
-      <li>When <span class="text-red-500">I search comedy show I want to go,</span></li>
+      <li>When <span class="text-red-500">I search for a comedy event that I want to go,</span></li>
       <li>I want <span class="text-red-500">to search by comedians I like,</span></li>
       <li>So I can <span class="text-red-500">be confident to choose the show that I would enjoy.</span></li>
     </ol>
@@ -241,7 +246,7 @@ headerFlip: false
       <h3 class="h3">No/low code MVP solution</h3>
     </header>
     <ul class="bulleted-list">
-      <li>Using option B(Fig.23) with follow comedian feature, bookmark show feature</li>
+      <li>Using option B(Fig.23) with following comedian feature, bookmarking show feature</li>
       <li>Using Adalo to build iOS native application</li>
     </ul>
     <a href="https://previewer.adalo.com/02ec3aac-1e4b-4187-a1dc-d6b5fa16c346" target="_blank" rel="noreferrer" class="button button--ghost button--sm mt-4">Open interactive prototype</a>
@@ -287,22 +292,22 @@ headerFlip: false
       <dd>
         <ul class="bulleted-list">
           <li>Participate product sprint process to validate the business concept</li>
-          <li>Refine priority list with scoping workshop</li>
+          <li>Refine the priority list with scoping workshop</li>
         </ul>
       </dd>
-      <dt>UI/Visual design</dt>
+      <dt>UI / Visual design</dt>
       <dd>
         <ul class="bulleted-list">
           <li>Build visual storytelling with illustration</li>
           <li>Creating an interactive prototype using Sketch and UXPin</li>
-          <li>Build app UI and BD using Adalo no code tool</li>
+          <li>Build app UI and BD using Adalo no-code tool</li>
         </ul>
       </dd>
       <dt>UX design</dt>
       <dd>
         <ul class="bulleted-list">
           <li>Conduct switch interview with comedians and comedy goers to define JTBD stories</li>
-          <li>Conduct user testing to validate MVP concept</li>
+          <li>Conduct user testing to validate the MVP concept</li>
         </ul>
       </dd>
       <dt>Front-end</dt>

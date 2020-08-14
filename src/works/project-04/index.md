@@ -67,8 +67,8 @@ headerFlip: false
       <dt>Friendly interaction sequence</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Mimicking the 'chat interaction' to present less aggressively</li>
-          <li>Utilizing conversational sequence to deliver information actively</li>
+          <li>Mimic the 'chat interaction' to present less aggressively</li>
+          <li>Utilize conversational sequence to deliver information actively</li>
         </ul>
       </dd>
     </dl>
