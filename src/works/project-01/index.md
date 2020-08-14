@@ -123,7 +123,7 @@ headerFlip: true
       <dd>
         <ol class="ordered-list">
           <li>Initial view</li>
-          <li>Searching: user enters location > search section enpanded</li>
+          <li>Searching: user enters location > search section expanded</li>
           <li>Exploring: user interact other components > moves toward to each path</li>
         </ol>
       </dd>

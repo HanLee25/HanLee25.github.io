@@ -119,7 +119,7 @@ function IndexPage() {
                   <span className="typing__string">an art director. </span>
                 </span>
                 <span className="typing__item">
-                  <span className="typing__string">a product stategist. </span>
+                  <span className="typing__string">a product strategist. </span>
                 </span>
                 <span className="typing__item">
                   <span className="typing__string">
