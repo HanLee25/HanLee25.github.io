@@ -1,7 +1,7 @@
 ---
 slug: "/works/5th-project"
 date: "2018-08-20"
-title: "User persona group"
+title: "User persona poster"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Analyze and visualize consumer data to build a group of user persona profile."
@@ -23,46 +23,46 @@ headerFlip: false
     <dl>
       <dt>Collecting consumer data</dt>
       <dd>
-        <ol class="bulleted-list">
-          <li>Increase flight search rate</li>
-          <li>Reduce bounce rate</li>
-        </ol>
+        <ul class="bulleted-list">
+          <li>External tools: CRM data collection, traffic analysis</li>
+          <li>Internal mechanism: feedback collection, booking data, user interview</li>
+        </ul>
       </dd>
       <dt>Data analysis</dt>
       <dd>
-        <ol class="bulleted-list">
-          <li>Sample Size Determination</li>
-          <li>Hypothesis Testing</li>
-        </ol>
+        <ul class="bulleted-list">
+          <li>Sample size determination to segmentize consumer profiles</li>
+          <li>Hypothesis testing/interview to breakdown behavior</li>
+        </ul>
       </dd>
       <dt>Data visualization</dt>
       <dd>
-        <ol class="bulleted-list">
-          <li>Sample Size Determination</li>
-          <li>Hypothesis Testing</li>
-        </ol>
+        <ul class="bulleted-list">
+          <li>Chart, illustration, and iconography</li>
+        </ul>
       </dd>
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--1">
     <figure class="project-content__figure pr-8 md:pr-56 lg:pr-16">
       <img src="./project01.png" alt="Project" />
-      <figcaption>Fig.1: Listing screen</figcaption>
+      <figcaption>Fig.1: Design process</figcaption>
     </figure>
   </div>
 </div>
 <div class="content-section project-content project-content--6/4">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Data visualization</h3>
+      <h3 class="h3">Visualizing information</h3>
     </header>
     <dl>
-      <dt>Interaction flow</dt>
+      <dt>Supplementary visual</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
-          <li>This helps developers and QAs to overview end-to-end product process.</li>
-          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+          <li>Putting the supplementary image to serve the context should deliver the information implicitly.</li>
+          <li>This adds a specific meaning to the contents conclusively.</li>
+          <li><span class="text-red-500">This is an effective visualization method for the qualitative data.</span></li>
+          <li>e.g., two different background images on two groups of keywords cloud (Fig.3, 4)</li>
         </ul>
       </dd>
     </dl>
@@ -70,7 +70,7 @@ headerFlip: false
   <div class="project-content__column project-content__image">
     <figure class="project-content__figure -mr-8 -ml-8 md:-mr-12 md:-ml-12 lg:mr-0 lg:ml-0">
       <img src="./project03.png" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.2: Keywords cloud sketch</figcaption>
     </figure>
   </div>
 </div>
@@ -78,23 +78,23 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project05.png" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.3: Personality keywords - emotional</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project06.png" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.4: Personality keywords - rational</figcaption>
     </figure>
   </div>
 </div>
 <div class="content-section project-content project-content--5/5 project-content--flipped">
   <div class="project-content__column">
     <dl>
-      <dt>Interaction flow</dt>
+      <dt>Data visualization</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
-          <li>This helps developers and QAs to overview end-to-end product process.</li>
-          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+          <li><span class="text-red-500">This method would serve quantitative data well.</span></li>
+          <li>If the data represents a specific number, the chart will serve the purpose. <span class="text-red-500">e.g., a pie chart - Fig.6</span></li>
+          <li>If the data represents a trend, visual could be more contextual. <span class="text-red-500">e.g., social media usage - Fig.7</span></li>
         </ul>
       </dd>
     </dl>
@@ -102,7 +102,7 @@ headerFlip: false
   <div class="project-content__column project-content__image">
     <figure class="project-content__figure -mr-24 -ml-24 md:-mr-56 md:-ml-56 lg:mr-0">
       <img src="./project02.png" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.5: Data visualization sketch</figcaption>
     </figure>
   </div>
 </div>
@@ -110,62 +110,57 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project07.png" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.6: Example of data presentation i</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project08.png" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.7: Example of data presentation ii</figcaption>
     </figure>
   </div>
 </div>
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Build interactions</h3>
+      <h3 class="h3">Final outcomes</h3>
     </header>
-    <dl>
-      <dt>Option A</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>Full search + Extra component</li>
-          <li>Users would miss additional context below the fold</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
-        </ul>
-      </dd>
-    </dl>
+    <ul class="bulleted-list">
+      <li>4 primary personas, 3 secondary personas, and 1 persona of potential consumer</li>
+      <li>Printed and presented by hanging on all meeting areas</li>
+      <li>Evangelize the whole team to specify persona in the product-related conversation</li>
+    </ul>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
     <figure class="project-content__figure">
       <img src="./project09.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.8: broke college student</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project10.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.9: Happy retired couple</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project11.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.10: Veteran concierge</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project12.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.11: Young-super mom</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project13.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.12: Outdated shopper</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project14.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.13: Super organized recruiter</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project15.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.14: Web-savvy accountant</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project16.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.15: Military husband</figcaption>
     </figure>
   </div>
 </div>
@@ -175,26 +170,19 @@ headerFlip: false
       <h3 class="h3">Contribution</h3>
     </header>
     <dl class="project-content__card">
-      <dt>Product strategy</dt>
+      <dt>Visual design</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Collaborating with product owner for setting the problem statement</li>
-          <li>Setting product design strategy</li>
+          <li>Directing overall visual concept and layout of the persona poster</li>
+          <li>Curating and visualizing information to present consistently and intuitively</li>
+          <li>Setting the color code strategy for segmentation</li>
         </ul>
       </dd>
-      <dt>UI design</dt>
+      <dt>UX research</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Creating a high-fidelity UI mock-up</li>
-          <li>Creating an interactive prototype using Sketch and UXPin</li>
-        </ul>
-      </dd>
-      <dt>UX design</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>Collaborating with UX researcher on a benchmarking report and analyzing user behavior, traffic analysis</li>
-          <li>Collaborating in interaction design to create a wireframe</li>
-          <li>Generating an interaction flow and micro-interaction guide</li>
+          <li>Collaborating with UX researcher analyzing consumer data</li>
+          <li>Collaborating with UX researcher searching internal data collection</li>
         </ul>
       </dd>
     </dl>

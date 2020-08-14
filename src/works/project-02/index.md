@@ -16,29 +16,32 @@ headerFlip: false
 ---
 
 <div class="content-section project-content project-content--4/6 project-content--flipped">
-  <div class="project-content__column">
+  <div class="project-content__column lg:ml-4 lg:-mr-8 xl:ml-8">
     <header class="content-section__header">
       <h3 class="h3">Project background</h3>
     </header>
     <dl>
       <dt>Product issue</dt>
       <dd>
-        Users abandon the booking path after selecting the flight fron the listing
+        Users abandon the booking path after selecting the flight from the listing
       </dd>
       <dt>User Test Finding</dt>
       <dd>
-        "I already selected what I want. I expected some sign of the next step..."
+        <ul class="bulleted-list">
+          <li>"I already selected what I want. I want to book it while it's available."</li>
+          <li>"I need to check overlay details before select the flight."</li>
+        </ul>
       </dd>
       <dt>Product goal</dt>
       <dd>
-        <ol class="ordered-list">
-          <li>Increase flight search rate</li>
-          <li>Reduce bounce rate</li>
-        </ol>
+        <ul class="bulleted-list">
+          <li>Increase listing - booking page funnel</li>
+          <li>Reduce bounce rate during the booking process</li>
+        </ul>
       </dd>
       <dt>Design challenge</dt>
       <dd>
-        Spare the space for post-booking and marketing components
+        Flight details should be available in the booking path but should not compete with tier 1 context of the pages
       </dd>
     </dl>
   </div>
@@ -59,20 +62,37 @@ headerFlip: false
       <h3 class="h3">Draft solutions</h3>
     </header>
     <dl>
-      <dt>Option A</dt>
+      <dt>Suggestion</dt>
       <dd>
-        <ul class="bulleted-list">
-          <li>Full search + Extra component</li>
-          <li>Users would miss additional context below the fold</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
-        </ul>
+        <ol class="ordered-list">
+          <li>Add flight detail screen as a drawer view - linked from both listing and booking</li>
+          <li>Rearrange booking input fields - first booking step</li>
+        </ol>
       </dd>
-      <dt>Option B</dt>
+      <dt>Diverge options</dt>
+      <dd>
+        <dl class="definition-list bulleted-list">
+          <dt>Option A</dt>
+          <dd>
+            <ul>
+              <li>Add flight detail screen as a mandatory step: <span class="text-red-500">Listing > Details > Booking</span></li>
+            </ul>
+          </dd>
+          <dt>Option B</dt>
+          <dd>
+            <ul>
+              <li>Add flight detail screen as an optional step: <span class="text-red-500">Listing > <span class="text-gray-500">Details</span> > Booking</span></li>
+            </ul>
+          </dd>
+        </dl>
+      </dd>
+      <dt>Wireframe and user test</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Minimal search bar to save more space</li>
-          <li>User wouldn't associate the minimal search bar UI with the concept of travel search</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/317587837" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
+          <li><span class="text-red-500">6/10 Users</span> reacted positively with <span class="text-red-500">Option B</span></li>
+          <li><span class="text-red-500">2/10 Users</span> reacted positively with <span class="text-red-500">Option A</span></li>
+          <li><span class="text-red-500">2/10 Users</span> reacted neutral</li>
+          <li><a href="https://preview.uxpin.com/1b5bd2839b4c6429c7afafa3b8b43b31eceee645ch" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open option B wireframe</a></li>
         </ul>
       </dd>
     </dl>
@@ -80,62 +100,64 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--block">
     <figure class="project-content__figure">
       <img src="./project03.png" alt="Project" />
-      <figcaption>Fig.3: Option A</figcaption>
+      <figcaption>Fig.3: Listing wireframe</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project04.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.4: Detail wireframe</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project05.png" alt="Project"/>
-      <figcaption>Fig.5: Option C</figcaption>
+      <figcaption>Fig.5: Booking wireframe</figcaption>
     </figure>
   </div>
 </div>
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Prototype</h3>
+      <h3 class="h3">Converge and Prototype</h3>
     </header>
     <dl>
       <dt>Visual design</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Color distinguishes IA and status of interaction</li>
-          <li>Animation emphasizes visual cue</li>
+          <li>Emphasize critical information (stops, alternate airport, etc.)</li>
+          <li>Clarify the group of information using spacing, background-color</li>
+          <li>Build a card component for consistent section</li>
         </ul>
       </dd>
-      <dt>Interaction sequence</dt>
+      <dt>Visual cues</dt>
       <dd>
-        <ol class="ordered-list">
-          <li>Initial view</li>
-          <li>Searching: user enters location > search section enpanded</li>
-          <li>Exploring: user interact other components > moves toward to each path</li>
-        </ol>
+        <ul class="bulleted-list">
+          <li>Navigating icon: <span class="text-red-500">back vs. close</span></li>
+          <li>Timeline icon: <span class="text-red-500">point a vs. point b</span></li>
+          <li>Highlighted text: critical information</li>
+          <li>Status code: <span class="text-red-500">filled (active) vs empty (inactive)</span></li>
+        </ul>
       </dd>
     </dl>
-    <a href="https://preview.uxpin.com/6178e38c68fdc4e35512c57e84b9a96790b8c9b2#/pages//simulate/sitemap?mode=ch" target="_blank" rel="noreferrer" class="button button--ghost button--sm mt-4">Open interactive prototype</a>
+    <a href="https://preview.uxpin.com/8024107a9a5d61961f769228aecf94aa73f2ce60#/pages//simulate/sitemap?mode=ch" target="_blank" rel="noreferrer" class="button button--ghost button--sm mt-4">Open interactive prototype</a>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
     <figure class="project-content__figure">
       <img src="./project07.png" alt="Project"/>
-      <figcaption>Fig.7: Interact map</figcaption>
+      <figcaption>Fig.6: Listing screen</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project08.png" alt="Project"/>
-      <figcaption>Fig.8: Inter map</figcaption>
+      <figcaption>Fig.7: Detail screen</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project09.png" alt="Project"/>
-      <figcaption>Fig.9: Flow chart</figcaption>
+      <figcaption>Fig.8: Booking screen - 1</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project10.png" alt="Project"/>
-      <figcaption>Fig.10: Flow chart</figcaption>
+      <figcaption>Fig.9: Booking screen - 2</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project11.png" alt="Project"/>
-      <figcaption>Fig.11: Flow chart</figcaption>
+      <figcaption>Fig.10: Booking screen - 3</figcaption>
     </figure>
   </div>
 </div>
@@ -149,8 +171,8 @@ headerFlip: false
       <dd>
         <ul class="bulleted-list">
           <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
-          <li>This helps developers and QAs to overview end-to-end product process.</li>
-          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+          <li>This helps whole product team to oversee the end-to-end production process.</li>
+          <li><a href="https://drive.google.com/file/d/1iUmO8cvOSaRnQ8G23JabEXbDDcl-2Yz6/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
         </ul>
       </dd>
     </dl>
@@ -172,7 +194,15 @@ headerFlip: false
       <dd>
         <ul class="bulleted-list">
           <li>Collaborating with product owner for setting the problem statement</li>
+          <li>Holistic product UX review</li>
           <li>Setting product design strategy</li>
+        </ul>
+      </dd>
+      <dt>UX design</dt>
+      <dd>
+        <ul class="bulleted-list">
+          <li>Collaborating with UX researcher on analyzing user feedback</li>
+          <li>Create a wireframe with interaction flow</li>
         </ul>
       </dd>
       <dt>UI design</dt>
@@ -180,14 +210,6 @@ headerFlip: false
         <ul class="bulleted-list">
           <li>Creating a high-fidelity UI mock-up</li>
           <li>Creating an interactive prototype using Sketch and UXPin</li>
-        </ul>
-      </dd>
-      <dt>UX design</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>Collaborating with UX researcher on a benchmarking report and analyzing user behavior, traffic analysis</li>
-          <li>Collaborating in interaction design to create a wireframe</li>
-          <li>Generating an interaction flow and micro-interaction guide</li>
         </ul>
       </dd>
     </dl>

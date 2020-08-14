@@ -31,10 +31,10 @@ headerFlip: true
       </dd>
       <dt>Product goal</dt>
       <dd>
-        <ol class="ordered-list">
+        <ul class="bulleted-list">
           <li>Increase flight search rate</li>
           <li>Reduce bounce rate</li>
-        </ol>
+        </ul>
       </dd>
       <dt>Design challenge</dt>
       <dd>

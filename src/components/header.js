@@ -124,6 +124,17 @@ function Header() {
                 </Link>
               </li>
             ))}
+
+            <li>
+              <a
+                className="main-nav__item"
+                href="https://drive.google.com/file/d/1GE4oyX-socQt1j9ed2ygo9fln6HPpfMK/view"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resumé
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

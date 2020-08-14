@@ -23,22 +23,27 @@ headerFlip: false
     <dl>
       <dt>Product issue</dt>
       <dd>
-        Users abandon the booking path after selecting the flight fron the listing
+        <ul class="bulleted-list">
+          <li>Users are discouraged by the full-blocked dialog modal.</li>
+          <li>The presentation is too aggressive, and the interaction is passive.</li>
+        </ul>
       </dd>
-      <dt>User Test Finding</dt>
+      <dt>User Interview Quote</dt>
       <dd>
-        "I already selected what I want. I expected some sign of the next step..."
+        <ul class="bulleted-list">
+          <li>"I felt kicked-out..."</li>
+          <li>"It's shutting me out instead of talking to me..."</li>
+        </ul>
       </dd>
       <dt>Product goal</dt>
       <dd>
-        <ol class="ordered-list">
-          <li>Increase flight search rate</li>
-          <li>Reduce bounce rate</li>
-        </ol>
+        <ul class="bulleted-list">
+          <li>Increase customer retention from the listing</li>
+        </ul>
       </dd>
       <dt>Design challenge</dt>
       <dd>
-        Spare the space for post-booking and marketing components
+        Grab user's attention less aggressively
       </dd>
     </dl>
   </div>
@@ -49,7 +54,7 @@ headerFlip: false
     </figure>
     <figure class="project-content__figure">
       <img src="./project02.png" alt="Project" />
-      <figcaption>Fig.2: Review screen</figcaption>
+      <figcaption>Fig.2: Inactive dialog</figcaption>
     </figure>
   </div>
 </div>
@@ -59,12 +64,11 @@ headerFlip: false
       <h3 class="h3">Draft ideas</h3>
     </header>
     <dl>
-      <dt>Interaction flow</dt>
+      <dt>Friendly interaction sequence</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
-          <li>This helps developers and QAs to overview end-to-end product process.</li>
-          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+          <li>Mimicking the 'chat interaction' to present less aggressively</li>
+          <li>Utilizing conversational sequence to deliver information actively</li>
         </ul>
       </dd>
     </dl>
@@ -72,7 +76,7 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--1">
     <figure class="project-content__figure">
       <img src="./project03.jpg" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.3: Idea sketch</figcaption>
     </figure>
   </div>
 </div>
@@ -82,12 +86,12 @@ headerFlip: false
       <h3 class="h3">Draft interaction</h3>
     </header>
     <dl>
-      <dt>Interaction flow</dt>
+      <dt>Humanly interaction</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
-          <li>This helps developers and QAs to overview end-to-end product process.</li>
-          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+          <li>Utilize persona to make the whole engagement more friendly</li>
+          <li>The conversational sequence would help breakdown the information into two way communication.</li>
+          <li>This format has more room to slip conversion-friendly message.</li>
         </ul>
       </dd>
     </dl>
@@ -95,19 +99,18 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--landscape">
     <figure class="project-content__figure project-content__figure--gif">
       <img src="./project11.gif" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.4: Engaging view</figcaption>
     </figure>
   </div>
 </div>
 <div class="content-section project-content project-content--4/6 project-content--flipped">
   <div class="project-content__column">
     <dl>
-      <dt>Interaction flow</dt>
+      <dt>Less input, more feedback</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
-          <li>This helps developers and QAs to overview end-to-end product process.</li>
-          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
+          <li>Reducing the input forms would help users to focus.</li>
+          <li>Instead of forcing users to be smart, the feedback logic should improve to deal with corner cases.</li>
         </ul>
       </dd>
     </dl>
@@ -115,22 +118,23 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--landscape">
     <figure class="project-content__figure project-content__figure--gif">
       <img src="./project12.gif" alt="Project"/>
-      <figcaption>Fig.3: Option C search view</figcaption>
+      <figcaption>Fig.5: Feedback view</figcaption>
     </figure>
   </div>
 </div>
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Build interactions</h3>
+      <h3 class="h3">Build interactions and prototype</h3>
     </header>
+    <a href="https://preview.uxpin.com/5754208e6b70ccd681b4bc7d96c2c6a3cf1c6169#/pages/109034717/simulate/sitemap?mode=ch" target="_blank" rel="noreferrer" class="button button--ghost button--sm mt-2 mb-8">Open interactive prototype</a>
     <dl>
-      <dt>Option A</dt>
+      <dt>Engaging sequence</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Full search + Extra component</li>
-          <li>Users would miss additional context below the fold</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
+          <li>Green blinking indicates agent online</li>
+          <li>Animating chat UI doesn't require to block out the whole page.</li>
+          <li>The sequence would conclude with a single constructive action.</li>
         </ul>
       </dd>
     </dl>
@@ -138,34 +142,35 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--block">
     <figure class="project-content__figure">
       <img src="./project04.png" alt="Project" />
-      <figcaption>Fig.3: Option A</figcaption>
+      <figcaption>Fig.6: Engaging sequence 1</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project05.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.7:  Engaging sequence 2</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project06.png" alt="Project" />
-      <figcaption>Fig.5: Option B</figcaption>
+      <figcaption>Fig.8:  Engaging sequence 4</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project07.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.9:  Engaging sequence 5</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project08.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.10:  Engaging sequence 6</figcaption>
     </figure>
   </div>
 </div>
-<div class="content-section project-content">
+<div class="content-section project-content xl:-mt-8">
   <div class="project-content__column">
-      <dt>Option A</dt>
+    <dl>
+      <dt>Feedback sequence</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Full search + Extra component</li>
-          <li>Users would miss additional context below the fold</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
+          <li>Add conditional feedback to simulate conversation</li>
+          <li>The chat is not necessarily stackable to keep the space minimum.</li>
+          <li>Final feedback without previous conversation would give user the sign of 'DONE'.</li>
         </ul>
       </dd>
     </dl>
@@ -173,15 +178,15 @@ headerFlip: false
   <div class="project-content__column project-content__image project-content__image--block">
     <figure class="project-content__figure">
       <img src="./project08.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.11: Feedback sequence 1</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project09.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.12: Feedback sequence 2</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project10.png" alt="Project" />
-      <figcaption>Fig.4: Option B</figcaption>
+      <figcaption>Fig.13: Feedback sequence 3</figcaption>
     </figure>
   </div>
 </div>
@@ -194,23 +199,28 @@ headerFlip: false
       <dt>Product strategy</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Collaborating with product owner for setting the problem statement</li>
-          <li>Setting product design strategy</li>
+          <li>Collaborating with product owner to set MVP strategy</li>
         </ul>
       </dd>
       <dt>UI design</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Creating a high-fidelity UI mock-up</li>
+          <li>Creating a low-fidelity mock for early validation</li>
           <li>Creating an interactive prototype using Sketch and UXPin</li>
+        </ul>
+      </dd>
+      <dt>Front-end</dt>
+      <dd>
+        <ul class="bulleted-list">
+          <li>Prototype the whole interaction with HTML/CSS and JS</li>
+          <li>Implement MVP directly through A/B testing tool</li>
         </ul>
       </dd>
       <dt>UX design</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Collaborating with UX researcher on a benchmarking report and analyzing user behavior, traffic analysis</li>
-          <li>Collaborating in interaction design to create a wireframe</li>
-          <li>Generating an interaction flow and micro-interaction guide</li>
+          <li>Illustrate the persona to help product to shape the context of interaction</li>
+          <li>Analyze traffic data and user interview result to address the pain points</li>
         </ul>
       </dd>
     </dl>
