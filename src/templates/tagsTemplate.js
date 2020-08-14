@@ -11,10 +11,10 @@ import SEO from "../components/seo";
 import Tags from "../components/tags";
 
 const TagPage = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
-  const pageTag = tag
-  const tagHeader = `Work${totalCount === 1 ? "" : "s"} in '${pageTag}'`
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark;
+  const pageTag = tag;
+  const tagHeader = `Work${totalCount === 1 ? "" : "s"} in '${pageTag}'`;
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -31,14 +31,17 @@ const TagPage = ({ pageContext, data }) => {
       start: "top bottom",
     });
 
-    const stickyHeader = '.header__wrapper';
+    const stickyHeader = ".header__wrapper";
 
     ScrollTrigger.create({
       trigger: projectList,
-      start: 'top -40px',
-      end: 'bottom top',
-      endTrigger: '.main',
-      toggleClass: { targets: stickyHeader, className: 'header__wrapper--floating' },
+      start: "top -40px",
+      end: "bottom top",
+      endTrigger: ".main",
+      toggleClass: {
+        targets: stickyHeader,
+        className: "header__wrapper--floating",
+      },
     });
   });
   return (
@@ -60,7 +63,10 @@ const TagPage = ({ pageContext, data }) => {
 
         <Tags />
 
-        <div className="work-list work-list--filtered" ref={(el) => (projectList = el)}>
+        <div
+          className="work-list work-list--filtered"
+          ref={(el) => (projectList = el)}
+        >
           {edges.map((edge) => {
             const { frontmatter } = edge.node;
             return (
@@ -77,9 +83,7 @@ const TagPage = ({ pageContext, data }) => {
 
                 <div className="work-list__detail">
                   <header className="work-list__header">
-                    <h3 className="work-list__title h4">
-                      {frontmatter.title}
-                    </h3>
+                    <h3 className="work-list__title h4">{frontmatter.title}</h3>
 
                     <small className="work-list__meta">
                       <time dateTime={frontmatter.date}>
@@ -134,7 +138,7 @@ const TagPage = ({ pageContext, data }) => {
       </section>
     </Layout>
   );
-}
+};
 
 TagPage.propTypes = {
   pageContext: PropTypes.shape({
@@ -157,7 +161,7 @@ TagPage.propTypes = {
       ),
     }),
   }),
-}
+};
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -190,6 +194,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default TagPage;

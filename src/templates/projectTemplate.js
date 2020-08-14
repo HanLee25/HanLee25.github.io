@@ -82,8 +82,9 @@ export default function Template({
       const x = e.pageX - imgBlock.offsetLeft;
       const walk = (x - startX) * 3; //scroll-fast
       imgBlock.scrollLeft = scrollLeft - walk;
-    }));
-  })
+      })
+    );
+  });
   return (
     <Modal>
       <div className="content-column">
@@ -153,9 +154,13 @@ export default function Template({
 
               <p className="project-header__overview">{frontmatter.excerpt}</p>
 
-              <div className={`project-header__preview${
-              frontmatter.previewLandscape === true ? ` project-header__preview--landscape` : ``
-            }`}>
+              <div
+                className={`project-header__preview${
+                  frontmatter.previewLandscape === true
+                    ? ` project-header__preview--landscape`
+                    : ``
+                }`}
+              >
                 <Img fluid={frontmatter.preview.childImageSharp.fluid} />
               </div>
             </header>

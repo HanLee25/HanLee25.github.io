@@ -10,51 +10,51 @@ function IndexPage() {
   let designer = useRef(null);
   let value = useRef(null);
 
-    useEffect(() => {
-      const headlineHi = hero.children[0].firstElementChild;
-      const headlineHand = hero.children[0].lastElementChild;
-      const headlineIam01 = hero.lastElementChild.previousSibling.children[0];
-      const headlineIam02 = hero.lastElementChild.children[0];
-      const designerBox = designer.firstElementChild;
-      const whyHire = value.firstElementChild.children[0];
-      const askMe = value.lastElementChild.children[0];
-      const checkOut = value.lastElementChild.children[1];
+  useEffect(() => {
+    const headlineHi = hero.children[0].firstElementChild;
+    const headlineHand = hero.children[0].lastElementChild;
+    const headlineIam01 = hero.lastElementChild.previousSibling.children[0];
+    const headlineIam02 = hero.lastElementChild.children[0];
+    const designerBox = designer.firstElementChild;
+    const whyHire = value.firstElementChild.children[0];
+    const askMe = value.lastElementChild.children[0];
+    const checkOut = value.lastElementChild.children[1];
 
-      gsap.from([headlineHi, headlineHand, headlineIam01, headlineIam02], {
-        duration: 0.8,
-        y: 130,
-        ease: "power3.out",
-        stagger: 0.4,
-      });
+    gsap.from([headlineHi, headlineHand, headlineIam01, headlineIam02], {
+      duration: 0.8,
+      y: 130,
+      ease: "power3.out",
+      stagger: 0.4,
+    });
 
-      gsap.from(designerBox, {
-        duration: 1,
-        y: -360,
-        ease: "bounce.out",
-        delay: 3,
-      });
+    gsap.from(designerBox, {
+      duration: 1,
+      y: -360,
+      ease: "bounce.out",
+      delay: 3,
+    });
 
-      gsap.from(whyHire, {
-        duration: 0.8,
-        y: 180,
-        ease: "power3.out",
-        delay: 1.6,
-      });
+    gsap.from(whyHire, {
+      duration: 0.8,
+      y: 180,
+      ease: "power3.out",
+      delay: 1.6,
+    });
 
-      gsap.from([askMe, checkOut], {
-        duration: 0.4,
-        y: 80,
-        ease: "power3.out",
-        stagger: 0.2,
-        delay: 2,
-      });
-    })
+    gsap.from([askMe, checkOut], {
+      duration: 0.4,
+      y: 80,
+      ease: "power3.out",
+      stagger: 0.2,
+      delay: 2,
+    });
+  });
   return (
     <Layout>
       <SEO
         keywords={[
           `product design`,
-          `illustrattion`,
+          `illustration`,
           `UI design`,
           `UX design`,
           `visual storytelling`,

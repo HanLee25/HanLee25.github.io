@@ -49,7 +49,7 @@ function Layout({ children }) {
       stagger: 0.2,
       delay: 0.5,
     });
-  })
+  });
   return (
     <div className="page" ref={(el) => (app = el)}>
       <Header />

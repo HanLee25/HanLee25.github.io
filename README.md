@@ -1,11 +1,13 @@
 # Han Lee
+
 ## Poduct Design Portfolio Site [https://hanlee25.github.io/](https://hanlee25.github.io/)
 
 <div>
   This site is built on <strong>a <a href="https://www.gatsbyjs.org/">Gatsby</a> starter styled using <a href="https://tailwindcss.com/">Tailwind CSS</a>, a utility-first CSS framework.</strong><br />
   Uses <a href="https://www.purgecss.com/">PurgeCSS</a> to remove unused CSS.<br />
 
-  This site is hosted directly from [GitHub Pages](https://pages.github.com/)
+This site is hosted directly from [GitHub Pages](https://pages.github.com/)
+
 </div>
 
 ## What is Tailwind CSS?
@@ -25,6 +27,7 @@ Build a stylesheet from your Tailwind CSS config and run the project in developm
 cd my-new-website
 npm run develop
 ```
+
 Refer this [starter theme](https://github.com/taylorbryant/gatsby-starter-tailwind)
 
 ## Format and lint

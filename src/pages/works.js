@@ -29,14 +29,17 @@ function WorksPage({
       start: "top bottom",
     });
 
-    const stickyHeader = '.header__wrapper';
+    const stickyHeader = ".header__wrapper";
 
     ScrollTrigger.create({
       trigger: projectList,
-      start: 'top -40px',
-      end: 'bottom top',
-      endTrigger: '.main',
-      toggleClass: { targets: stickyHeader, className: 'header__wrapper--floating' },
+      start: "top -40px",
+      end: "bottom top",
+      endTrigger: ".main",
+      toggleClass: {
+        targets: stickyHeader,
+        className: "header__wrapper--floating",
+      },
     });
   });
   return (
@@ -77,9 +80,7 @@ function WorksPage({
 
                 <div className="work-list__detail">
                   <header className="work-list__header">
-                    <h3 className="work-list__title h4">
-                      {frontmatter.title}
-                    </h3>
+                    <h3 className="work-list__title h4">{frontmatter.title}</h3>
 
                     <small className="work-list__meta">
                       <time dateTime={frontmatter.date}>
@@ -135,9 +136,7 @@ function WorksPage({
 
 export const workQuery = graphql`
   query WorksPageQuery {
-    allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___number] }
-    ) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___number] }) {
       edges {
         node {
           frontmatter {

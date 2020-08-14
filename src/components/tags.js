@@ -14,9 +14,13 @@ function Tags() {
         onClick={() => toggleExpansion(!isExpanded)}
       >
         by skill
-        <span className={`filter__arrow${
-          isExpanded ? ` filter__arrow--flipped` : ``
-        }`}>&or;</span>
+        <span
+          className={`filter__arrow${
+            isExpanded ? ` filter__arrow--flipped` : ``
+          }`}
+        >
+          &or;
+        </span>
       </button>
 
       <ul

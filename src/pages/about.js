@@ -13,7 +13,6 @@ function AboutPage() {
   let stickyContainer = useRef(null);
 
   useEffect(() => {
-
     const careerEvent = careerTimeLine.childNodes;
 
     gsap.defaults({ ease: "power3.out" });
@@ -28,28 +27,28 @@ function AboutPage() {
 
     ScrollTrigger.create({
       trigger: stickyContainer,
-      start: 'top top',
-      end: 'bottom top',
-      endTrigger: '.main',
-      toggleClass: { targets: stickyTarget, className: 'is--stuck' },
+      start: "top top",
+      end: "bottom top",
+      endTrigger: ".main",
+      toggleClass: { targets: stickyTarget, className: "is--stuck" },
     });
 
     ScrollTrigger.create({
       trigger: stickyContainer,
-      start: 'top -100px',
-      end: 'bottom top',
-      endTrigger: '.main',
-      toggleClass: { targets: stickyTarget, className: 'is--shown' },
+      start: "top -100px",
+      end: "bottom top",
+      endTrigger: ".main",
+      toggleClass: { targets: stickyTarget, className: "is--shown" },
     });
 
     ScrollTrigger.create({
       trigger: stickyContainer,
-      start: 'top -110px',
-      end: 'bottom top',
-      endTrigger: '.main',
-      toggleClass: { targets: stickyTarget, className: 'is--pushed' },
+      start: "top -110px",
+      end: "bottom top",
+      endTrigger: ".main",
+      toggleClass: { targets: stickyTarget, className: "is--pushed" },
     });
-  })
+  });
   return (
     <Layout>
       <SEO
