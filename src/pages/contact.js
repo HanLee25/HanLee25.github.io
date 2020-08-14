@@ -9,7 +9,7 @@ function ContactPage() {
       <SEO
         keywords={[
           `product design`,
-          `illustrattion`,
+          `illustration`,
           `UI design`,
           `UX design`,
           `visual storytelling`,

@@ -5,8 +5,10 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Han Lee`,
+    title: `Han Lee - Product Designer`,
     description: `Product designer, illustrator, and front-end developer who values the visual storytelling method`,
+    url: "https://hanlee25.github.io/",
+    image: "/images/preview.png",
     author: `@hanlee`,
   },
   plugins: [

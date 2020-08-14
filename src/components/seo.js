@@ -9,6 +9,8 @@ function SEO({ description, lang, meta, keywords, title }) {
       site {
         siteMetadata {
           title
+          siteUrl: url
+          defaultImage: image
           description
           author
         }
@@ -76,6 +78,7 @@ SEO.defaultProps = {
   lang: `en`,
   keywords: [],
   meta: [],
+  image: null,
 };
 
 SEO.propTypes = {
@@ -84,6 +87,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
 };
 
 export default SEO;

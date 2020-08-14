@@ -33,7 +33,7 @@ function Header() {
               aria-labelledby="hanFaceTitleID hanFaceDescID"
             />
 
-            <span className="header__title">{site.siteMetadata.title}</span>
+            <span className="header__title">Han Lee</span>
           </h1>
         </Link>
 
