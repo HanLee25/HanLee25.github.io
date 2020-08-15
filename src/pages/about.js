@@ -114,7 +114,7 @@ function AboutPage() {
 
             <p>
               I love drawing illustrations and digitalizes them to create
-              animation. I am also very talented Amazon box artist.{" "}
+              animation. I am also a super talented Amazon box artist.{" "}
               <span role="img" aria-label="emoji: packaging box">
                 📦
               </span>
@@ -135,23 +135,15 @@ function AboutPage() {
             </div>
 
             <p>
-              Telling a story is the one of the most effective way delivering
-              information. When we tell a story, the information is flowing with
-              context. In storytelling, we don't dump information in audience's
-              face.
+              Telling a story is one of the most effective ways to deliver information. When we tell a story, the information is flowing with context. In storytelling, we don't dump information in audience's face.
             </p>
 
             <p>
-              When I was in college, my biggest challenge was delivering the
-              message through my artwork because I wouldn’t be around all the
-              time to explain things.
+              When I was in college, my biggest challenge was delivering the message through my artwork because I wouldn’t be around all the time to explain things.
             </p>
 
             <p>
-              Now, I have to tell a story about my product without standing by
-              my users. And I need to do that visually. I should be able to
-              understand the flow of thoughts of my users, and curate the
-              information to fit with the context at times.
+              Now, I have to tell a story about my product without standing by my users. And I need to do that visually. I should understand the flow of thoughts of my users, and curate the information to fit with the context at times.
             </p>
 
             <p>
@@ -175,17 +167,15 @@ function AboutPage() {
             </header>
 
             <p>
-              One thing that I learned from my past experience is, more elements
-              of the experience I understand, better my product justification
-              gets. Because users experience the product as a whole, not
-              component by component.
+              I learned from my experience that as I understand more atoms of the user's ultimate experience, my product gets better usability—the user experience is the product as a whole, not one component by component in separation.
             </p>
 
             <p>
-              I have experience of a studio artist, a visual designer, an UI
-              deisgner, a front-end developer, and an interaction designer for
-              past 10+ years. And that helps me to grow as an all-around product
-              designer.
+              And that idea has pushed me to look into other digital design elements, such as animation, accessibility, coding, and scripting.
+            </p>
+
+            <p>
+              I also have experience as a studio artist, a visual designer, a UI designer, a front-end developer, an illustrator, and an interaction designer for the past 10+ years. And that helps me to grow as an all-around product designer.
             </p>
 
             <ul className="timeline" ref={(el) => (careerTimeLine = el)}>
@@ -197,10 +187,7 @@ function AboutPage() {
                 </small>
 
                 <p className="timeline__detail">
-                  Solving UI/UX problems of digital products, through front-end
-                  development and product consulting. Conducting design
-                  researches, participating, and facilitating product design
-                  sprints. Contribute UI, UX design iteration process.
+                  Solving UI/UX problems of digital products through front-end development and product consulting. Conducting design researches, participating, and facilitating product design sprints. Contribute UI, UX design iteration process.
                 </p>
               </li>
 
@@ -212,10 +199,7 @@ function AboutPage() {
                 </small>
 
                 <p className="timeline__detail">
-                  Working closely with the head of the mobile product.
-                  Responsible to oversee the quality of UI design, the
-                  seamlessness of the UX of the product. And responsible for
-                  overseeing the quality of front-end codebase.
+                  Working closely with the head of the mobile product. Responsible for overseeing the quality of UI design, the seamlessness of the UX of the product. And accountable for supervising the quality of front-end codebase.
                 </p>
               </li>
 
@@ -227,15 +211,11 @@ function AboutPage() {
                 </small>
 
                 <p className="timeline__detail">
-                  Responsible for providing design feedback in iterative product
-                  design process, and creating hand-on design deliverables such
-                  as wireframes, prototypes, and high-fidelity UI mockups.
+                  Responsible for providing design feedback in iterative product the design process, and creating hand-on design deliverables such as wireframes, prototypes, and high-fidelity UI mockups.
                 </p>
 
                 <p className="timeline__detail">
-                  Also contributing to building MVP for product experiment by
-                  utilizing front-end coding ability. Participating to create a
-                  branding guide, style guide, and UI library.
+                  Also contributing to building MVP for product experiment by utilizing front-end coding ability. Participating in creating a branding guide, style guide, and UI library.
                 </p>
               </li>
 
@@ -247,17 +227,11 @@ function AboutPage() {
                 </small>
 
                 <p className="timeline__detail">
-                  Reporting to the Creative Director, and working closely with
-                  the Product Manager.
+                  Reporting to the Creative Director and working closely with the Product Manager.
                 </p>
 
                 <p className="timeline__detail">
-                  Responsible for UI/UX design workflow, to create high-quality
-                  design solutions to serve e-commerce User Experience.
-                  Collaborating with the product team to provide design
-                  guidelines and UX feedback. Contributing to creating
-                  user-friendly branding, including a branding guide, marketing
-                  materials, and brand identity.
+                  Responsible for UI/UX design workflow to create high-quality design solutions to serve e-commerce User Experience. Collaborating with the product team to provide design guidelines and UX feedback and contributing to creating user-friendly branding, including a branding guide, marketing materials, and brand identity.
                 </p>
               </li>
 
@@ -276,9 +250,7 @@ function AboutPage() {
                 </p>
 
                 <p className="timeline__detail">
-                  Providing branding identity, presentation for clients.
-                  Creating UI design solutions, marketing materials, and CMS
-                  template/theme by front-end coding.
+                  Providing branding identity, presentation for clients. Creating UI design solutions, marketing materials, and CMS template/theme by front-end coding.
                   <br />
                   Creating flash animation, editing promotion video.
                 </p>

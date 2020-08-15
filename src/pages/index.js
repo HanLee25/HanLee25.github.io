@@ -90,7 +90,7 @@ function IndexPage() {
 
           <span className="hero__paragraph">
             <span className="hero__line">
-              loves to tell a story{" "}
+              loves to tell stories{" "}
               <a
                 href="https://en.wikipedia.org/wiki/Visual_narrative"
                 target="_blank"
