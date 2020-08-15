@@ -35,12 +35,20 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: title,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: site.siteMetadata.defaultImage,
         },
         {
           name: `twitter:card`,
@@ -55,8 +63,16 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: title,
         },
         {
+          name: `twitter:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: site.siteMetadata.defaultImage,
         },
       ]
         .concat(
