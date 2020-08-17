@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -130,6 +131,12 @@ function WorksPage({
           })}
         </div>
       </section>
+
+      <Helmet
+        bodyAttributes={{
+          class: 'works'
+        }}
+      />
     </Layout>
   );
 }

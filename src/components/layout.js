@@ -11,6 +11,9 @@ import IconTailwind from "../images/svg-plugin/icon-tailwindcss.svg";
 import IconGraphql from "../images/svg-plugin/icon-graphql.svg";
 import IconNpm from "../images/svg-plugin/icon-npm.svg";
 import IconGsap from "../images/svg-plugin/icon-gsap.svg";
+import Shape01 from "../images/shape01.svg";
+import Shape02 from "../images/shape02.svg";
+import Shape03 from "../images/shape03.svg";
 
 function Layout({ children }) {
   gsap.config({
@@ -19,16 +22,31 @@ function Layout({ children }) {
 
   let app = useRef(null);
   let main = useRef(null);
+  let float = useRef(null);
 
   useEffect(() => {
     gsap.to(app, { duration: 0, css: { visibility: "visible" } });
+
+    const floatingElement = float.childNodes;
+
+    gsap.fromTo(floatingElement, {
+      y: 100,
+      opacity: 0,
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power4.inOut",
+      stagger: 0.3,
+      delay: 1,
+    }, 1);
 
     gsap.to(main, {
       duration: 0.5,
       opacity: 1,
       ease: "power3.out",
       delay: 0.25,
-    });
+    }, 1);
 
     const contentSection = ".content-section";
 
@@ -134,6 +152,18 @@ function Layout({ children }) {
           </nav>
         </div>
       </footer>
+
+      <div ref={(el) => (float = el)}>
+        <div className="floaty floaty--1">
+          <Shape01 className="floaty__svg" role="presentation" />
+        </div>
+        <div className="floaty floaty--3">
+          <Shape03 className="floaty__svg" role="presentation" />
+        </div>
+        <div className="floaty floaty--2">
+          <Shape02 className="floaty__svg" role="presentation" />
+        </div>
+      </div>
     </div>
   );
 }

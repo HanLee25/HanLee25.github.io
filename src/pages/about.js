@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -259,6 +260,12 @@ function AboutPage() {
           </section>
         </div>
       </div>
+
+      <Helmet
+        bodyAttributes={{
+          class: 'about'
+        }}
+      />
     </Layout>
   );
 }

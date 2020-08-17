@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import { gsap } from "gsap";
+
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -25,20 +27,21 @@ function IndexPage() {
       y: 130,
       ease: "power3.out",
       stagger: 0.4,
-    });
+      delay: 1,
+    }, 1);
 
     gsap.from(designerBox, {
       duration: 1,
       y: -360,
       ease: "bounce.out",
-      delay: 3,
+      delay: 4,
     });
 
     gsap.from(whyHire, {
       duration: 0.8,
       y: 180,
       ease: "power3.out",
-      delay: 1.6,
+      delay: 2.5,
     });
 
     gsap.from([askMe, checkOut], {
@@ -46,7 +49,7 @@ function IndexPage() {
       y: 80,
       ease: "power3.out",
       stagger: 0.2,
-      delay: 2,
+      delay: 3,
     });
   });
   return (
@@ -151,6 +154,12 @@ function IndexPage() {
           </div>
         </div>
       </section>
+
+      <Helmet
+        bodyAttributes={{
+          class: 'home'
+        }}
+      />
     </Layout>
   );
 }

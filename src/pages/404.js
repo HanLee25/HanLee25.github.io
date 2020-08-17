@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
@@ -26,6 +27,12 @@ function NotFoundPage() {
           again?
         </p>
       </section>
+
+      <Helmet
+        bodyAttributes={{
+          class: '404'
+        }}
+      />
     </Layout>
   );
 }

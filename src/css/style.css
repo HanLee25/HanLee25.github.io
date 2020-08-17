@@ -350,6 +350,7 @@ figcaption {
  [9] Paragraph truncate
  [10] Modal
  [11] Sticky element
+ [12] Floating element
 
  =================================================================*/
 
@@ -870,6 +871,150 @@ figcaption {
 
 .sticky-element__target.is--stuck > * {
   @apply relative;
+}
+
+
+/* [12] Floating element *********************/
+
+.floaty {
+  @apply duration-300;
+  @apply fixed;
+  @apply opacity-0;
+  @apply transition-all;
+  
+  z-index: -1;
+}
+
+.floaty .floaty__svg {
+  @apply duration-300;
+  @apply fill-current;
+  @apply transition-all;
+
+  height: 45vh;
+}
+
+.floaty--1 {
+  @apply text-teal-200;
+
+  bottom: -20%;
+  right: -40%;
+}
+
+.floaty--1 .floaty__svg {
+  @apply opacity-75;
+  
+  animation: float 8s ease-in-out infinite;
+}
+
+.floaty--2 {
+  @apply text-red-200;
+
+  bottom: -25%;
+  left: -20%;
+}
+
+.floaty--2 .floaty__svg {
+  @apply opacity-75;
+
+  animation: float-2 10s 1s ease-in-out infinite;
+}
+
+.floaty--3 {
+  @apply text-red-200;
+
+  left: -45%;
+  top: -20%;
+}
+
+.floaty--3 .floaty__svg {
+  @apply opacity-75;
+
+  animation: float 15s 1s ease-in-out infinite;
+}
+
+.about .floaty--1 {
+  bottom: auto;
+  right: -10%;
+  top: -15%
+}
+
+.about .floaty--2 {
+  bottom: -25%;
+  left: auto;
+  right: -25%;
+}
+
+.about .floaty--3 {
+  left: 70%;
+}
+
+.works .floaty--1 {
+  bottom: auto;
+  right: -20%;
+  top: -15%
+}
+
+.works .floaty--2 {
+  bottom: -25%;
+  left: auto;
+  right: -35%;
+}
+
+.works .floaty--3 {
+  left: 5%;
+}
+
+.contact .floaty--1 {
+  right: -5%;
+}
+
+.contact .floaty--2 {
+  right: 15%;
+}
+
+.contact .floaty--3 {
+  left: 15%;
+}
+
+@keyframes float {
+  0% {
+    @apply opacity-75;
+
+    transform: translateX(0) translateY(0px) scaleX(100%) scaleY(90%);
+  }
+  33% {
+    @apply opacity-50;
+
+    transform: translateX(10px) translateY(-20px) scaleX(90%) scaleY(100%);
+  }
+  66% {
+    @apply opacity-50;
+
+    transform: translateX(-10px) translateY(10px) scaleX(110%) scaleY(100%);
+  }
+  100% {
+    @apply opacity-75;
+
+    transform: translateX(0) translateY(0px) scaleX(100%) scaleY(90%);
+  }
+}
+
+@keyframes float-2 {
+  0% {
+    @apply opacity-25;
+
+    transform: translateX(0) translateY(10px) scaleY(100%) rotate(0);
+  }
+  50% {
+    @apply opacity-50;
+
+    transform: translateX(-20px) translateY(-10px) scaleY(60%) rotate(25deg);
+  }
+  100% {
+    @apply opacity-25;
+
+    transform: translateX(0) translateY(10px) scaleY(100%) rotate(0);
+  }
 }
 
 
@@ -1546,8 +1691,23 @@ figcaption {
 
   .sticky-element__target.is--shown {
     @apply border-none;
-    @apply shadow-none;
     @apply top-0;
+  }
+
+  .floaty--1 {
+    bottom: -20%;
+    right: -25%;
+  }
+
+  .floaty--2 {
+    bottom: -25%;
+    left: auto;
+    right: 5%;
+  }
+
+  .floaty--3 {
+    left: 0;
+    top: -35%;
   }
 
   .work-list {
@@ -1822,6 +1982,25 @@ figcaption {
     top: theme("spacing.8");
   }
 
+  .sticky-element__target.is--shown {
+    @apply shadow-none;
+  }
+
+  .floaty--1 {
+    bottom: -15%;
+    right: -30%;
+  }
+
+  .floaty--2 {
+    bottom: -30%;
+    right: -5%;
+  }
+
+  .floaty--3 {
+    left: 10%;
+    top: -30%;
+  }
+
   .work-list__item {
     @apply gap-12;
 
@@ -2083,6 +2262,21 @@ figcaption {
 
   .modal__content {
     @apply max-w-screen-xl;
+  }
+
+  .floaty--1 {
+    bottom: -5%;
+    right: -10%;
+  }
+
+  .floaty--2 {
+    bottom: -15%;
+    right: 8%;
+  }
+
+  .floaty--3 {
+    left: 20%;
+    top: -30%;
   }
 
   .work-list__link {

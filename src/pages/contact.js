@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -94,6 +95,12 @@ function ContactPage() {
           </button>
         </form>
       </section>
+
+      <Helmet
+        bodyAttributes={{
+          class: 'contact'
+        }}
+      />
     </Layout>
   );
 }
