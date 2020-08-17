@@ -106,7 +106,7 @@ function AboutPage() {
 
             <p>
               I studied fine and studio art at Hong-ik University in South Korea
-              and the Cooper Union in New York City. After graduate schools, I
+              and the Cooper Union in New York City. After schools, I
               translated my learnings of the human-artwork interaction into the
               human-computer interaction. Since then, my goal is always to
               communicate with the audience naturally.
