@@ -730,6 +730,13 @@ figcaption {
 .featured-carousel__image-link {
   @apply block;
   @apply overflow-hidden;
+
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
 }
 
 .featured-carousel__image {
@@ -759,9 +766,20 @@ figcaption {
   @apply text-sm;
 }
 
-.featured-carousel__title a {
+.featured-carousel__title a,
+.featured-carousel__title button {
   color: inherit;
   @apply no-underline;
+}
+
+.featured-carousel__title button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: left;
 }
 
 .featured-carousel__controls,
@@ -994,6 +1012,31 @@ figcaption {
   }
 }
 
+.project-modal__close {
+  @apply z-20;
+
+  align-items: center;
+  background: white;
+  border: 0;
+  border-radius: 2px;
+  color: #111827;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  height: 2.75rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 2.75rem;
+}
+
+.project-modal__close:hover {
+  background: #f3f4f6;
+}
+
 .modal__close {
   @apply absolute;
   @apply text-white;
@@ -1003,7 +1046,8 @@ figcaption {
   top: theme("spacing.6");
 }
 
-.ReactModal__Overlay--after-open {
+.ReactModal__Overlay--after-open,
+.showcase-modal.modal__overlay {
   @apply translate-y-0;
 }
 

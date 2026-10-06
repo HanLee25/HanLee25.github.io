@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { gsap } from "gsap";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { useProjectModal } from "../components/projectModalContext";
 
 const featuredProjectSlugs = [
   "/works/1st-project",
@@ -23,6 +24,7 @@ function IndexPage({ data }) {
       description: excerpt,
       image: cover?.childImageSharp?.fluid,
       path: slug,
+      content: node,
     };
 
     return lookup;
@@ -108,6 +110,7 @@ function IndexPage({ data }) {
   };
 
   const project = featuredProjects[activeProject];
+  const { openProject } = useProjectModal();
 
   return (
     <Layout>
@@ -171,7 +174,7 @@ function IndexPage({ data }) {
               to make complex ideas tangible
               {" "}
               <span className="hero__why">
-                 for people who use products and people who build them. Check out my showcase. ;)
+                 for people who use products and people who build them. Check out my showcase...
               </span>
             </span>
           </p>
@@ -189,20 +192,31 @@ function IndexPage({ data }) {
               aria-label={`${activeProject + 1} of ${featuredProjects.length}`}
               aria-live="polite"
             >
-              <Link className="featured-carousel__image-link" to={project.path}>
+              <button
+                className="featured-carousel__image-link"
+                type="button"
+                aria-label={`View ${project.title}`}
+                onClick={() => openProject(project.content)}
+              >
                 {project.image ? (
                   <Img className="featured-carousel__image" fluid={project.image} alt={project.title} />
                 ) : null}
-              </Link>
+              </button>
               <div>
                 <p className="featured-carousel__eyebrow">Showcase #{activeProject + 1}/{featuredProjects.length}</p>
                 <h3 className="h5 featured-carousel__title">
-                  <Link to={project.path}>{project.title}</Link>
+                  <button type="button" onClick={() => openProject(project.content)}>
+                    {project.title}
+                  </button>
                 </h3>
                 <p className="featured-carousel__desc">{project.description}</p>
-                <Link className="button button--link" to={project.path}>
+                <button
+                  className="button button--link"
+                  type="button"
+                  onClick={() => openProject(project.content)}
+                >
                   View project <span aria-hidden="true">&rarr;</span>
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -241,11 +255,26 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___number] }) {
       edges {
         node {
+          html
           frontmatter {
             slug
             title
             excerpt
+            team
+            teamUrl
+            role
+            industry
+            tags
+            headerFlip
+            previewLandscape
             cover {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            preview {
               childImageSharp {
                 fluid(maxWidth: 800, quality: 100) {
                   ...GatsbyImageSharpFluid
