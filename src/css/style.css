@@ -22,9 +22,10 @@
 
 body {
   @apply bg-gray-100;
-  @apply font-sans;
+  @apply font-mono;
   @apply text-base;
   @apply text-gray-800;
+  @apply subpixel-antialiased;
 }
 
 p {
@@ -48,7 +49,8 @@ a:hover {
 .h5,
 .h6 {
   @apply capitalize;
-  @apply leading-relaxed;
+  @apply font-sans;
+  @apply leading-snug;
   @apply mb-4;
   @apply font-bold;
   @apply text-black;
@@ -231,7 +233,7 @@ figcaption {
 }
 
 .header__title {
-  @apply font-bold;
+  @apply font-thin;
   @apply tracking-widest;
   @apply uppercase;
 }
@@ -361,8 +363,9 @@ figcaption {
   @apply border-4;
   @apply border-transparent;
   @apply duration-300;
-  @apply font-bold;
+  @apply font-medium;
   @apply inline-block;
+  @apply leading-none;
   @apply no-underline;
   @apply py-2;
   @apply px-4;
@@ -414,7 +417,7 @@ figcaption {
 }
 
 .button--link:hover {
-  @apply bg-transparent;
+  @apply bg-gray-300;
   @apply text-red-700;
 }
 
@@ -446,8 +449,7 @@ figcaption {
 
 .button--sm {
   @apply border-b-2;
-  @apply py-1;
-  @apply px-2;
+  @apply p-2;
   @apply text-xs;
 }
 
@@ -459,6 +461,30 @@ figcaption {
 .button--sm.button--svg {
   @apply border-0;
   @apply p-0;
+}
+
+.button--addon {
+  @apply flex;
+  @apply gap-2;
+  @apply items-center;
+  @apply justify-between;
+}
+
+.button--addon__icon {
+  @apply leading-none;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .button--addon__icon {
+      @apply mr-2;
+    }
+
+    .button--addon__label + .button--addon__icon {
+      @apply ml-2;
+      @apply mr-0;
+    }
+  }
 }
 
 
@@ -517,8 +543,18 @@ figcaption {
 /* [3] Icons *********************/
 
 .icon {
+  @apply duration-200;
+  @apply fill-current;
   @apply h-6;
+  @apply stroke-current;
+  @apply transform;
+  @apply transition-all;
   @apply w-6;
+}
+
+.icon--xs {
+  @apply h-2;
+  @apply w-2;
 }
 
 .icon--sm {
@@ -529,6 +565,22 @@ figcaption {
 .icon--md {
   @apply h-8;
   @apply w-8;
+}
+
+.icon--90 {
+  @apply rotate-90;
+}
+
+.icon--180 {
+  @apply rotate-180;
+}
+
+.icon--270 {
+  @apply -rotate-90;
+}
+
+.icon--flipped {
+  transform: scaleX(-1);
 }
 
 .icon--burger .icon__part {
@@ -565,7 +617,8 @@ figcaption {
 
 .main-nav {
   @apply font-bold;
-  @apply text-2xl;
+  @apply text-xl;
+  @apply uppercase;
 }
 
 .main-nav__item {
@@ -599,8 +652,10 @@ figcaption {
 
 .hero {
   @apply inline-block;
+  @apply italic;
   @apply normal-case;
-  @apply tracking-tight;
+  @apply subpixel-antialiased;
+  @apply tracking-tighter;
 }
 
 .hero__paragraph {
@@ -608,8 +663,16 @@ figcaption {
   @apply overflow-hidden;
 }
 
+.hero__greeting {
+  @apply mb-8;
+}
+
 .hero__line {
   @apply inline-block;
+}
+
+.hero__hi {
+  @apply not-italic;
 }
 
 .hero__strong {
@@ -620,15 +683,11 @@ figcaption {
   @apply relative;
 }
 
-.hero__designer {
+.hero__keyword {
   @apply relative;
   @apply text-white;
 
   mix-blend-mode: difference;
-}
-
-.hero__product {
-  @apply hidden;
 }
 
 .hero__box {
@@ -649,21 +708,132 @@ figcaption {
 
 .hero__why {
   @apply duration-700;
-  @apply cursor-not-allowed;
   @apply inline-block;
   @apply transition-all;
   @apply w-auto;
 }
 
-.hero__bad {
-  @apply align-baseline;
-  @apply duration-1000;
-  @apply inline-block;
-  @apply transition-all;
+.featured-carousel {
+  @apply mt-6;
+  @apply max-w-4xl;
+  @apply w-full;
 }
 
-.hero__cta {
-  @apply mt-4;
+.featured-carousel__slide {
+  @apply grid;
+  @apply gap-6;
+  @apply items-start;
+
+  grid-template-columns: minmax(0, 0.7fr) minmax(14rem, 1.3fr);
+}
+
+.featured-carousel__image-link {
+  @apply block;
+  @apply overflow-hidden;
+}
+
+.featured-carousel__image {
+  @apply block;
+  @apply object-cover;
+  @apply rounded-sm;
+  @apply w-full;
+
+  aspect-ratio: 30 / 17;
+}
+
+.featured-carousel__eyebrow {
+  @apply font-bold;
+  @apply mb-1;
+  @apply text-red-700;
+  @apply text-xs;
+  @apply tracking-wider;
+  @apply uppercase;
+}
+
+.featured-carousel__title {
+  @apply mb-2;
+}
+
+.featured-carousel__desc {
+  @apply mb-4;
+  @apply text-sm;
+}
+
+.featured-carousel__title a {
+  color: inherit;
+  @apply no-underline;
+}
+
+.featured-carousel__controls,
+.featured-carousel__pagination,
+.featured-carousel__arrows {
+  @apply flex;
+  @apply items-center;
+}
+
+.featured-carousel__controls {
+  @apply gap-1;
+  @apply mt-1;
+}
+
+.featured-carousel__pagination {
+  @apply gap-1;
+}
+
+.featured-carousel__indicator {
+  @apply border-0;
+  @apply bg-gray-300;
+  @apply cursor-pointer;
+  @apply h-1;
+  @apply p-0;
+  @apply w-6;
+}
+
+.featured-carousel__indicator:hover {
+  @apply bg-red-400;
+}
+
+.featured-carousel__indicator--active {
+  @apply bg-red-700;
+}
+
+.featured-carousel__arrows {
+  @apply gap-1;
+  @apply ml-auto;
+}
+
+.featured-carousel__arrows button {
+  @apply bg-transparent;
+  @apply border;
+  @apply border-gray-300;
+  @apply border-solid;
+  @apply cursor-pointer;
+  @apply grid;
+  @apply leading-3;
+  @apply text-gray-900;
+  @apply text-lg;
+  @apply w-8;
+
+  aspect-ratio: 1;
+  place-items: center;
+}
+
+.featured-carousel__arrows button:hover,
+.featured-carousel__arrows button:focus-visible,
+.featured-carousel__indicator:focus-visible {
+  @apply bg-red-700;
+  @apply text-white;
+}
+
+@media (max-width: 640px) {
+  .featured-carousel__slide {
+    grid-template-columns: minmax(0, 1fr);
+    @apply gap-1;
+  }
+
+  .featured-carousel__controls {
+    gap: 0.75rem;
+  }
 }
 
 
@@ -811,13 +981,24 @@ figcaption {
   @apply overflow-y-auto;
   @apply overflow-x-hidden;
   @apply scrolling-touch;
+
+  /* Hides scrollbar for Firefox */
+  scrollbar-width: none; 
+  
+  /* Hides scrollbar for Internet Explorer and Legacy Edge */
+  -ms-overflow-style: none;
+  
+  /* Hides scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .modal__close {
   @apply absolute;
+  @apply text-white;
   @apply z-10;
 
-  fill: theme("colors.white");
   left: theme("spacing.6");
   top: theme("spacing.6");
 }
@@ -895,6 +1076,29 @@ figcaption {
   @apply pb-8;
 }
 
+.project-list__toolbar {
+  @apply flex;
+  @apply items-center;
+  @apply justify-start;
+  @apply gap-2;
+  @apply mb-8;
+}
+
+.project-list__sort-label {
+  @apply text-sm;
+  @apply text-gray-600;
+}
+
+.project-list__sort-select {
+  @apply border;
+  @apply border-gray-300;
+  @apply bg-white;
+  @apply px-2;
+  @apply py-1;
+  @apply text-sm;
+  @apply text-gray-800;
+}
+
 .work-list__item,
 .work-list__detail {
   @apply gap-3;
@@ -915,6 +1119,7 @@ figcaption {
 .work-list__thumbnail,
 .work-list__thumbnail .gatsby-image-wrapper {
   @apply h-full;
+  @apply rounded;
 }
 
 .work-list__header {
@@ -939,6 +1144,10 @@ figcaption {
 .work-list__description {
   @apply max-w-full;
   @apply mb-0;
+}
+
+.work-list__tags {
+  min-height: 2rem;
 }
 
 
@@ -1037,6 +1246,14 @@ figcaption {
   @apply my-3;
 }
 
+.timeline__contribution {
+  @apply leading-none;
+  @apply list-disc;
+  @apply list-inside;
+  @apply mt-3;
+  @apply text-sm;
+}
+
 
 /* [4] Quote *********************/
 
@@ -1044,7 +1261,7 @@ figcaption {
   @apply border-l-4;
   @apply border-red-700;
   @apply font-serif;
-  @apply leading-loose;
+  @apply leading-normal;
   @apply pl-4;
   @apply text-justify;
 }
@@ -1052,7 +1269,8 @@ figcaption {
 .quote-by {
   @apply block;
   @apply font-bold;
-  @apply my-4;
+  @apply mb-6;
+  @apply mt-2;
   @apply uppercase;
   @apply text-xs;
 }
@@ -1069,21 +1287,6 @@ figcaption {
   @apply right-0;
 
   margin-top: -3.5rem;
-}
-
-.filter__arrow {
-  @apply duration-300;
-  @apply inline-block;
-  @apply text-gray-600;
-  @apply transition-all;
-  @apply transform-none;
-  @apply ml-2;
-}
-
-.filter__arrow--flipped {
-  @apply text-red-600;
-  @apply transform;
-  @apply rotate-180;
 }
 
 .filter__list {
@@ -1524,14 +1727,6 @@ figcaption {
     @apply tracking-normal;
   }
 
-  .hero__product {
-    @apply inline;
-  }
-
-  .hero__cta + .hero__cta {
-    @apply ml-4;
-  }
-
   .modal__wrapper {
     @apply p-0;
   }
@@ -1769,8 +1964,12 @@ figcaption {
     @apply tracking-wide;
   }
 
+  .hero__greeting {
+    @apply mb-12;
+  }
+
   .hero__value {
-    @apply mb-24;
+    @apply mb-8;
   }
 
   .modal__wrapper {
@@ -1787,7 +1986,8 @@ figcaption {
   }
 
   .modal__close {
-    fill: theme("colors.gray.600");
+    @apply text-gray-600;
+
     left: auto;
     right: theme("spacing.8");
     top: theme("spacing.8");
@@ -2054,7 +2254,7 @@ figcaption {
   .h4,
   .h5,
   .h6 {
-    @apply leading-normal;
+    @apply leading-tight;
   }
 
   .h1 {

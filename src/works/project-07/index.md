@@ -5,7 +5,7 @@ title: "Comedy portal MVP"
 team: "Thoughtbot"
 teamUrl: "https://thoughtbot.com/"
 excerpt: "Refine the product strategy to build a valid MVP version of the web app and native app along with the marketing landing pages."
-tags: ['Product strategy', 'Front-end', 'RoR', 'HTML / SCSS', 'Jamstack', 'UI design', 'Branding', 'Illustration', 'Visual narrative', 'User test', 'iOS HIG', 'No code', 'Adalo']
+tags: ['Product Discovery', 'Design Sprint', 'Front-end', 'User Interface', 'Branding', 'Illustration', 'User Research', '@Thoughtbot']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true

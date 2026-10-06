@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import BrandFace from "../images/svg-plugin/han-face.svg";
 import IconBurger from "../images/svg-plugin/icon-burger.svg";
@@ -41,8 +42,7 @@ function Header() {
 
         <ul className="header__links">
           <li>
-            <a
-              className="button button--svg"
+            <OutboundLink className="button button--svg"
               href="https://www.linkedin.com/in/han-lee-07bb3688/"
               target="_blank"
               rel="noopener noreferrer"
@@ -51,12 +51,11 @@ function Header() {
                 className="icon icon--sm"
                 aria-label="Linkedin Profile"
               />
-            </a>
+            </OutboundLink>
           </li>
 
           <li>
-            <a
-              className="button button--svg"
+            <OutboundLink className="button button--svg"
               href="https://dribbble.com/eyian25"
               target="_blank"
               rel="noopener noreferrer"
@@ -65,12 +64,11 @@ function Header() {
                 className="icon icon--sm"
                 aria-label="Dribbble Profile"
               />
-            </a>
+            </OutboundLink>
           </li>
 
           <li>
-            <a
-              className="button button--svg"
+            <OutboundLink className="button button--svg"
               href="https://github.com/HanLee25/practicalJavaScript"
               target="_blank"
               rel="noopener noreferrer"
@@ -79,7 +77,7 @@ function Header() {
                 className="icon icon--sm"
                 aria-label="GitHub Profile"
               />
-            </a>
+            </OutboundLink>
           </li>
         </ul>
 
@@ -126,14 +124,14 @@ function Header() {
             ))}
 
             <li>
-              <a
+              <OutboundLink
                 className="main-nav__item"
-                href="https://drive.google.com/file/d/1GE4oyX-socQt1j9ed2ygo9fln6HPpfMK/view"
+                href="https://drive.google.com/file/d/1YbJBK0PmRRiNV9cllV0X78FrtElKuFxz/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Resumé
-              </a>
+              </OutboundLink>
             </li>
           </ul>
         </nav>

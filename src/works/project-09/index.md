@@ -5,7 +5,7 @@ title: "Hero image illustration"
 team: "Thoughtbot"
 teamUrl: "https://thoughtbot.com/"
 excerpt: "Illustrate the core product value of the business to communicate visually."
-tags: ['Illustration', 'Visual narrative', UI design, 'Visual design', 'UX research', 'User test']
+tags: ['Illustration', 'Visual Design', 'User Research', '@Thoughtbot']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true

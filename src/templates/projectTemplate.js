@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import { gsap } from "gsap";
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Modal from "../components/modal";
 
@@ -107,14 +108,14 @@ export default function Template({
           >
             <dt className="project-meta__title">Team</dt>
             <dd>
-              <a
+              <OutboundLink
                 href={frontmatter.teamUrl}
                 target="_blank"
                 rel="noreferrer"
                 title={frontmatter.team}
               >
                 {frontmatter.team}
-              </a>
+              </OutboundLink>
             </dd>
 
             <dt className="project-meta__title">Industry</dt>

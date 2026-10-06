@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { gsap } from "gsap";
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Header from "./header";
 
@@ -49,7 +50,7 @@ function Layout({ children }) {
       stagger: 0.2,
       delay: 0.5,
     });
-  });
+  }, []);
   return (
     <div className="page" ref={(el) => (app = el)}>
       <Header />
@@ -68,68 +69,61 @@ function Layout({ children }) {
             <span className="footer__links">
               <span>Built with{` `}</span>
 
-              <a
-                className="footer__link button button--svg"
+              <OutboundLink className="footer__link button button--svg"
                 href="https://pages.github.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconGithub2 className="icon" aria-label="GitHub Pages" />
-              </a>
+              </OutboundLink>
 
-              <a
-                className="footer__link button button--svg"
+              <OutboundLink className="footer__link button button--svg"
                 href="https://www.gatsbyjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconGatsby className="icon" aria-label="Gatsby" />
-              </a>
+              </OutboundLink>
 
-              <a
-                className="footer__link button button--svg"
+              <OutboundLink className="footer__link button button--svg"
                 href="https://reactjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconReact className="icon" aria-label="React" />
-              </a>
+              </OutboundLink>
 
-              <a
-                className="footer__link button button--svg"
+              <OutboundLink className="footer__link button button--svg"
                 href="https://graphql.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconGraphql className="icon" aria-label="GraphQL" />
-              </a>
+              </OutboundLink>
 
-              <a
-                className="footer__link button button--svg"
+              <OutboundLink className="footer__link button button--svg"
                 href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconTailwind className="icon" aria-label="Tailwind CSS" />
-              </a>
+              </OutboundLink>
 
-              <a
-                className="footer__link button button--svg"
+              <OutboundLink className="footer__link button button--svg"
                 href="https://greensock.com/gsap/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconGsap className="icon" aria-label="GSAP" />
-              </a>
+              </OutboundLink>
 
-              <a
-                className="footer__link button button--svg"
+              <OutboundLink className="footer__link button button--svg"
                 href="https://www.npmjs.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IconNpm className="icon" aria-label="npm" />
-              </a>
+              </OutboundLink>
             </span>
           </nav>
         </div>

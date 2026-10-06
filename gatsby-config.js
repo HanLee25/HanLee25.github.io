@@ -38,7 +38,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
+    ...(process.env.NODE_ENV === `production` ? [`gatsby-plugin-offline`] : []),
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {

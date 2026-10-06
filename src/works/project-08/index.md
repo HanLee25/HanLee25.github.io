@@ -5,7 +5,7 @@ title: "Dating app MVP"
 team: "Thoughtbot"
 teamUrl: "https://thoughtbot.com/"
 excerpt: "Set and validate the product concept via a design sprint workshop and build the landing page for the pre-launch marketing campaign."
-tags: ['Product strategy', 'Design sprint', 'Prototype', 'UI design', 'iOS HIG', 'Interaction', 'User test', 'HTML / SCSS', 'Jamstack', 'Art directing', 'Illustration']
+tags: ['Product Discovery', 'Design Sprint', 'Prototyping', 'User Interface', 'Micro Interaction', 'User Research', 'Illustration', '@Thoughtbot']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true

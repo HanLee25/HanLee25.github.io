@@ -5,7 +5,7 @@ title: "Brand identity & logo design"
 team: "Various clients"
 teamUrl: "/"
 excerpt: "Explore and build up the visual communication of the brand identity."
-tags: ['Branding', 'Art directing', 'Illustration', 'Brand sprint', 'Visual design', 'Visual narrative', 'Print design']
+tags: ['Branding', 'Illustration', 'Visual Design']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true

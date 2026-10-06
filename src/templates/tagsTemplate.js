@@ -1,49 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Img from "gatsby-image";
+import { graphql } from "gatsby";
 
 // Components
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Tags from "../components/tags";
+import ProjectList from "../components/projectList";
 
 const TagPage = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
-  const pageTag = tag;
-  const tagHeader = `Work${totalCount === 1 ? "" : "s"} in '${pageTag}'`;
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  let projectList = useRef(null);
-
-  useEffect(() => {
-    const project = projectList.childNodes;
-
-    gsap.defaults({ ease: "power3.out" });
-    gsap.set(project, { y: 50, opacity: 0.5 });
-
-    ScrollTrigger.batch(project, {
-      onEnter: (batch) => gsap.to(batch, { y: 0, opacity: 1 }),
-      start: "top bottom",
-    });
-
-    const stickyHeader = ".header__wrapper";
-
-    ScrollTrigger.create({
-      trigger: projectList,
-      start: "top -40px",
-      end: "bottom top",
-      endTrigger: ".main",
-      toggleClass: {
-        targets: stickyHeader,
-        className: "header__wrapper--floating",
-      },
-    });
-  });
+  const tagHeader = `Work${totalCount === 1 ? "" : "s"} in '${tag}'`;
   return (
     <Layout>
       <SEO
@@ -63,78 +31,7 @@ const TagPage = ({ pageContext, data }) => {
 
         <Tags />
 
-        <div
-          className="work-list work-list--filtered"
-          ref={(el) => (projectList = el)}
-        >
-          {edges.map((edge) => {
-            const { frontmatter } = edge.node;
-            return (
-              <article key={frontmatter.slug} className="work-list__item">
-                <Link
-                  to={frontmatter.slug}
-                  className="work-list__link button button--link"
-                >
-                  <Img
-                    fluid={frontmatter.cover.childImageSharp.fluid}
-                    className="work-list__thumbnail"
-                  />
-                </Link>
-
-                <div className="work-list__detail">
-                  <header className="work-list__header">
-                    <h3 className="work-list__title h4">{frontmatter.title}</h3>
-
-                    <small className="work-list__meta">
-                      <time dateTime={frontmatter.date}>
-                        {frontmatter.date}
-                      </time>
-                      {` `}
-                      at
-                      {` `}
-                      <a
-                        href={frontmatter.teamUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {frontmatter.team}
-                      </a>
-                    </small>
-                  </header>
-
-                  <p className="work-list__description">
-                    {frontmatter.excerpt}
-                  </p>
-
-                  {frontmatter.tags ? (
-                    <ul className="inline-list">
-                      {frontmatter.tags.map((tag) => (
-                        <li key={tag + `tag`} className="inline-list__item">
-                          <span
-                            className={`tag${
-                              tag === pageTag ? ` tag--active` : ``
-                            }`}
-                          >
-                            {tag}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-
-                  <div>
-                    <Link
-                      to={frontmatter.slug}
-                      className="text-sm text-gray-600"
-                    >
-                      Read more &gt;
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
-        </div>
+        <ProjectList edges={edges} activeTag={tag} filtered />
       </section>
     </Layout>
   );
@@ -175,6 +72,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             date(formatString: "MMM, YYYY")
+            sortDate: date(formatString: "YYYY-MM-DD")
             slug
             title
             team

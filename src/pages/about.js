@@ -69,21 +69,21 @@ function AboutPage() {
                 <li>
                   <AnchorLink
                     to="/about#bio"
-                    title="Bio"
+                    title="Who I am"
                     className="anchor-nav__item"
                   />
                 </li>
                 <li>
                   <AnchorLink
                     to="/about#mission"
-                    title="Mission"
+                    title="How I think"
                     className="anchor-nav__item"
                   />
                 </li>
                 <li>
                   <AnchorLink
                     to="/about#experience"
-                    title="Experience"
+                    title="How I work"
                     className="anchor-nav__item"
                   />
                 </li>
@@ -95,26 +95,17 @@ function AboutPage() {
         <div className="content-column__main">
           <section id="bio" className="content-section">
             <header className="content-section__header">
-              <h2 className="h2">Bio</h2>
+              <h2 className="h3">Who I am</h2>
             </header>
 
             <p>
-              Han Lee, a product designer who helps to solve UI/UX problems of
-              digital products, through front-end development and product
-              consulting for 10+ years.
+              I'm Han Lee, a product designer who believes <b>good design should empower people to make better decisions.</b>
             </p>
 
             <p>
-              I studied fine and studio art at Hong-ik University in South Korea
-              and the Cooper Union in New York City. After schools, I
-              translated my learnings of the human-artwork interaction into the
-              human-computer interaction. Since then, my goal is always to
-              communicate with the audience naturally.
-            </p>
-
-            <p>
-              I love drawing illustrations and digitalizes them to create
-              animation. I am also a super talented Amazon box artist.{" "}
+              I used be a sculptor, a tattoo artist, and an illustrator.
+              <br />
+              I  still am a pretty awsome Amazon box toy-maker.{" "}
               <span role="img" aria-label="emoji: packaging box">
                 📦
               </span>
@@ -123,7 +114,7 @@ function AboutPage() {
 
           <section id="mission" className="content-section">
             <header className="content-section__header">
-              <h2 className="h2">Mission</h2>
+              <h2 className="h3">How I think</h2>
             </header>
 
             <div>
@@ -135,108 +126,142 @@ function AboutPage() {
             </div>
 
             <p>
-              Telling a story is one of the most effective ways to deliver information. When we tell a story, the information is flowing with context. In storytelling, we don't dump information in audience's face.
+              I've always been interested in how information becomes meaningful through context. As an artist, I learned to communicate through the arts. And as a designer, I apply those same principles.
             </p>
 
             <p>
-              When I was in college, my biggest challenge was delivering the message through my artwork because I wouldn’t be around all the time to explain things.
-            </p>
-
-            <p>
-              Now, I have to tell a story about my product without standing by my users. And I need to do that visually. I should understand the flow of thoughts of my users, and curate the information to fit with the context at times.
-            </p>
-
-            <p>
-              <b>
-                - all to{" "}
-                <a
-                  href="https://en.wikipedia.org/wiki/Visual_narrative"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  tell a story visually
-                </a>{" "}
-                about the product.
-              </b>
+              I believe <b>visual storytelling</b> can give people the clarity and confidence they need to move forward.
             </p>
           </section>
 
           <section id="experience" className="content-section">
             <header className="content-section__header">
-              <h2 className="h2">Experience</h2>
+              <h2 className="h3">How I work</h2>
             </header>
 
             <p>
-              I learned from my experience that as I understand more atoms of the user's ultimate experience, my product gets better usability—the user experience is the product as a whole, not one component by component in separation.
+              My collaboration goal is simple:
+              <br />
+              <b>making ideas tangible enough for the team to make better decisions.</b>
             </p>
 
             <p>
-              And that idea has pushed me to look into other digital design elements, such as animation, accessibility, coding, and scripting.
-            </p>
-
-            <p>
-              I also have experience as a studio artist, a visual designer, a UI designer, a front-end developer, an illustrator, and an interaction designer for the past 10+ years. And that helps me to grow as an all-around product designer.
+              The deliverable to bring an idea to life can vary in forms and fidelity, depending on what the team needs.
+              I would use my best design justification to help the team make decisions effectively.
             </p>
 
             <ul className="timeline" ref={(el) => (careerTimeLine = el)}>
-              <li className="timeline__event" data-date="Jul 2019 - Apr 2020">
-                <h3 className="timeline__title h5">Product designer</h3>
+              <li className="timeline__event" data-date="Jan 2024 - Present">
+                <h3 className="timeline__title h6">Staff Product designer</h3>
+
+                <small className="timeline__meta">
+                  Match Group / E&E / New York, NY
+                </small>
+
+                <div className="timeline__detail">
+                  Support team with hands-on contribution:
+
+                  <ul className="timeline__contribution">
+                    <li>Product discovery workshop guide</li>
+                    <li>Design principle mentoring</li>
+                    <li>Tactical UI/UX iteration</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li className="timeline__event" data-date="Jul 2019 - Jan 2024">
+                <h3 className="timeline__title h6">Lead Product designer</h3>
+
+                <small className="timeline__meta">
+                  OkCupid / Client success / New York, NY
+                </small>
+
+                <div className="timeline__detail">
+                  Contributing end-to-end design cycle:
+
+                  <ul className="timeline__contribution">
+                    <li>Design discovery</li>
+                    <li>UI/UX iteration</li>
+                    <li>Design system management</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li className="timeline__event" data-date="Jul 2019 - Jan 2021">
+                <h3 className="timeline__title h6">Product designer</h3>
 
                 <small className="timeline__meta">
                   Thoughtbot / Client success / New York, NY
                 </small>
 
-                <p className="timeline__detail">
-                  Solving UI/UX problems of digital products through front-end development and product consulting. Conducting design researches, participating, and facilitating product design sprints. Contribute UI, UX design iteration process.
-                </p>
+                <div className="timeline__detail">
+                  Contributing various client projects:
+
+                  <ul className="timeline__contribution">
+                    <li>Product consulting</li>
+                    <li>Design discovery workshop</li>
+                    <li>UI/UX iteration</li>
+                    <li>Front-end engineering</li>
+                  </ul>
+                </div>
               </li>
 
               <li className="timeline__event" data-date="Mar 2017 - Jul 2019">
-                <h3 className="timeline__title h5">Design manager</h3>
+                <h3 className="timeline__title h6">Design manager</h3>
 
                 <small className="timeline__meta">
-                  Fareportal / Mobile product / New York, NY
+                  Fareportal / Mobile app / New York, NY
                 </small>
 
-                <p className="timeline__detail">
-                  Working closely with the head of the mobile product. Responsible for overseeing the quality of UI design, the seamlessness of the UX of the product. And accountable for supervising the quality of front-end codebase.
-                </p>
+                <div className="timeline__detail">
+                  Responsible to lead the team:
+
+                  <ul className="timeline__contribution">
+                    <li>Design quality management</li>
+                    <li>Design system adoption</li>
+                    <li>Product design thinking adoption</li>
+                  </ul>
+                </div>
               </li>
 
               <li className="timeline__event" data-date="Mar 2015 - Feb 2017">
-                <h3 className="timeline__title h5">Design Team Lead</h3>
+                <h3 className="timeline__title h6">Design Lead</h3>
 
                 <small className="timeline__meta">
-                  Fareportal / Web app & booking engine / New York, NY
+                  Fareportal / Web app / New York, NY
                 </small>
 
-                <p className="timeline__detail">
-                  Responsible for providing design feedback in iterative product the design process, and creating hand-on design deliverables such as wireframes, prototypes, and high-fidelity UI mockups.
-                </p>
+                <div className="timeline__detail">
+                  Leading UI/UX design process:
 
-                <p className="timeline__detail">
-                  Also contributing to building MVP for product experiment by utilizing front-end coding ability. Participating in creating a branding guide, style guide, and UI library.
-                </p>
+                  <ul className="timeline__contribution">
+                    <li>Design consistency guide</li>
+                    <li>Design system ownership</li>
+                    <li>Front-end engineering</li>
+                  </ul>
+                </div>
               </li>
 
               <li className="timeline__event" data-date="Mar 2012 – Feb 2015">
-                <h3 className="timeline__title h5">UI/UX designer</h3>
+                <h3 className="timeline__title h6">UI/UX designer</h3>
 
                 <small className="timeline__meta">
-                  Fareportal / Web app & booking engine / New York, NY
+                  Fareportal / Booking engine / New York, NY
                 </small>
 
-                <p className="timeline__detail">
-                  Reporting to the Creative Director and working closely with the Product Manager.
-                </p>
+                <div className="timeline__detail">
+                  Contributing UI/UX design process:
 
-                <p className="timeline__detail">
-                  Responsible for UI/UX design workflow to create high-quality design solutions to serve e-commerce User Experience. Collaborating with the product team to provide design guidelines and UX feedback and contributing to creating user-friendly branding, including a branding guide, marketing materials, and brand identity.
-                </p>
+                  <ul className="timeline__contribution">
+                    <li>UI/UX look & feel</li>
+                    <li>User flow design</li>
+                    <li>Conversion optimization</li>
+                  </ul>
+                </div>
               </li>
 
               <li className="timeline__event" data-date="Mar 2008 – Jan 2012">
-                <h3 className="timeline__title h5">
+                <h3 className="timeline__title h6">
                   Web / Motion Graphic Designer
                 </h3>
 
@@ -244,16 +269,16 @@ function AboutPage() {
                   SB design studio / Web design / New York, NY
                 </small>
 
-                <p className="timeline__detail">
-                  Reporting to the Creative Director, and working closely with
-                  the Product Manager.
-                </p>
+                <div className="timeline__detail">
+                  Own Web/Motion design process:
 
-                <p className="timeline__detail">
-                  Providing branding identity, presentation for clients. Creating UI design solutions, marketing materials, and CMS template/theme by front-end coding.
-                  <br />
-                  Creating flash animation, editing promotion video.
-                </p>
+                  <ul className="timeline__contribution">
+                    <li>Building online brand presence</li>
+                    <li>Brand identity</li>
+                    <li>Promotion video</li>
+                    <li>Visual presentation</li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </section>

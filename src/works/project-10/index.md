@@ -5,7 +5,7 @@ title: "E-commerce branding"
 team: "HYPD"
 teamUrl: "/"
 excerpt: "Define brand identity and build a landing page for grand launching include illustration for opening campaign."
-tags: ['Branding', 'Brand sprint', 'Art directing', 'Illustration', 'Visual narrative', 'UI design', 'Front-end', 'Shopify', 'Liquid', 'HTML / SCSS', 'Javascript']
+tags: ['Branding', 'Illustration', 'User Interface', 'Front-end']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true

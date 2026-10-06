@@ -5,7 +5,7 @@ title: "Campaign landing page"
 team: "Beteran"
 teamUrl: "https://giveaway.beteran.com/"
 excerpt: "Design and build a landing page for the new e-commerce launching campaign."
-tags: ['UI design', 'IA / NA', 'Visual design', 'Wireframe', 'Conversion optimization', 'Front-end', 'Shopify', 'Liquid', 'HTML / SCSS', 'Javascript']
+tags: ['User Interface', 'Information Archtecture', 'Visual Design', 'Front-end']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: true

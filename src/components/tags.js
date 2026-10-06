@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 import { useTagsList } from "../hooks";
 import { kebabCase } from "lodash";
 
+import IconArrow from "../images/svg-plugin/icon-arrow.svg";
+
 function Tags() {
   const tags = useTagsList();
   const [isExpanded, toggleExpansion] = useState(false);
@@ -10,16 +12,14 @@ function Tags() {
   return (
     <div className="filter">
       <button
-        className="filter__toggle button button--ghost button--sm xl:hidden"
+        className="filter__toggle button button--ghost button--sm button--addon xl:hidden"
         onClick={() => toggleExpansion(!isExpanded)}
       >
-        by skill
-        <span
-          className={`filter__arrow${
-            isExpanded ? ` filter__arrow--flipped` : ``
-          }`}
-        >
-          &or;
+        <span className="button--addon__label">by skill</span>
+        <span className="button--addon__icon">
+          <IconArrow className={`icon icon--xs${
+            isExpanded ? ` icon--90` : ` icon--270`
+            }`} aria-label="Open this project" />
         </span>
       </button>
 
