@@ -9,7 +9,7 @@ import SEO from "../components/seo";
 
 const featuredProjectSlugs = [
   "/works/1st-project",
-  "/works/10th-project",
+  "/works/4th-project",
   "/works/3rd-project",
 ];
 
