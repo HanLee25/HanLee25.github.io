@@ -1643,6 +1643,72 @@ button.work-list__link {
   cursor: grab;
 }
 
+.image-block-nav {
+  @apply relative;
+  @apply -mt-8;
+}
+
+.image-block-nav > .project-content__image--block {
+  @apply m-0;
+}
+
+.project-content__image--block {
+  --fade-start: #000;
+  --fade-end: #000;
+
+  -webkit-mask-image: linear-gradient(to right, var(--fade-start), #000 6rem, #000 calc(100% - 6rem), var(--fade-end));
+  mask-image: linear-gradient(to right, var(--fade-start), #000 6rem, #000 calc(100% - 6rem), var(--fade-end));
+}
+
+.project-content__image--block.is--clipped-start {
+  --fade-start: transparent;
+}
+
+.project-content__image--block.is--clipped-end {
+  --fade-end: transparent;
+}
+
+.image-block-nav__button {
+  @apply absolute;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply rounded-full;
+  @apply bg-white;
+  @apply opacity-0;
+  @apply pointer-events-none;
+
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-block-nav__button--prev {
+  left: 0;
+}
+
+.image-block-nav__button--next {
+  right: 0;
+}
+
+.image-block-nav__button.is--visible {
+  @apply opacity-100;
+  @apply pointer-events-auto;
+}
+
+.project-content__image--block.is--overflows {
+  scrollbar-width: none;
+}
+
+.project-content__image--block.is--overflows::-webkit-scrollbar {
+  display: none;
+}
+
 .project-content__image--block.is--grabbed {
   cursor: grabbing;
 }
@@ -1976,8 +2042,6 @@ button.work-list__link {
 
   .project-content__image--block {
     @apply gap-0;
-    @apply -mx-24;
-    @apply pl-24;
     @apply pr-12;
     @apply py-12;
   }
@@ -2344,12 +2408,7 @@ button.work-list__link {
 
   .project-content__image--block {
     @apply gap-0;
-    @apply -mr-16;
-    @apply pr-12;
     @apply py-8;
-
-    margin-left: -22rem;
-    padding-left: 22rem;
   }
 
   .project-content__image--block .project-content__figure {

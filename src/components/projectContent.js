@@ -48,6 +48,52 @@ function ProjectContent({ markdownRemark }) {
 
       imageBlock.classList.add(isOverflown ? "is--overflows" : "is--fits");
 
+      if (isOverflown) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "image-block-nav";
+        imageBlock.parentNode.insertBefore(wrapper, imageBlock);
+        wrapper.appendChild(imageBlock);
+
+        const makeButton = (dir) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = `image-block-nav__button image-block-nav__button--${dir}`;
+          button.setAttribute("aria-label", dir === "prev" ? "Scroll left" : "Scroll right");
+          button.innerHTML = dir === "prev" ? "&larr;" : "&rarr;";
+          button.addEventListener("click", () => {
+            imageBlock.scrollBy({
+              left: (dir === "prev" ? -1 : 1) * imageBlock.clientWidth * 0.6,
+              behavior: "smooth",
+            });
+          });
+          wrapper.appendChild(button);
+          return button;
+        };
+        const prev = makeButton("prev");
+        const next = makeButton("next");
+
+        const updateArrows = () => {
+          const max = imageBlock.scrollWidth - imageBlock.clientWidth;
+          const canPrev = imageBlock.scrollLeft > 4;
+          const canNext = imageBlock.scrollLeft < max - 4;
+          prev.classList.toggle("is--visible", canPrev);
+          next.classList.toggle("is--visible", canNext);
+          imageBlock.classList.toggle("is--clipped-start", canPrev);
+          imageBlock.classList.toggle("is--clipped-end", canNext);
+        };
+        updateArrows();
+        imageBlock.addEventListener("scroll", updateArrows, { passive: true });
+        window.addEventListener("resize", updateArrows);
+        dragCleanups.push(() => {
+          imageBlock.removeEventListener("scroll", updateArrows);
+          window.removeEventListener("resize", updateArrows);
+          if (wrapper.parentNode) {
+            wrapper.parentNode.insertBefore(imageBlock, wrapper);
+            wrapper.remove();
+          }
+        });
+      }
+
       const startDrag = (event) => {
         isDragging = true;
         imageBlock.classList.add("is--grabbed");
@@ -74,7 +120,13 @@ function ProjectContent({ markdownRemark }) {
         imageBlock.removeEventListener("mouseleave", stopDrag);
         imageBlock.removeEventListener("mouseup", stopDrag);
         imageBlock.removeEventListener("mousemove", drag);
-        imageBlock.classList.remove("is--overflows", "is--fits", "is--grabbed");
+        imageBlock.classList.remove(
+          "is--overflows",
+          "is--fits",
+          "is--grabbed",
+          "is--clipped-start",
+          "is--clipped-end"
+        );
       });
     });
 

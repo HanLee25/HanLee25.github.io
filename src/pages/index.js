@@ -176,7 +176,7 @@ function IndexPage({ data }) {
               to make complex ideas tangible
               {" "}
               <span className="hero__why">
-                 for people who use products and people who build them. Check out my showcase...
+                 for people who use products and people who build them. Check out my showcase.
               </span>
             </span>
           </p>
