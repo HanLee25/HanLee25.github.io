@@ -142,7 +142,19 @@ function ProjectContent({ markdownRemark }) {
           >
             <h2 className="project-header__title h1">{frontmatter.title}</h2>
 
-            <p className="project-header__overview">{frontmatter.excerpt}</p>
+            <div>
+                <p className="project-header__overview">{frontmatter.excerpt}</p>
+
+                {frontmatter.impacts?.length ? (
+                <ul className="inline-list">
+                    {frontmatter.impacts.map((impact) => (
+                    <li key={impact} className="inline-list__item">
+                        <span className="tag tag--highlight">{impact}</span>
+                    </li>
+                    ))}
+                </ul>
+                ) : null}
+            </div>
 
             <div
               className={`project-header__preview${

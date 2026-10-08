@@ -26,6 +26,8 @@ body {
   @apply text-base;
   @apply text-gray-800;
   @apply subpixel-antialiased;
+
+  word-spacing: -0.25em;
 }
 
 p {
@@ -55,6 +57,8 @@ a:hover {
   @apply font-bold;
   @apply text-black;
   @apply tracking-wide;
+
+  word-spacing: 0;
 }
 
 .h1 {
@@ -1223,6 +1227,16 @@ figcaption {
   @apply -mr-1;
 }
 
+.tag--highlight {
+  @apply bg-gray-500;
+  @apply max-w-full;
+  @apply px-4;
+  @apply py-2;
+  @apply text-base;
+  @apply text-white;
+  @apply truncate;
+}
+
 
 /* [3] Tineline *********************/
 
@@ -1416,6 +1430,7 @@ figcaption {
 
 .project-header__title {
   @apply hidden;
+  @appy w-full;
 }
 
 .project-header__overview {
@@ -1843,14 +1858,12 @@ figcaption {
   .project-header__preview .gatsby-image-wrapper {
     @apply -mr-32;
 
-    margin-top: -26rem;
+    margin-top: -22rem;
   }
 
   .project-header__preview--landscape .gatsby-image-wrapper {
     @apply ml-8;
     @apply -mr-64;
-
-    margin-top: -22rem;
   }
 
   .project-header--flipped {
@@ -2127,6 +2140,7 @@ figcaption {
     @apply col-gap-4;
 
     grid-template-columns: auto minmax(8rem, max-content);
+    grid-template-rows: auto minmax(max-content, 2fr);
   }
 
   .project-header__title {
@@ -2151,7 +2165,7 @@ figcaption {
   .project-header__preview .gatsby-image-wrapper {
     @apply -ml-8;
     @apply -mr-56;
-    @apply -mt-48;
+    @apply -mt-24;
   }
 
   .project-header__preview--landscape .gatsby-image-wrapper {
@@ -2355,6 +2369,7 @@ figcaption {
     @apply col-gap-16;
 
     grid-template-columns: auto minmax(16rem, max-content);
+    grid-template-rows: auto minmax(max-content, 2fr);
   }
 
   .project-header__overview {
@@ -2375,7 +2390,6 @@ figcaption {
   }
 
   .project-header--flipped {
-    @apply gap-16;
     @apply -mr-8;
 
     grid-template-columns: minmax(16rem, max-content) auto;

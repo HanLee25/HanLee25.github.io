@@ -264,6 +264,7 @@ export const pageQuery = graphql`
             teamUrl
             role
             industry
+            impacts
             tags
             headerFlip
             previewLandscape

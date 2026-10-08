@@ -23,6 +23,7 @@ export const pageQuery = graphql`
         slug
         title
         tags
+        impacts
         excerpt
         team
         teamUrl

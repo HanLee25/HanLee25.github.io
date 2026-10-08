@@ -4,7 +4,8 @@ date: "2018-05-04"
 title: "Flight search redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
-excerpt: "Redesign the flight search feature and other home page components for CheapOair iOS native app to improve funnel."
+excerpt: "Making flight search easier to understand without losing the rest of the home experience."
+impacts: ['↘️ Bounce Rate', '↗️ Flight Search Rate', '↗️ Initial Funnel']
 tags: ['User Interface', 'User Experience', 'Information Archtecture', 'Prototyping', 'Micro Interaction', 'Front-end', '@Fareportal']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
@@ -18,7 +19,7 @@ headerFlip: true
 <div class="content-section project-content project-content--6/4">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Project background</h3>
+      <h3 class="h3">Probelm area</h3>
     </header>
     <dl>
       <dt>Product issue</dt>
@@ -53,6 +54,7 @@ headerFlip: true
     </figure>
   </div>
 </div>
+
 <div class="content-section project-content project-content--4/6 project-content--flipped">
   <div class="project-content__column">
     <header class="content-section__header">

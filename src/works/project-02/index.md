@@ -4,7 +4,8 @@ date: "2019-10-04"
 title: "Checkout path redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
-excerpt: "Re-architect and redesign the checkout process flow of CheapOair iOS native application to reduce the 'abandon cart' scenario."
+excerpt: "Redesigned the CheapOair iOS checkout flow to reduce cart abandonment and improve booking completion."
+impacts: ['↘️ Cart Abandon Rate', '↗️ Booking Completion']
 tags: ['User Interface', 'User Experience', 'Information Archtecture', 'Prototyping', 'Micro Interaction', 'Front-end', 'Design System', '@Fareportal']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
@@ -18,7 +19,7 @@ headerFlip: false
 <div class="content-section project-content project-content--4/6 project-content--flipped">
   <div class="project-content__column lg:ml-4 lg:-mr-8 xl:ml-8">
     <header class="content-section__header">
-      <h3 class="h3">Project background</h3>
+      <h3 class="h3">Probelm area</h3>
     </header>
     <dl>
       <dt>Product issue</dt>
