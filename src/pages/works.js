@@ -7,22 +7,19 @@ import SEO from "../components/seo";
 import Tags from "../components/tags";
 import ProjectList from "../components/projectList";
 
+export const Head = () => (
+  <SEO
+    keywords={[`product designer`, `illustrator`, `UI designer`, `UX designer`]}
+    title="Works"
+  />
+);
+
 function WorksPage({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <SEO
-        keywords={[
-          `product designer`,
-          `illustrator`,
-          `UI designer`,
-          `UX designer`,
-        ]}
-        title="Works"
-      />
-
       <section className="content-section">
         <header className="content-section__header">
           <h2 className="h2">Works</h2>
@@ -41,33 +38,40 @@ function WorksPage({
   );
 }
 
-export const workQuery = graphql`
-  query WorksPageQuery {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___number] }) {
-      edges {
-        node {
-          frontmatter {
-            date(formatString: "MMM, YYYY")
-            sortDate: date(formatString: "YYYY-MM-DD")
-            slug
-            title
-            team
-            teamUrl
-            excerpt
-            tags
-            cover {
-              childImageSharp {
-                fluid(maxWidth: 600, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const workQuery = graphql`query WorksPageQuery {
+  allMarkdownRemark(sort: {frontmatter: {number: ASC}}) {
+    edges {
+      node {
+        html
+        frontmatter {
+          date(formatString: "MMM, YYYY")
+          sortDate: date(formatString: "YYYY-MM-DD")
+          slug
+          title
+          team
+          teamUrl
+          excerpt
+          impacts
+          role
+          industry
+          tags
+          headerFlip
+          previewLandscape
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 600, quality: 100)
             }
-            number
           }
+          preview {
+            childImageSharp {
+              gatsbyImageData(width: 800, quality: 100)
+            }
+          }
+          number
         }
       }
     }
   }
-`;
+}`;
 
 export default WorksPage;

@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ProjectContent from "./projectContent";
 
-import IconArrow from "../images/svg-plugin/icon-arrow.svg";
+import { ReactComponent as IconArrow } from "../images/svg-plugin/icon-arrow.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 

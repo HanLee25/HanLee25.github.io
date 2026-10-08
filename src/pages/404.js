@@ -3,13 +3,13 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import ImgOops from "../images/abduction-illustration.svg";
+import { ReactComponent as ImgOops } from "../images/abduction-illustration.svg";
+
+export const Head = () => <SEO title="404: Not found" />;
 
 function NotFoundPage() {
   return (
     <Layout>
-      <SEO title="404: Not found" />
-
       <section className="content-section">
         <header className="content-section__header">
           <h2 className="h2">You seems lost</h2>

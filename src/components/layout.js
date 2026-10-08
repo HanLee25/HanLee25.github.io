@@ -5,13 +5,13 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Header from "./header";
 
-import IconGithub2 from "../images/svg-plugin/icon-github2.svg";
-import IconGatsby from "../images/svg-plugin/icon-gatsbyjs.svg";
-import IconReact from "../images/svg-plugin/icon-reactjs.svg";
-import IconTailwind from "../images/svg-plugin/icon-tailwindcss.svg";
-import IconGraphql from "../images/svg-plugin/icon-graphql.svg";
-import IconNpm from "../images/svg-plugin/icon-npm.svg";
-import IconGsap from "../images/svg-plugin/icon-gsap.svg";
+import { ReactComponent as IconGithub2 } from "../images/svg-plugin/icon-github2.svg";
+import { ReactComponent as IconGatsby } from "../images/svg-plugin/icon-gatsbyjs.svg";
+import { ReactComponent as IconReact } from "../images/svg-plugin/icon-reactjs.svg";
+import { ReactComponent as IconTailwind } from "../images/svg-plugin/icon-tailwindcss.svg";
+import { ReactComponent as IconGraphql } from "../images/svg-plugin/icon-graphql.svg";
+import { ReactComponent as IconNpm } from "../images/svg-plugin/icon-npm.svg";
+import { ReactComponent as IconGsap } from "../images/svg-plugin/icon-gsap.svg";
 
 function Layout({ children }) {
   gsap.config({

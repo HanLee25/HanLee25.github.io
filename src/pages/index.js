@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import { gsap } from "gsap";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -14,6 +14,20 @@ const featuredProjectSlugs = [
   "/works/3rd-project",
 ];
 
+export const Head = () => (
+  <SEO
+    keywords={[
+      `product design`,
+      `illustration`,
+      `UI design`,
+      `UX design`,
+      `visual storytelling`,
+      `visual narrative`,
+    ]}
+    title="Home"
+  />
+);
+
 function IndexPage({ data }) {
   const allProjects = data?.allMarkdownRemark?.edges || [];
   const projectLookup = allProjects.reduce((lookup, { node }) => {
@@ -22,7 +36,7 @@ function IndexPage({ data }) {
     lookup[slug] = {
       title,
       description: excerpt,
-      image: cover?.childImageSharp?.fluid,
+      image: cover?.childImageSharp?.gatsbyImageData,
       path: slug,
       content: node,
     };
@@ -114,18 +128,6 @@ function IndexPage({ data }) {
 
   return (
     <Layout>
-      <SEO
-        keywords={[
-          `product design`,
-          `illustration`,
-          `UI design`,
-          `UX design`,
-          `visual storytelling`,
-          `visual narrative`,
-        ]}
-        title="Home"
-      />
-
       <section className="content-section justify-between">
         <h2 className="hero h1" ref={(el) => (hero = el)}>
           <span className="hero__paragraph hero__greeting">
@@ -199,7 +201,11 @@ function IndexPage({ data }) {
                 onClick={() => openProject(project.content)}
               >
                 {project.image ? (
-                  <Img className="featured-carousel__image" fluid={project.image} alt={project.title} />
+                  <GatsbyImage
+                    className="featured-carousel__image"
+                    image={project.image}
+                    alt={project.title}
+                  />
                 ) : null}
               </button>
               <div>
@@ -250,43 +256,37 @@ function IndexPage({ data }) {
   );
 }
 
-export const pageQuery = graphql`
-  query FeaturedProjectsQuery {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___number] }) {
-      edges {
-        node {
-          html
-          frontmatter {
-            slug
-            title
-            excerpt
-            team
-            teamUrl
-            role
-            industry
-            impacts
-            tags
-            headerFlip
-            previewLandscape
-            cover {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const pageQuery = graphql`query FeaturedProjectsQuery {
+  allMarkdownRemark(sort: {frontmatter: {number: ASC}}) {
+    edges {
+      node {
+        html
+        frontmatter {
+          slug
+          title
+          excerpt
+          team
+          teamUrl
+          role
+          industry
+          impacts
+          tags
+          headerFlip
+          previewLandscape
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 800, quality: 100)
             }
-            preview {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          }
+          preview {
+            childImageSharp {
+              gatsbyImageData(width: 800, quality: 100)
             }
           }
         }
       }
     }
   }
-`;
+}`;
 
 export default IndexPage;

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { gsap } from "gsap";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
@@ -89,7 +89,10 @@ function ProjectContent({ markdownRemark }) {
       <aside className="content-column__side-bar">
         <div className="project-intro">
           <div className="project-intro__thumbnail">
-            <Img fluid={frontmatter.cover.childImageSharp.fluid} />
+            <GatsbyImage
+              image={frontmatter.cover.childImageSharp.gatsbyImageData}
+              alt={frontmatter.title}
+            />
           </div>
 
           <span className="project-intro__title">{frontmatter.title}</span>
@@ -163,7 +166,10 @@ function ProjectContent({ markdownRemark }) {
                   : ``
               }`}
             >
-              <Img fluid={frontmatter.preview.childImageSharp.fluid} />
+              <GatsbyImage
+                image={frontmatter.preview.childImageSharp.gatsbyImageData}
+                alt=""
+              />
             </div>
           </header>
         </section>

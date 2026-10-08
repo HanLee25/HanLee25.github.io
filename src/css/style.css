@@ -1,8 +1,60 @@
 /*! purgecss start ignore */
-@tailwind base;
-@tailwind components;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+
+@theme {
+  --rotate-*: initial;
+  --rotate-0: 0;
+  --rotate-5: 5deg;
+  --rotate-15: 15deg;
+  --rotate-30: 30deg;
+  --rotate-45: 45deg;
+  --rotate-90: 90deg;
+  --rotate-180: 180deg;
+
+  --rotate--180: -180deg;
+  --rotate--90: -90deg;
+  --rotate--45: -45deg;
+  --rotate--30: -30deg;
+  --rotate--15: -15deg;
+  --rotate--5: -5deg;
+
+  --height-1\/2: 50%;
+  --height-1\/3: 33.333333%;
+  --height-2\/3: 66.666667%;
+  --height-1\/4: 25%;
+  --height-2\/4: 50%;
+  --height-3\/4: 75%;
+  --height-1\/5: 20%;
+  --height-2\/5: 40%;
+  --height-3\/5: 60%;
+  --height-4\/5: 80%;
+  --height-1\/10: 10%;
+  --height-1\/20: 5%;
+  --height-1\/50: 2.5%;
+  --height-1\/100: 1%;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
 /*! purgecss end ignore */
-@tailwind utilities;
 /* @tailwind screen; */
 
 
@@ -27,7 +79,7 @@ body {
   @apply text-gray-800;
   @apply subpixel-antialiased;
 
-  word-spacing: -0.25em;
+  word-spacing:-0.25em;
 }
 
 p {
@@ -166,7 +218,7 @@ figcaption {
 .page {
   @apply flex;
   @apply flex-col;
-  @apply max-w-screen-xl;
+  @apply max-w-(--breakpoint-xl);
   @apply min-h-screen;
   @apply pt-16;
 }
@@ -186,7 +238,7 @@ figcaption {
 }
 
 .content-section__header--short {
-  width: calc(100% - theme("spacing.24"));
+  width: calc(100% - (--spacing(24)));
 }
 
 
@@ -278,8 +330,7 @@ figcaption {
 }
 
 .header__back-drop {
-  @apply bg-black;
-  @apply bg-opacity-90;
+  @apply bg-black/90;
   @apply fixed;
   @apply h-screen;
   @apply hidden;
@@ -315,7 +366,7 @@ figcaption {
   @apply border-t;
   @apply border-gray-300;
   @apply m-auto;
-  @apply max-w-screen-xl;
+  @apply max-w-(--breakpoint-xl);
 }
 
 .footer__credit {
@@ -362,131 +413,133 @@ figcaption {
 
 /* [1] Buttons *********************/
 
-.button {
-  @apply bg-red-600;
-  @apply border-4;
-  @apply border-transparent;
-  @apply duration-300;
-  @apply font-medium;
-  @apply inline-block;
-  @apply leading-none;
-  @apply no-underline;
-  @apply py-2;
-  @apply px-4;
-  @apply text-white;
-  @apply transition-all;
-  @apply uppercase;
-}
+@layer components {
+  .button {
+    @apply bg-red-600;
+    @apply border-4;
+    @apply border-transparent;
+    @apply duration-300;
+    @apply font-medium;
+    @apply inline-block;
+    @apply leading-none;
+    @apply no-underline;
+    @apply py-2;
+    @apply px-4;
+    @apply text-white;
+    @apply transition-all;
+    @apply uppercase;
+  }
 
-.button:hover {
-  @apply bg-gray-900;
-  @apply text-white;
-}
+  .button:hover {
+    @apply bg-gray-900;
+    @apply text-white;
+  }
 
-.button--ghost {
-  @apply bg-transparent;
-  @apply border-current;
-  @apply text-current;
-}
+  .button--ghost {
+    @apply bg-transparent;
+    @apply border-current;
+    @apply text-current;
+  }
 
-.button--ghost:hover {
-  @apply bg-transparent;
-  @apply border-red-700;
-  @apply text-red-700;
-}
+  .button--ghost:hover {
+    @apply bg-transparent;
+    @apply border-red-700;
+    @apply text-red-700;
+  }
 
-.button--link {
-  @apply bg-transparent;
-  @apply border-0;
-  @apply border-transparent;
-  @apply inline-block;
-  @apply normal-case;
-  @apply p-0;
-  @apply relative;
-  @apply text-current;
-}
+  .button--link {
+    @apply bg-transparent;
+    @apply border-0;
+    @apply border-transparent;
+    @apply inline-block;
+    @apply normal-case;
+    @apply p-0;
+    @apply relative;
+    @apply text-current;
+  }
 
-.button--link::before {
-  @apply absolute;
-  @apply bg-gray-900;
-  @apply bottom-0;
-  @apply block;
-  @apply duration-300;
-  @apply h-1/20;
-  @apply left-0;
-  @apply transition-all;
-  @apply w-full;
+  .button--link::before {
+    @apply absolute;
+    @apply bg-gray-900;
+    @apply bottom-0;
+    @apply block;
+    @apply duration-300;
+    @apply h-1/20;
+    @apply left-0;
+    @apply transition-all;
+    @apply w-full;
 
-  content: "";
-}
+    content: "";
+  }
 
-.button--link:hover {
-  @apply bg-gray-300;
-  @apply text-red-700;
-}
+  .button--link:hover {
+    @apply bg-gray-300;
+    @apply text-red-700;
+  }
 
-.button--link:hover::before {
-  @apply w-0;
-}
+  .button--link:hover::before {
+    @apply w-0;
+  }
 
-.button--svg {
-  @apply bg-transparent;
-  @apply border-0;
-  @apply p-0;
-  @apply text-current;
-}
+  .button--svg {
+    @apply bg-transparent;
+    @apply border-0;
+    @apply p-0;
+    @apply text-current;
+  }
 
-.button--svg:hover {
-  @apply bg-transparent;
-  @apply text-red-600;
-}
+  .button--svg:hover {
+    @apply bg-transparent;
+    @apply text-red-600;
+  }
 
-.button--svg:focus {
-  @apply outline-none;
-}
+  .button--svg:focus {
+    @apply outline-hidden;
+  }
 
-.button--active {
-  @apply bg-red-600;
-  @apply border-red-600;
-  @apply text-white;
-}
+  .button--active {
+    @apply bg-red-600;
+    @apply border-red-600;
+    @apply text-white;
+  }
 
-.button--sm {
-  @apply border-b-2;
-  @apply p-2;
-  @apply text-xs;
-}
+  .button--sm {
+    @apply border-b-2;
+    @apply p-2;
+    @apply text-xs;
+  }
 
-.button--sm.button--ghost {
-  @apply border-2;
-}
+  .button--sm.button--ghost {
+    @apply border-2;
+  }
 
-.button--sm.button--link,
-.button--sm.button--svg {
-  @apply border-0;
-  @apply p-0;
-}
+  .button--sm.button--link,
+  .button--sm.button--svg {
+    @apply border-0;
+    @apply p-0;
+  }
 
-.button--addon {
-  @apply flex;
-  @apply gap-2;
-  @apply items-center;
-  @apply justify-between;
-}
+  .button--addon {
+    @apply flex;
+    @apply gap-2;
+    @apply items-center;
+    @apply justify-between;
+  }
 
-.button--addon__icon {
-  @apply leading-none;
-}
+  .button--addon__icon {
+    @apply leading-none;
+  }
 
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    .button--addon__icon {
-      @apply mr-2;
-    }
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+      .button--addon__icon {
+        @apply mr-2;
+      }
 
-    .button--addon__label + .button--addon__icon {
-      @apply ml-2;
-      @apply mr-0;
+      .button--addon__label + .button--addon__icon {
+        @apply ml-2;
+        @apply mr-0;
+      }
     }
   }
 }
@@ -734,22 +787,15 @@ figcaption {
 .featured-carousel__image-link {
   @apply block;
   @apply overflow-hidden;
-
-  appearance: none;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  text-align: left;
+  @apply appearance-none bg-transparent border-0 cursor-pointer p-0 text-left;
 }
 
 .featured-carousel__image {
+  @apply aspect-30/17;
   @apply block;
   @apply object-cover;
-  @apply rounded-sm;
+  @apply rounded-xs;
   @apply w-full;
-
-  aspect-ratio: 30 / 17;
 }
 
 .featured-carousel__eyebrow {
@@ -943,6 +989,7 @@ figcaption {
 /* [8] Badge *********************/
 
 .badge {
+  @apply aspect-square;
   @apply bg-current;
   @apply font-thin;
   @apply inline-block;
@@ -951,7 +998,7 @@ figcaption {
   @apply text-center;
   @apply w-4;
 
-  padding: calc(theme("spacing.1") * 0.5) 0;
+  padding: calc(--spacing(1) * 0.5) 0;
 }
 
 .badge__value {
@@ -978,8 +1025,7 @@ figcaption {
 }
 
 .modal__overlay {
-  @apply bg-gray-800;
-  @apply bg-opacity-75;
+  @apply bg-gray-800/75;
   @apply duration-500;
   @apply fixed;
   @apply inset-0;
@@ -992,7 +1038,7 @@ figcaption {
 .modal__content {
   @apply bg-gray-100;
   @apply h-screen;
-  @apply outline-none;
+  @apply outline-hidden;
   @apply w-screen;
 }
 
@@ -1002,7 +1048,8 @@ figcaption {
   @apply p-8;
   @apply overflow-y-auto;
   @apply overflow-x-hidden;
-  @apply scrolling-touch;
+
+  -webkit-overflow-scrolling: touch;
 
   /* Hides scrollbar for Firefox */
   scrollbar-width: none; 
@@ -1046,8 +1093,8 @@ figcaption {
   @apply text-white;
   @apply z-10;
 
-  left: theme("spacing.6");
-  top: theme("spacing.6");
+  left: --spacing(6);
+  top: --spacing(6);
 }
 
 .ReactModal__Overlay--after-open,
@@ -1094,7 +1141,7 @@ figcaption {
 .sticky-element__target.is--pushed {
   @apply z-20;
 
-  top: theme("spacing.16");
+  top: --spacing(16);
 }
 
 .sticky-element__target.is--stuck > * {
@@ -1145,6 +1192,8 @@ figcaption {
   @apply py-1;
   @apply text-sm;
   @apply text-gray-800;
+
+  padding-inline-end: 2.5rem;
 }
 
 .work-list__item,
@@ -1161,13 +1210,22 @@ figcaption {
 }
 
 .work-list__link {
-  height: calc(theme("spacing.20") + theme("spacing.24"));
+  height: calc(--spacing(20) + (--spacing(24)));
+}
+
+button.work-list__link {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
 }
 
 .work-list__thumbnail,
 .work-list__thumbnail .gatsby-image-wrapper {
   @apply h-full;
-  @apply rounded;
+  @apply rounded-sm;
 }
 
 .work-list__header {
@@ -1210,6 +1268,7 @@ figcaption {
   @apply py-1;
   @apply text-xs;
   @apply text-gray-600;
+  @apply tracking-widest;
   @apply uppercase;
   @apply rounded-full;
 }
@@ -1228,7 +1287,7 @@ figcaption {
 }
 
 .tag--highlight {
-  @apply bg-gray-500;
+  @apply bg-slate-400;
   @apply max-w-full;
   @apply px-4;
   @apply py-2;
@@ -1291,9 +1350,9 @@ figcaption {
   @apply text-gray-600;
 
   content: attr(data-date);
-  left: theme("spacing.8");
-  top: theme("spacing.8");
-  width: calc(100% - theme("spacing.8"));
+  left: --spacing(8);
+  top: --spacing(8);
+  width: calc(100% - (--spacing(8)));
 }
 
 .timeline__meta {
@@ -1390,8 +1449,7 @@ figcaption {
 
 .project-intro__thumbnail::before {
   @apply absolute;
-  @apply bg-red-700;
-  @apply bg-opacity-50;
+  @apply bg-red-700/50;
   @apply inset-0;
 
   content: " ";
@@ -1408,7 +1466,7 @@ figcaption {
   @apply text-2xl;
   @apply z-10;
 
-  bottom: theme("spacing.4");
+  bottom: --spacing(4);
 }
 
 .project-meta {
@@ -1436,7 +1494,7 @@ figcaption {
 .project-header__overview {
   @apply col-start-1;
   @apply block;
-  @apply font-hairline;
+  font-weight: 100;
   @apply -ml-2;
   @apply p-2;
   @apply relative;
@@ -1579,7 +1637,8 @@ figcaption {
 .project-content__image--block.is--overflows {
   @apply overflow-y-visible;
   @apply overflow-x-auto;
-  @apply scrolling-touch;
+
+  -webkit-overflow-scrolling: touch;
 
   cursor: grab;
 }
@@ -1626,17 +1685,16 @@ figcaption {
 
 .project-content__figure--gif::before {
   @apply absolute;
-  @apply bg-gray-500;
-  @apply bg-opacity-75;
+  @apply bg-gray-500/75;
   @apply block;
   @apply px-1;
-  @apply rounded;
+  @apply rounded-sm;
   @apply text-gray-800;
 
   content: "GIF";
   font-size: 0.65rem;
-  left: theme("spacing.1");
-  top: theme("spacing.1");
+  left: --spacing(1);
+  top: --spacing(1);
 }
 
 
@@ -1651,7 +1709,7 @@ figcaption {
 
 /* Medium screen *********************/
 
-@screen md {
+@media (width >= theme(--breakpoint-md)) {
   .page {
     @apply flex-row;
     @apply pt-0;
@@ -1668,7 +1726,7 @@ figcaption {
   }
 
   .header {
-    @apply bg-opacity-90;
+    @apply bg-gray-100/90;
     @apply border-b-0;
     @apply h-screen;
     @apply w-48;
@@ -1684,7 +1742,7 @@ figcaption {
     @apply right-0;
 
     content: "";
-    height: calc(theme("height.full") - theme("spacing.8"));
+    height: calc(var(--height-full) - (--spacing(8)));
   }
 
   .header__wrapper {
@@ -1730,7 +1788,7 @@ figcaption {
   }
 
   .header__back-drop {
-    @apply bg-opacity-0;
+    @apply bg-black/0;
   }
 
   .main {
@@ -1741,8 +1799,7 @@ figcaption {
   }
 
   .footer {
-    @apply bg-gray-100;
-    @apply bg-opacity-90;
+    @apply bg-gray-100/90;
     @apply bottom-0;
     @apply inset-x-0;
     @apply fixed;
@@ -1794,8 +1851,8 @@ figcaption {
     @apply px-8;
     @apply opacity-100;
 
-    left: theme("spacing.48");
-    top: calc(theme("spacing.32") * -1);
+    left: --spacing(48);
+    top: calc(--spacing(32) * -1);
   }
 
   .sticky-element__target.is--shown {
@@ -1935,7 +1992,7 @@ figcaption {
 
 /* Large screen *********************/
 
-@screen lg {
+@media (width >= theme(--breakpoint-lg)) {
   .h1 {
     @apply text-5xl;
   }
@@ -2038,16 +2095,16 @@ figcaption {
     @apply mx-auto;
     @apply rounded-lg;
 
-    height: calc(100vh - theme("spacing.16"));
-    width: calc(100vw - theme("spacing.16"));
+    height: calc(100vh - (--spacing(16)));
+    width: calc(100vw - (--spacing(16)));
   }
 
   .modal__close {
     @apply text-gray-600;
 
     left: auto;
-    right: theme("spacing.8");
-    top: theme("spacing.8");
+    right: --spacing(8);
+    top: --spacing(8);
   }
 
   .modal__close .icon__part {
@@ -2076,13 +2133,13 @@ figcaption {
     @apply px-0;
     @apply sticky;
 
-    top: theme("spacing.8");
+    top: --spacing(8);
   }
 
   .work-list__item {
     @apply gap-12;
 
-    grid-template-columns: 40% calc(60% - theme("spacing.12"));
+    grid-template-columns: 40% calc(60% - (--spacing(12)));
   }
 
   .work-list__link {
@@ -2103,7 +2160,7 @@ figcaption {
     @apply w-40;
 
     top: 0.48rem;
-    right: calc(100% + theme("spacing.6"));
+    right: calc(100% + (--spacing(6)));
   }
 
   .timeline__title {
@@ -2137,7 +2194,7 @@ figcaption {
   }
 
   .project-header {
-    @apply col-gap-4;
+    @apply gap-x-4;
 
     grid-template-columns: auto minmax(8rem, max-content);
     grid-template-rows: auto minmax(max-content, 2fr);
@@ -2215,23 +2272,23 @@ figcaption {
   }
 
   .project-content--3\/7 {
-    grid-template-columns: calc(30% - theme('spacing.4')) calc(70% - theme('spacing.4'));
+    grid-template-columns: calc(30% - (--spacing(4))) calc(70% - (--spacing(4)));
   }
 
   .project-content--4\/6 {
-    grid-template-columns: calc(40% - theme('spacing.4')) calc(60% - theme('spacing.4'));
+    grid-template-columns: calc(40% - (--spacing(4))) calc(60% - (--spacing(4)));
   }
 
   .project-content--5\/5 {
-    grid-template-columns: calc(50% - theme('spacing.4')) calc(50% - theme('spacing.4'));
+    grid-template-columns: calc(50% - (--spacing(4))) calc(50% - (--spacing(4)));
   }
 
   .project-content--6\/4 {
-    grid-template-columns: calc(60% - theme('spacing.4')) calc(40% - theme('spacing.4'));
+    grid-template-columns: calc(60% - (--spacing(4))) calc(40% - (--spacing(4)));
   }
 
   .project-content--7\/3 {
-    grid-template-columns: calc(70% - theme('spacing.4')) calc(30% - theme('spacing.4'));
+    grid-template-columns: calc(70% - (--spacing(4))) calc(30% - (--spacing(4)));
   }
 
   .project-content--flipped > .project-content__column:first-child {
@@ -2305,7 +2362,7 @@ figcaption {
 
 /* Extra large screen *********************/
 
-@screen xl {
+@media (width >= theme(--breakpoint-xl)) {
   .h1,
   .h2,
   .h3,
@@ -2340,7 +2397,7 @@ figcaption {
   }
 
   .modal__content {
-    @apply max-w-screen-xl;
+    @apply max-w-(--breakpoint-xl);
   }
 
   .work-list__link {
@@ -2366,7 +2423,7 @@ figcaption {
   }
 
   .project-header {
-    @apply col-gap-16;
+    @apply gap-x-16;
 
     grid-template-columns: auto minmax(16rem, max-content);
     grid-template-rows: auto minmax(max-content, 2fr);

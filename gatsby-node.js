@@ -7,28 +7,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const projectTemplate = require.resolve(`./src/templates/projectTemplate.js`);
   const tagTemplate = path.resolve("src/templates/tagsTemplate.js");
 
-  const result = await graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              slug
-              tags
-            }
-          }
-        }
-      }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___tags) {
-          fieldValue
+  const result = await graphql(`{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+    edges {
+      node {
+        frontmatter {
+          slug
+          tags
         }
       }
     }
-  `);
+  }
+  tagsGroup: allMarkdownRemark(limit: 2000) {
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+    }
+  }
+}`);
 
   // Handle errors
   if (result.errors) {

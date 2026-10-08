@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 
-import IconArrow from "../images/svg-plugin/icon-arrow.svg";
+import { ReactComponent as IconArrow } from "../images/svg-plugin/icon-arrow.svg";
 
 function Modal({ children }) {
   gsap.registerPlugin(ScrollTrigger);

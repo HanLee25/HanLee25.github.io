@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import BrandFace from "../images/svg-plugin/han-face.svg";
-import IconBurger from "../images/svg-plugin/icon-burger.svg";
-import IconLinkedin from "../images/svg-plugin/icon-linkedin.svg";
-import IconDribbble from "../images/svg-plugin/icon-dribbble.svg";
-import IconGithub from "../images/svg-plugin/icon-github.svg";
+import { ReactComponent as BrandFace } from "../images/svg-plugin/han-face.svg";
+import { ReactComponent as IconBurger } from "../images/svg-plugin/icon-burger.svg";
+import { ReactComponent as IconLinkedin } from "../images/svg-plugin/icon-linkedin.svg";
+import { ReactComponent as IconDribbble } from "../images/svg-plugin/icon-dribbble.svg";
+import { ReactComponent as IconGithub } from "../images/svg-plugin/icon-github.svg";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);

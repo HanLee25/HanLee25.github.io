@@ -4,9 +4,10 @@ import { Link } from "gatsby";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import IconArrow from "../images/svg-plugin/icon-arrow.svg";
+import { ReactComponent as IconArrow } from "../images/svg-plugin/icon-arrow.svg";
+import { useProjectModal } from "./projectModalContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,8 +21,8 @@ function ProjectList({
 }) {
   const projectList = useRef(null);
   const [sortOrder, setSortOrder] = useState("newest");
+  const { openProject } = useProjectModal();
   const TeamLink = trackTeamLinks ? OutboundLink : "a";
-  const modalState = openInModal ? { modal: true } : undefined;
   const sortedEdges = [...edges].sort((first, second) => {
     const firstDate = first.node.frontmatter.sortDate;
     const secondDate = second.node.frontmatter.sortDate;
@@ -86,23 +87,33 @@ function ProjectList({
       >
         {sortedEdges.map((edge) => {
         const { frontmatter } = edge.node;
-        const image = frontmatter.cover.childImageSharp.fluid;
+        const image = frontmatter.cover.childImageSharp.gatsbyImageData;
 
         return (
           <article key={frontmatter.slug} className="work-list__item">
-            <Link
-              to={frontmatter.slug}
-              className={`work-list__link${openInModal ? "" : " button button--link"}`}
-              state={modalState}
-            >
-              {openInModal ? (
+            {openInModal ? (
+              <button
+                className="work-list__link"
+                type="button"
+                aria-label={`View ${frontmatter.title}`}
+                onClick={() => openProject(edge.node)}
+              >
                 <div className="work-list__thumbnail">
-                  <Img fluid={image} />
+                  <GatsbyImage image={image} alt={frontmatter.title} />
                 </div>
-              ) : (
-                <Img fluid={image} className="work-list__thumbnail" />
-              )}
-            </Link>
+              </button>
+            ) : (
+              <Link
+                to={frontmatter.slug}
+                className="work-list__link button button--link"
+              >
+                <GatsbyImage
+                  image={image}
+                  className="work-list__thumbnail"
+                  alt={frontmatter.title}
+                />
+              </Link>
+            )}
 
             <div className="work-list__detail">
               <header className="work-list__header">
@@ -142,19 +153,34 @@ function ProjectList({
               ) : null}
 
               <div className="flex justify-end mt-4">
-                <Link
-                  to={frontmatter.slug}
-                  className="button button--addon button--link"
-                  state={modalState}
-                >
-                  <span className="button--addon__label">More</span>
-                  <span className="button--addon__icon">
-                    <IconArrow
-                      className="icon icon--xs icon--flipped"
-                      aria-label="Open this project"
-                    />
-                  </span>
-                </Link>
+                {openInModal ? (
+                  <button
+                    className="button button--addon button--link"
+                    type="button"
+                    onClick={() => openProject(edge.node)}
+                  >
+                    <span className="button--addon__label">More</span>
+                    <span className="button--addon__icon">
+                      <IconArrow
+                        className="icon icon--xs icon--flipped"
+                        aria-label="Open this project"
+                      />
+                    </span>
+                  </button>
+                ) : (
+                  <Link
+                    to={frontmatter.slug}
+                    className="button button--addon button--link"
+                  >
+                    <span className="button--addon__label">More</span>
+                    <span className="button--addon__icon">
+                      <IconArrow
+                        className="icon icon--xs icon--flipped"
+                        aria-label="Open this project"
+                      />
+                    </span>
+                  </Link>
+                )}
               </div>
             </div>
           </article>

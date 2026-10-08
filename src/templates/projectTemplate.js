@@ -33,16 +33,12 @@ export const pageQuery = graphql`
         previewLandscape
         cover {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 600, quality: 100)
           }
         }
         preview {
           childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 600, quality: 100)
           }
         }
       }

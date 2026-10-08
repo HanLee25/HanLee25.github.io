@@ -6,6 +6,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+export const Head = () => (
+  <SEO
+    keywords={[`product designer`, `illustrator`, `UI designer`, `UX designer`]}
+    title="About"
+  />
+);
+
 function AboutPage() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -51,16 +58,6 @@ function AboutPage() {
   });
   return (
     <Layout>
-      <SEO
-        keywords={[
-          `product designer`,
-          `illustrator`,
-          `UI designer`,
-          `UX designer`,
-        ]}
-        title="About"
-      />
-
       <div className="content-column content-column--reversed">
         <aside className="content-column__side-bar">
           <div className="sticky-element" ref={(el) => (stickyContainer = el)}>

@@ -3,21 +3,23 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+export const Head = () => (
+  <SEO
+    keywords={[
+      `product design`,
+      `illustrattion`,
+      `UI design`,
+      `UX design`,
+      `visual storytelling`,
+      `visual narrative`,
+    ]}
+    title="Thank you for reaching out"
+  />
+);
+
 function ThanksPage() {
   return (
     <Layout>
-      <SEO
-        keywords={[
-          `product design`,
-          `illustrattion`,
-          `UI design`,
-          `UX design`,
-          `visual storytelling`,
-          `visual narrative`,
-        ]}
-        title="Thank you for reaching out"
-      />
-
       <section className="content-section">
         <header className="content-section__header">
           <h2 className="h2">

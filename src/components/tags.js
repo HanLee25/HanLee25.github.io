@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { useTagsList } from "../hooks";
 import { kebabCase } from "lodash";
 
-import IconArrow from "../images/svg-plugin/icon-arrow.svg";
+import { ReactComponent as IconArrow } from "../images/svg-plugin/icon-arrow.svg";
 
 function Tags() {
   const tags = useTagsList();

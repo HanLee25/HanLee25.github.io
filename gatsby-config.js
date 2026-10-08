@@ -1,8 +1,3 @@
-const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
-
-const fullConfig = resolveConfig(tailwindConfig);
-
 module.exports = {
   siteMetadata: {
     title: `Han Lee - Product Designer`,
@@ -12,16 +7,14 @@ module.exports = {
     author: `@hanlee`,
   },
   plugins: [
-    `gatsby-plugin-eslint`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-tailwind-by-HanLee`,
         short_name: `HanLee`,
         start_url: `/`,
-        background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal["400"],
+        background_color: "#ffffff",
+        theme_color: "#2dd4bf",
         display: `minimal-ui`,
         icon: `src/images/han-favicon.png`,
       },
@@ -30,8 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require(`autoprefixer`),
+          require(`@tailwindcss/postcss`),
           ...(process.env.NODE_ENV === `production`
             ? [require(`cssnano`)]
             : []),
@@ -40,19 +32,12 @@ module.exports = {
     },
     ...(process.env.NODE_ENV === `production` ? [`gatsby-plugin-offline`] : []),
     {
-      resolve: `gatsby-plugin-react-svg`,
+      resolve: `gatsby-plugin-svgr`,
       options: {
-        rule: {
-          include: /svg/, // See below to configure properly
-          options: {
-            props: {
-              className: `svg-img`, // Default class name
-              role: `img`,
-            },
-          },
-        },
+        svgo: false,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -60,7 +45,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-default-html-attrs`,
+            resolve: require.resolve("./plugins/gatsby-remark-default-html-attrs"),
             options: {
               h1: "h3",
               h2: ["h4", "bold"],
@@ -103,19 +88,6 @@ module.exports = {
       options: {
         trackingId: "UA-171803500-1",
         head: false,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-modal-routing`,
-      options: {
-        appElement: "#___gatsby",
-        modalProps: {
-          portalClassName: `modal`,
-          overlayClassName: `modal__overlay`,
-          className: `modal__content`,
-          bodyOpenClassName: `modal-body--opened`,
-          htmlOpenClassName: `modal-html--opened`,
-        },
       },
     },
   ],
