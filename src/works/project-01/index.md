@@ -5,7 +5,7 @@ title: "Flight search redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Making flight search easier to understand without losing the rest of the home experience."
-impacts: ['↘️ Bounce Rate', '↗️ Flight Search Rate', '↗️ Initial Funnel']
+impacts: ['<strong>4.8%</strong> ⬇️ Bounce Rate', '<strong>2.6%</strong> ⬆️ Flight Search Rate', '<strong>3.1%</strong> ⬆️ Initial Funnel']
 tags: ['User Interface', 'User Experience', 'Information Archtecture', 'Prototyping', 'Micro Interaction', 'Front-end', '@Fareportal']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
@@ -19,8 +19,7 @@ headerFlip: true
 <div class="content-section project-content project-content--6/4">
   <div class="project-content__column">
     <header class="content-section__header">
-      <b class="content-section__eyebrow">background</b>
-      <h3 class="h3">Probelm area</h3>
+      <h3 class="h3">The challenge</h3>
     </header>
     <dl>
       <dt>Product issue</dt>
@@ -122,10 +121,10 @@ headerFlip: true
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #3</b>
-      <h3 class="h3">Converging solutions</h3>
+      <h3 class="h3">Converting the trade-off</h3>
     </header>
     <p>
-      <b>Turning the trade-off into an interactive crossroads:</b> expanding as the user needed more information
+      <b>Turning it into an interactive crossroads:</b> expanding as the user needed more information
     </p>
     <dl>
       <dt>Option C - Expandable search</dt>
@@ -181,11 +180,11 @@ headerFlip: true
   <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
       <img src="./project07.png" alt="Project"/>
-      <figcaption>Fig.7: Option C search view</figcaption>
+      <figcaption>Fig.7: Search view</figcaption>
     </figure>
     <figure class="project-content__figure">
       <img src="./project06.png" alt="Project"/>
-      <figcaption>Fig.6: Option C initial view</figcaption>
+      <figcaption>Fig.6: Initial view</figcaption>
     </figure>
   </div>
 </div>

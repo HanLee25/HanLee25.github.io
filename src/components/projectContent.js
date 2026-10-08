@@ -204,7 +204,10 @@ function ProjectContent({ markdownRemark }) {
                 <ul className="inline-list">
                     {frontmatter.impacts.map((impact) => (
                     <li key={impact} className="inline-list__item">
-                        <span className="tag tag--highlight">{impact}</span>
+                        <span
+                          className="tag tag--highlight"
+                          dangerouslySetInnerHTML={{ __html: impact }}
+                        />
                     </li>
                     ))}
                 </ul>
