@@ -1,0 +1,1 @@
+(self.webpackChunkgatsby_tailwind_portfolio=self.webpackChunkgatsby_tailwind_portfolio||[]).push([[522],{8522:function(){}}]);
