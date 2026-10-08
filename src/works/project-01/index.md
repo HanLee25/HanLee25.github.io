@@ -19,6 +19,7 @@ headerFlip: true
 <div class="content-section project-content project-content--6/4">
   <div class="project-content__column">
     <header class="content-section__header">
+      <b class="content-section__eyebrow">background</b>
       <h3 class="h3">Probelm area</h3>
     </header>
     <dl>
@@ -39,7 +40,7 @@ headerFlip: true
       </dd>
       <dt>Design challenge</dt>
       <dd>
-        Spare the space for post-booking and marketing components
+        HMW make flight search immediately understandable without taking over the entire screen
       </dd>
     </dl>
   </div>
@@ -55,26 +56,52 @@ headerFlip: true
   </div>
 </div>
 
-<div class="content-section project-content project-content--4/6 project-content--flipped">
+<div class="content-section project-content project-content--3/7 project-content--flipped">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Diverge ideas</h3>
+      <b class="content-section__eyebrow">Key Stage #1</b>
+      <h3 class="h3">Reframing the problem</h3>
+    </header>
+    <p>
+      Search needed to be obvious, but it couldn't own the entire screen.
+      <b class="block">↳ How much of the screen should search occupy?</b>
+    </p>
+    <dl>
+      <dt>Flight search</dt>
+      <dd>Help users understand where to start.</dd>
+      <dt>Everything else</dt>
+      <dd>Leave enough space for post-booking and marketing content.</dd>
+    </dl>
+  </div>
+  <div class="project-content__column project-content__image project-content__image--1">
+    <figure class="project-content__figure">
+      <img src="./project13.png" alt="Project" />
+      <figcaption>How important the search is?</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="content-section project-content project-content--6/4">
+  <div class="project-content__column">
+    <header class="content-section__header">
+      <b class="content-section__eyebrow">Key Stage #2</b>
+      <h3 class="h3">Exploring the trade-off</h4>
     </header>
     <dl>
-      <dt>Option A</dt>
+      <dt>Option A — Full search</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Full search + Extra component</li>
-          <li>Users would miss additional context below the fold</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
+          <li>Give users the complete search interface immediately</li>
+          <li>Trade-off: Secondary content was pushed below the fold, reducing its visibility</li>
+          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/318101850" target="_blank" rel="noreferrer" class="text-sm text-gray-600 button button--link">Open wireframe</a></li>
         </ul>
       </dd>
-      <dt>Option B</dt>
+      <dt>Option B — Minimal search</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>Minimal search bar to save more space</li>
-          <li>User wouldn't associate the minimal search bar UI with the concept of travel search</li>
-          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/317587837" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Open wireframe</a></li>
+          <li>Reduce search to a smaller entry point to preserve more space</li>
+          <li>Trade-off: The reduced UI was less recognizable as a travel search experience</li>
+          <li><a href="https://projects.invisionapp.com/share/MPNTZTV9RHG#/screens/317587837" target="_blank" rel="noreferrer" class="text-sm text-gray-600 button button--link">Open wireframe</a></li>
         </ul>
       </dd>
     </dl>
@@ -90,44 +117,23 @@ headerFlip: true
     </figure>
   </div>
 </div>
-<div class="content-section project-content project-content--6/4">
-  <div class="project-content__column">
-    <header class="content-section__header">
-      <h3 class="h3">Converge solutions</h3>
-    </header>
-    <dl>
-      <dt>Option C</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>Keep the two main context(search vs other components) in balance</li>
-          <li>Visualize the concept of travel (point a to point b)</li>
-          <li>Expose additional components below the search</li>
-          <li>User would collect enough information to decide the path</li>
-          <li>As users interact, UIs would expand to convey full context</li>
-        </ul>
-      </dd>
-    </dl>
-  </div>
-  <div class="project-content__column project-content__image">
-    <figure class="project-content__figure">
-      <img src="./project05.png" alt="Project"/>
-      <figcaption>Fig.5: Option C</figcaption>
-    </figure>
-  </div>
-</div>
+
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Micro interaction</h3>
+      <b class="content-section__eyebrow">Key Stage #3</b>
+      <h3 class="h3">Converging solutions</h3>
     </header>
+    <p>
+      <b>Turning the trade-off into an interactive crossroads:</b> expanding as the user needed more information
+    </p>
     <dl>
-      <dt>Interaction sequence</dt>
+      <dt>Option C - Expandable search</dt>
       <dd>
-        <ol class="ordered-list">
-          <li>Initial view</li>
-          <li>Searching: user enters location > search section expanded</li>
-          <li>Exploring: user interact other components > moves toward to each path</li>
-        </ol>
+        <ul class="bulleted-list">
+          <li>Initial state: communicates the concept of travel search</li>
+          <li>Engaged state: user's action will define path (Typing VS. Scrolling) </li>
+        </ul>
       </dd>
     </dl>
   </div>
@@ -146,10 +152,12 @@ headerFlip: true
     </figure>
   </div>
 </div>
+
 <div class="content-section project-content project-content--5/5">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Prototype</h3>
+      <b class="content-section__eyebrow">Key Stage #4</b>
+      <h3 class="h3">Final outcome</h3>
     </header>
     <dl>
       <dt>Visual design</dt>
@@ -168,7 +176,7 @@ headerFlip: true
         </ol>
       </dd>
     </dl>
-    <a href="https://preview.uxpin.com/6178e38c68fdc4e35512c57e84b9a96790b8c9b2#/pages//simulate/sitemap?mode=ch" target="_blank" rel="noreferrer" class="button button--ghost button--sm mt-4">Open interactive prototype</a>
+    <a href="https://preview.uxpin.com/6178e38c68fdc4e35512c57e84b9a96790b8c9b2#/pages//simulate/sitemap?mode=ch" target="_blank" rel="noreferrer" class="text-sm text-gray-600 button button--link mt-4">Open interactive prototype</a>
   </div>
   <div class="project-content__column project-content__image project-content__image--2">
     <figure class="project-content__figure">
@@ -181,47 +189,7 @@ headerFlip: true
     </figure>
   </div>
 </div>
-<div class="content-section project-content">
-  <div class="project-content__column">
-    <header class="content-section__header">
-      <h3 class="h3">Hand-off</h3>
-    </header>
-    <dl>
-      <dt>Interaction flow</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>To visualize user’s interaction flow to help product developers overviewing final UX flow.</li>
-          <li>This helps developers and QAs to overview end-to-end product process.</li>
-          <li><a href="https://drive.google.com/file/d/1e4CmK73HWg_kwraxP7-GWWBLrzHwWX0L/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
-        </ul>
-      </dd>
-    </dl>
-  </div>
-  <div class="project-content__column project-content__image project-content__image--1">
-    <figure class="project-content__figure">
-      <img src="./project09.jpg" alt="Project"/>
-      <figcaption>Fig.8: Interaction map</figcaption>
-    </figure>
-  </div>
-  <div class="project-content__column">
-    <dl>
-      <dt>User flow</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>To visualize the early concept of UX logic to include primary and secondary use-cases.</li>
-          <li>This helps product manager to define user stories to prepare the developments.</li>
-          <li><a href="https://drive.google.com/file/d/1vEFyY1PBGcZHtjw21RjEmgGtw10nQdhw/view" target="_blank" rel="noreferrer" class="text-sm text-gray-600">Enlarge image</a></li>
-        </ul>
-      </dd>
-    </dl>
-  </div>
-  <div class="project-content__column project-content__image project-content__image--1">
-    <figure class="project-content__figure">
-      <img src="./project08.jpg" alt="Project"/>
-      <figcaption>Fig.9: Flow chart</figcaption>
-    </figure>
-  </div>
-</div>
+
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">

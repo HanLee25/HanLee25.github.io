@@ -207,7 +207,9 @@ dd {
 
 figcaption {
   @apply block;
-  @apply mt-2;
+  @apply text-center;
+  @apply -mb-4;
+  @apply mt-4;
   @apply text-xs;
   @apply text-gray-600;
 }
@@ -239,6 +241,19 @@ figcaption {
 
 .content-section__header--short {
   width: calc(100% - (--spacing(24)));
+}
+
+.content-section__eyebrow {
+  @apply bg-gray-300;
+  @apply font-medium;
+  @apply inline-block;
+  @apply px-1;
+  @apply py-px;
+  @apply rounded-xs;
+  @apply tracking-widest;
+  @apply text-xs;
+  @apply text-gray-600;
+  @apply uppercase;
 }
 
 
@@ -1271,6 +1286,7 @@ button.work-list__link {
   @apply tracking-widest;
   @apply uppercase;
   @apply rounded-full;
+  @apply w-max;
 }
 
 .tag--active {
@@ -1444,7 +1460,9 @@ button.work-list__link {
 }
 
 .project-intro__thumbnail > .gatsby-image-wrapper {
-  top: -25%;
+  @apply absolute;
+  @apply -mt-24;
+  @apply w-full;
 }
 
 .project-intro__thumbnail::before {
@@ -1574,6 +1592,7 @@ button.work-list__link {
   @apply gap-4;
   @apply grid;
   @apply grid-cols-1;
+  @apply my-8;
 }
 
 .project-content__column {
@@ -1953,6 +1972,10 @@ button.work-list__link {
 
   .project-intro__thumbnail {
     @apply h-48;
+  }
+
+  .project-intro__thumbnail > .gatsby-image-wrapper {
+    @apply -mt-8;
   }
 
   .project-intro__title {
@@ -2335,6 +2358,10 @@ button.work-list__link {
     @apply w-auto;
   }
 
+  .project-content--2\/8 {
+    grid-template-columns: calc(20% - (--spacing(4))) calc(80% - (--spacing(4)));
+  }
+  
   .project-content--3\/7 {
     grid-template-columns: calc(30% - (--spacing(4))) calc(70% - (--spacing(4)));
   }
@@ -2353,6 +2380,10 @@ button.work-list__link {
 
   .project-content--7\/3 {
     grid-template-columns: calc(70% - (--spacing(4))) calc(30% - (--spacing(4)));
+  }
+
+  .project-content--8\/2 {
+    grid-template-columns: calc(80% - (--spacing(4))) calc(20% - (--spacing(4)));
   }
 
   .project-content--flipped > .project-content__column:first-child {
@@ -2540,4 +2571,10 @@ button.work-list__link {
 
     min-width: 26%;
   }
+}
+
+.content-column .gatsby-image-wrapper,
+.content-column .gatsby-image-wrapper > div,
+.content-column .gatsby-image-wrapper [data-placeholder-image] {
+  background-color: transparent !important;
 }
