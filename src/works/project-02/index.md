@@ -57,6 +57,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
+
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
@@ -113,6 +114,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
+
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
@@ -162,6 +164,7 @@ headerFlip: false
     </figure>
   </div>
 </div>
+
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">

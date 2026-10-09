@@ -19,6 +19,7 @@ headerFlip: true
 <div class="content-section project-content project-content--6/4">
   <div class="project-content__column">
     <header class="content-section__header">
+      <b class="content-section__eyebrow">Project background</b>
       <h3 class="h3">The challenge</h3>
     </header>
     <dl>
@@ -28,7 +29,9 @@ headerFlip: true
       </dd>
       <dt>User Test Finding</dt>
       <dd>
-        "I don't see what I can do..." (Search)
+        <blockquote class="quote">
+          "I don't see what I can do here..." (Search)
+        </blockquote>
       </dd>
       <dt>Product goal</dt>
       <dd>
@@ -39,7 +42,7 @@ headerFlip: true
       </dd>
       <dt>Design challenge</dt>
       <dd>
-        HMW make flight search immediately understandable without taking over the entire screen
+        How might we make it easy to tell and discover a future story without writing an entire article? 
       </dd>
     </dl>
   </div>
@@ -61,14 +64,14 @@ headerFlip: true
       <b class="content-section__eyebrow">Key Stage #1</b>
       <h3 class="h3">Reframing the problem</h3>
     </header>
-    <p>
-      Search needed to be obvious, but it couldn't own the entire screen.
+    <p class="mb-8">
+      Search needed to be obvious, but there're other things needed to be on the page.
       <b class="block">↳ How much of the screen should search occupy?</b>
     </p>
     <dl>
-      <dt>Flight search</dt>
-      <dd>Help users understand where to start.</dd>
-      <dt>Everything else</dt>
+      <dt>Flight search (primary action by chance)</dt>
+      <dd>Help majority of users see where to start right away.</dd>
+      <dt>Everything else (secondary by choice)</dt>
       <dd>Leave enough space for post-booking and marketing content.</dd>
     </dl>
   </div>
@@ -156,7 +159,7 @@ headerFlip: true
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #4</b>
-      <h3 class="h3">Final outcome</h3>
+      <h3 class="h3">Final design</h3>
     </header>
     <dl>
       <dt>Visual design</dt>
@@ -192,31 +195,18 @@ headerFlip: true
 <div class="content-section project-content">
   <div class="project-content__column">
     <header class="content-section__header">
-      <h3 class="h3">Contribution</h3>
+      <b class="content-section__eyebrow">Learnings</b>
+      <h3 class="h3">"Design around the user's level of intent."</h3>
     </header>
-    <dl class="project-content__card">
-      <dt>Product strategy</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>Collaborating with product owner for setting the problem statement</li>
-          <li>Setting product design strategy</li>
-        </ul>
-      </dd>
-      <dt>UI design</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>Creating a high-fidelity UI mock-up</li>
-          <li>Creating an interactive prototype using Sketch and UXPin</li>
-        </ul>
-      </dd>
-      <dt>UX design</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>Collaborating with UX researcher on a benchmarking report and analyzing user behavior, traffic analysis</li>
-          <li>Collaborating in interaction design to create a wireframe</li>
-          <li>Generating an interaction flow and micro-interaction guide</li>
-        </ul>
-      </dd>
-    </dl>
+    <div class="project-content__card">
+      <p>
+        This project reinforced something I continue to use in my product design work:
+        <b>An interface doesn't always need to show everything at once.</b>
+      </p>
+      <p>
+        When users are still deciding what to do, clarity can come from showing less.
+        As their intent becomes clearer, the interface can reveal more context and detail.
+      </p>
+    </div>
   </div>
 </div>

@@ -5,7 +5,7 @@ title: "Car listing redesign"
 team: "Fareportal"
 teamUrl: "http://www.fareportal.com/"
 excerpt: "Revisit the information architecture of the car listing page and detail page of CheapOair native iOS application to improve the car rental process."
-tags: ['User Interface', 'User Experience', 'Information Archtecture', 'User Persona', 'User Reasearch', 'Prototyping', 'Micro Interaction', 'Front-end', 'Design System', '@Fareportal']
+tags: ['User Interface', 'User Experience', 'Information Archtecture', 'User Persona', 'User Research', 'Prototyping', 'Micro Interaction', 'Front-end', 'Design System', '@Fareportal']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: false

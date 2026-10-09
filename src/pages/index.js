@@ -9,9 +9,9 @@ import SEO from "../components/seo";
 import { useProjectModal } from "../components/projectModalContext";
 
 const featuredProjectSlugs = [
+  "/works/12nd-project",
   "/works/1st-project",
-  "/works/4th-project",
-  "/works/3rd-project",
+  "/works/1st-project",
 ];
 
 export const Head = () => (
