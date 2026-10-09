@@ -1,12 +1,12 @@
 ---
-slug: "/works/12nd-project"
+slug: "/works/12th-project"
 date: "2026-09-10"
 title: "Future Vision"
 team: "Upward"
 teamUrl: "https://apps.apple.com/us/app/upward-dating-meet-singles/id1499137942"
-excerpt: "Helping people show the future they want—and see whether it aligns with someone else's."
+excerpt: "Helping people express the future they envision—and discover whether it aligns with someone else's."
 impacts: ['<strong>71%</strong> 📲 Feature Adoption', '<strong>87%</strong> 💪 Positive Rate', '<strong>92%</strong> 💡 Uniqueness Rate']
-tags: ['Product Discovery', 'User Interface', 'User Experience', 'Illustration']
+tags: ['Product Discovery', 'User Interface', 'User Experience', 'Illustration', '@Match Group']
 cover: "./project-cover.png"
 preview: "./project-preview.png"
 previewLandscape: false
@@ -25,7 +25,7 @@ headerFlip: false
     <dl>
       <dt>Product issue</dt>
       <dd>
-        As Upward doubles down on marriage-focused dating, it lacked a way to reflect long-term compatibility.
+        As Upward doubles down on marriage-focused dating, it needs a way for users to express and assess long-term compatibility.
       </dd>
       <dt>User Test Finding</dt>
       <dd>
@@ -35,11 +35,11 @@ headerFlip: false
       </dd>
       <dt>Product goal</dt>
       <dd>
-        Help users express their future vision and discover alignment.
+        Help users express their vision for the future and discover where it aligns with others'.
       </dd>
       <dt>Design challenge</dt>
       <dd>
-        How might we make it easy to tell and discover a future story without writing an entire article?
+        How might we help users express and explore their vision for the future without writing an essay?
       </dd>
     </dl>
   </div>
@@ -55,13 +55,13 @@ headerFlip: false
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #1</b>
-      <h3 class="h3">Exploring: how to make 'abstract' tangible</h3>
+      <h3 class="h3">Exploring: Making the abstract tangible</h3>
     </header>
     <dl>
       <dt>Metaphor-driven</dt>
-      <dd>Borrow familiar real-world concepts<span class="text-red-500"> —for example, building blocks— </span>to help people visualize their future in progress.</dd>
+      <dd>Borrow familiar real-world metaphors, like building blocks, to make an abstract future feel tangible.</dd>
       <dt>Narrative-driven</dt>
-      <dd>Convert utilitarian forms into the experience that turned choices about marriage, family, home, and traditions into something people could see taking shape</dd>
+      <dd>Turn utilitarian forms into a visual story, bringing choices about marriage, family, home, and traditions to life.</dd>
     </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--2">
@@ -80,15 +80,15 @@ headerFlip: false
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #2</b>
-      <h3 class="h3">Testing: how would users tell the story</h3>
+      <h3 class="h3">Testing: How users would tell their story</h3>
     </header>
     <dl>
-      <dt>Option A — Future Storybook</dt>
+      <dt>Option A — 'Future Storybook'</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>A playful, illustrated experience that evolved as users made choices.</li>
-          <li>Pros: Emotionally engaging - makes serious topics feel approachable</li>
-          <li>Cons: Maybe not the best way to scan information efficiently on other's profile</li>
+          <li>A playful, illustrated experience that evolves as users make choices.</li>
+          <li>Pros: Emotionally engaging; makes serious topics feel approachable.</li>
+          <li>Cons: May make information harder to scan on someone else's profile.</li>
         </ul>
       </dd>
     </dl>
@@ -117,12 +117,12 @@ headerFlip: false
   </div>
   <div class="project-content__column">
     <dl>
-      <dt>Option B — Ideal Future Standard</dt>
+      <dt>Option B — 'Structured Future Profile'</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>A more structured, text-based experience focused on efficiency and clarity.</li>
-          <li>Pros: Easier to scan the information from the display POV</li>
-          <li>Cons: Feels like "fillinf out a job application"</li>
+          <li>A structured, text-based experience designed for clarity and efficiency.</li>
+          <li>Pros: Easy to scan and compare at a glance.</li>
+          <li>Cons: Feels like filling out a job application.</li>
         </ul>
       </dd>
     </dl>
@@ -155,32 +155,55 @@ headerFlip: false
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #3</b>
-      <h3 class="h3">Visualizing: how to show the story</h3>
+      <h3 class="h3">Visualizing: How to bring the story to life</h3>
     </header>
-    <dl>
-      <dt>3 Visual Concept Options</dt>
-      <dd>
-        <ul class="bulleted-list">
-          <li>"The Toy Story" - idea of 'building blocks' / copyright risk</li>
-          <li>"The Retro Illust" - align with new branding / stereotype risk</li>
-          <li>"The Boutique Stickers" - align with sticker style / narrower narrative risk</li>
-        </ul>
-      </dd>
-    </dl>
   </div>
   <div class="project-content__column project-content__image project-content__image--landscape project-content__image--block">
-    <figure class="project-content__figure">
-      <img src="./visual concept 01.png" alt="Project" />
-      <figcaption>Fig.13: "The Toy Story"</figcaption>
-    </figure>
-    <figure class="project-content__figure">
-      <img src="./visual concept 02.png" alt="Project" />
-      <figcaption>Fig.14: "The Retro Illust"</figcaption>
-    </figure>
-    <figure class="project-content__figure">
-      <img src="./visual concept 03.png" alt="Project" />
-      <figcaption>Fig.15: "Boutique Stickers"</figcaption>
-    </figure>
+    <div class="project-content__figure"">
+      <dl class="mb-4 -mt-8">
+        <dt>01. Toy-Inspired Building Blocks</dt>
+        <dd>
+          <ul class="bulleted-list">
+            <li>A playful building-block aesthetic.</li>
+            <li>Risk: Potential copyright concerns.</li>
+          </ul>
+        </dd>
+      </dl>
+      <figure class="project-content__figure">
+        <img src="./visual concept 01.png" alt="Project" />
+        <figcaption>Fig.13: "The Toy Story"</figcaption>
+      </figure>
+    </div>
+    <div class="project-content__figure"">
+      <dl class="mb-4 -mt-8">
+        <dt>02. Retro Illustration</dt>
+        <dd>
+          <ul class="bulleted-list">
+            <li>A nostalgic illustration style aligned with the new brand.</li>
+            <li>Risk: Could reinforce stereotypes.</li>
+          </ul>
+        </dd>
+      </dl>
+      <figure class="project-content__figure">
+        <img src="./visual concept 02.png" alt="Project" />
+        <figcaption>Fig.14: "The Retro Illust"</figcaption>
+      </figure>
+    </div>
+    <div class="project-content__figure"">
+      <dl class="mb-4 -mt-8">
+        <dt>03. Boutique Stickers</dt>
+        <dd>
+          <ul class="bulleted-list">
+            <li>A sticker-based visual language aligned with the existing style.</li>
+            <li>Risk: Could limit the range of stories expressed.</li>
+          </ul>
+        </dd>
+      </dl>
+      <figure class="project-content__figure">
+        <img src="./visual concept 03.png" alt="Project" />
+        <figcaption>Fig.15: "Boutique Stickers"</figcaption>
+      </figure>
+    </div>
   </div>
 </div>
 
@@ -188,24 +211,26 @@ headerFlip: false
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #4</b>
-      <h3 class="h3">Final design: mix & match in retro look</h3>
+      <h3 class="h3">Final design: A refined retro aesthetic</h3>
     </header>
     <p>
-      This created a two-part experience: <b>Build your vision → Discover someone else's.</b>
+      The result: a two-part experience <b>— build your vision, then discover someone else's.</b>
     </p>
     <dl>
-      <dt>A's storytelling experience</dt>
+      <dt>PART A — STORYTELLING EXPERIENCE</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>to make expressing the future feel approachable and personal</li>
-          <li>lands on new onboarding steps</li>
+          <li><b>Express your future</b></li>
+          <li>Make envisioning the future feel approachable and personal.</li>
+          <li>Integrates into the onboarding flow.</li>
         </ul>
       </dd>
-      <dt>B's structured summary view</dt>
+      <dt>PART A — STORYTELLING EXPERIENCE</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>to make someone else's future easy to understand at a glance</li>
-          <li>lands on new discovery profile section</li>
+          <li><b>Discover someone else's</b></li>
+          <li>Make another person's vision easy to understand at a glance.</li>
+          <li>Integrates into the discover flow.</li>
         </ul>
       </dd>
     </dl>
@@ -226,14 +251,14 @@ headerFlip: false
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Learnings</b>
-      <h3 class="h3">"When things feel easy, feel short."</h3>
+      <h3 class="h3">"It's not how long it takes, but how it feels."</h3>
     </header>
     <div class="project-content__card">
       <p>
-        The project reinforced that visual storytelling can make an abstract idea easier to understand and talk about—but the interface shouldn't make that story feel like a contract.
+        Visual storytelling can make abstract ideas easier to understand and discuss. But the experience should never make a personal vision feel like a contract.
       </p>
       <p>
-        The best experience gives people enough structure to communicate what matters while leaving room for nuance.
+        The best design provides enough structure to communicate what matters while leaving room for nuance.
       </p>
     </div>
   </div>
