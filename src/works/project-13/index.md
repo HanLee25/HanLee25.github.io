@@ -4,7 +4,7 @@ date: "2025-05-20"
 title: "Guided Discover over the Map"
 team: "Archer"
 teamUrl: "https://www.archerapp.com/"
-excerpt: "Making the open-discover experience effective more guided, relevant, and engaging."
+excerpt: "Making map discover experience more guided, relevant, and engaging."
 impacts: ['<strong>19%</strong> ⬆️ DAU', '<strong>2%</strong> ⬆️ NDR', '<strong>28%</strong> ⬆️ Profile Views', '<strong>3%</strong> ⬆️ Outgoing Attention', '<strong>6%</strong> ⬆️ 6-Way Convo']
 tags: ['Product Discovery', 'User Interface', 'User Experience', 'Prototyping', 'Micro Interaction', '@Match Group']
 cover: "./project-cover.png"
@@ -29,11 +29,11 @@ headerFlip: true
       </dd>
       <dt>Product goal</dt>
       <dd>
-        Increase profile views and engagement by helping users find relevant people more easily.
+        Increase profile views and engagement by helping users discover relevant people more easily.
       </dd>
       <dt>Design challenge</dt>
       <dd>
-        How might we guide users toward meaningful connections without taking away the freedom to explore?
+        How might we guide users toward meaningful connections without taking away their freedom to explore?
       </dd>
     </dl>
   </div>
@@ -52,22 +52,22 @@ headerFlip: true
       <h3 class="h3">Exploring: Finding direction in an open map</h3>
     </header>
     <p class="mb-8">
-      Explore why an open map can feel aimless, and how users might benefit from clearer starting points and contextual cues.
+      Explore why an open map can feel aimless, and how clearer starting points and contextual cues could help.
     </p>
     <ul class="bulleted-list">
-      <li>Too many or too little people around you</li>
-      <li>No information other than face (sometimes not even a face)</li>
-      <li>Probabely the same people you saw yesterday</li>
+      <li>Too many or too few people nearby.</li>
+      <li>Little context beyond a single photo.</li>
+      <li>Often the same people users saw yesterday.</li>
     </ul>
   </div>
   <div class="project-content__column project-content__image project-content__image--landscape project-content__image--block">
     <div class="project-content__figure"">
       <dl class="mb-4">
-        <dt>Option 1. Continuse browsing feed</dt>
+        <dt>Option 1. Browsing feed</dt>
         <dd>
           <ul class="bulleted-list">
-            <li>Curated feed with proximity order</li>
-            <li>Top-level intriging information with actionable buttons</li>
+            <li>Curated profiles ordered by proximity.</li>
+            <li>Key profile information and actionable buttons at a glance.</li>
           </ul>
         </dd>
       </dl>
@@ -81,8 +81,8 @@ headerFlip: true
         <dt>Option 2. Focused browsable carousel</dt>
         <dd>
           <ul class="bulleted-list">
-            <li>Curated profiles in proximity order</li>
-            <li>Profile highlight with actionable buttons above the fold</li>
+            <li>Curated profiles ordered by proximity.</li>
+            <li>Profile highlight with full-profile access</li>
           </ul>
         </dd>
       </dl>
@@ -93,11 +93,11 @@ headerFlip: true
     </div>
     <div class="project-content__figure"">
       <dl class="mb-4">
-        <dt>Option 3. 3D Zoomed-in navigation</dt>
+        <dt>Option 3. Zoomed-In 3D Navigation</dt>
         <dd>
           <ul class="bulleted-list">
-            <li>Zoom into a profile once at a time</li>
-            <li>Profile highlight HUD concept</li>
+            <li>Zoom in on one profile at a time.</li>
+            <li>Explore a heads-up display (HUD) for profile highlights.</li>
           </ul>
         </dd>
       </dl>
@@ -113,20 +113,20 @@ headerFlip: true
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #2</b>
-      <h3 class="h3">Re-routing: Measuring the problem cause</h4>
+      <h3 class="h3">Re-routing: Measuring focus and freedom</h4>
     </header>
     <p>
-      Reducing distraction, while keep the freemdom open
-      <b class="block">↳ Focus mode hybrid map discover model</b>
+      Reduce distractions without sacrificing the freedom to explore.
+      <b class="block">↳ Introduce a hybrid map discovery model with Focus Mode.</b>
     </p>
     <dl>
       <dt>Focuse mode</dt>
       <dd>
-        'One proflie at a time' discover flow with actionable profile glimps
+        <b>One proflie at a time:</b> A focused discovery flow with actionable profile previews.
       </dd>
-      <dt>Exit, anytime</dt>
+      <dt>Exit anytime</dt>
       <dd>
-        No obligation to linear discover, browsing everyone anytime you want.h
+        <b>Stay in control:</b> Users can leave the focused flow and continue exploring map freely.
       </dd>
     </dl>
   </div>
@@ -146,17 +146,17 @@ headerFlip: true
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #3</b>
-      <h3 class="h3">Re-targeting: Turning the goal-oriented UX</h3>
+      <h3 class="h3">Re-targeting: Tuning the goal-oriented UX</h3>
     </header>
     <p>
-      Go deep to interact or go wide to find more <b>- one thing at a time.</b>
+      Go deep to connect, or go wide to explore <b>- one at a time.</b>
     </p>
     <dl>
       <dt>Focus mode layout option</dt>
       <dd>
         <ul class="bulleted-list">
-          <li>A. Priotize photo and compatibility</li>
-          <li>B. Content oriented with editotial layout</li>
+          <li>Option A — Photo-First: Prioritize profile photos and compatibility signals.</li>
+          <li>Option B — Editorial: Prioritize profile content through an editorial layout.</li>
         </ul>
       </dd>
     </dl>
@@ -177,7 +177,7 @@ headerFlip: true
   <div class="project-content__column">
     <header class="content-section__header">
       <b class="content-section__eyebrow">Key Stage #4</b>
-      <h3 class="h3">Final design: Focused mode with exit</h3>
+      <h3 class="h3">Final design: Focus Mode with the freedom to exit</h3>
     </header>
   </div>
   <div class="project-content__column project-content__image project-content__image--block">
@@ -187,11 +187,11 @@ headerFlip: true
     </figure>
     <figure class="project-content__figure project-content__figure--gif">
       <img src="./project07.gif" alt="Project"/>
-      <figcaption>Fig.6: Introducing focus mode</figcaption>
+      <figcaption>Fig.6: Introducing Focus Mode</figcaption>
     </figure>
     <figure class="project-content__figure project-content__figure--gif">
       <img src="./project08.gif" alt="Project"/>
-      <figcaption>Fig.6: Focus mode profiles</figcaption>
+      <figcaption>Fig.6: Exploring profiles in Focus Mode</figcaption>
     </figure>
   </div>
 </div>
